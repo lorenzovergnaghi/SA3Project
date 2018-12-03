@@ -23,14 +23,14 @@
   padding: 20px;
   flex-grow: 1;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: left;
   background-color: lightgrey;
 }
 .card{
   display: flex;
-  flex-flow: column wrap;
-  width: 33%;
+  flex-flow: column;
+  width: 30%;
   margin: 0;
   padding: 0;
   flex-grow: 1;
