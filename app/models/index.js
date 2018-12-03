@@ -5,7 +5,9 @@
 
 const mongoose = require('mongoose');
 require('./episode');
+require('./card');
 
 module.exports = {
-  'Episode' : mongoose.model('Episode')
+  'Episode' : mongoose.model('Episode'),
+  'Card' : mongoose.model('Card')
 };

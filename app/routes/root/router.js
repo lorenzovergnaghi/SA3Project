@@ -22,29 +22,16 @@ const url	= require('url');
 
 
 router.get('/', function(req, res){
-  let ep = {
-    name: 'Death Note Ep.1',
-    file : '/storage/testFileDN.mp4',
-    id : 1
-  };
-  let epa = {
-    name: 'Boruto Ep.1',
-    file : '/storage/testFileBO.mp4',
-    id : 2
-  };
-  let list = [ep,epa,epa,epa,epa,epa];
-  let model = {
-    x : list
-  }
-  res.render('index' , model);
-    // Episode.find({name :'pippo'},(err,found)=>{
-    //   if (err) {
-    //     console.log('err');
-    //     res.status(500).end();
-    //   }else {
-    //     res.render('index', {x:found});
-    //   }
-    // })
+  Episode.find({},function(err,foundAll){
+      if (err) {
+        res.status(404).end();
+      }else {
+        console.log(foundAll[0]);
+        let mod = {
+          x : foundAll
+        }
+        res.render('index', mod);
+      }});
 });
 
 router.get('/storage/testFile.mp4',function(req,res){

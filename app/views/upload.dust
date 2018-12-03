@@ -17,8 +17,9 @@
   <div class='main'>
     <div class="main_content">
     <form id="upload-form" action="/upload" enctype="multipart/form-data" method="post">
-	    <input id="upload-form-file" type="file" name="file"><br>
-	    <input type="submit" name="submit" onclick=postVideo(event)>
+      <input name='path' type='text'>
+	    <input id="upload-form-file" type="file" name="file" ><br>
+	    <input type="submit" name="submit">
 	    </form>
     </div>
   </div>
