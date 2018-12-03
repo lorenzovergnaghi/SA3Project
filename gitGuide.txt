@@ -1,0 +1,21 @@
+SETUP:
+go to
+ https://github.com/lorenzovergnaghi/SA3Project
+clone the repository
+
+git branch <you’re name>			(create you’re branch to work on)
+git checkout <you’re name>			(move git focus on you’re branch)
+
+have fun
+
+WORKING:
+when you want to send to the remote repo you’re changes run these commands:
+git add .				(to add all modified files to the staging area)
+git commit -m “<MESSAGE>”		(commit staged files with a meaningful MESSAGE)
+git push				(push to you’re branch)
+
+when you want to get on you’re local folder the new or modified files run:
+
+git pull
+
+
