@@ -6,8 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # ignore all video
-*.mp4
-
+./public/storage
 
 # Runtime data
 pids
