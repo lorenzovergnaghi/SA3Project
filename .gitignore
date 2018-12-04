@@ -8,6 +8,10 @@ yarn-error.log*
 # ignore all video
 *.mp4
 
+#ignore all .idea files
+*.idea
+Presentations/*
+
 # Runtime data
 pids
 *.pid

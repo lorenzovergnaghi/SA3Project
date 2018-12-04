@@ -63,7 +63,7 @@ router.post('/', function(req, res){
     form.on('error', function(err) {
       console.log('error detected');
     });
-
+    form.maxFileSize = 1024*1024*1000;
     form.uploadDir=folder;
     form.encoding = 'utf-8';
     form.keepExtensions = true;
