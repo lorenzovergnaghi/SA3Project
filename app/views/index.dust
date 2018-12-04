@@ -27,15 +27,15 @@
       var videos = document.querySelectorAll('video');
       console.log(videos);
       videos.forEach(function(vid){
-
-
-
         document.querySelector('#bt'+vid.id).addEventListener('click', function(event){
             event.preventDefault();
             vid.webkitRequestFullScreen();
             vid.play();
           });
-      })
+      });
+      // document.addEventListener('keydown', function(event){
+      //     console.log(event.keyCode);
+      // });
       </script>
     </div>
   </div>
