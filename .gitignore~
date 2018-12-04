@@ -8,7 +8,6 @@ yarn-error.log*
 # ignore all video
 *.mp4
 #ignore ds store files
-.DS_Store
 # Runtime data
 pids
 *.pid
