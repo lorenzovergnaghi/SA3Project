@@ -36,7 +36,7 @@ router.get('/', function(req, res){
 // });
 
 router.post('/', function(req, res){
-  var folder ='./public/storage/';
+  var folder ='./public/storage';
   var xname;
   var xpath;
 
@@ -61,9 +61,7 @@ router.post('/', function(req, res){
       console.log(xname,xpath);
 		});
     form.on('error', function(err) {
-      console.log('ERROR');
-      console.log(err);
-      res.status(500).end();
+      console.log('error detected');
     });
 
     form.uploadDir=folder;
@@ -71,20 +69,23 @@ router.post('/', function(req, res){
     form.keepExtensions = true;
     form.parse(req, (err, fields, files)=>{
       let incomingEp = new Episode({name:xname , bookmarked:true, file : xpath});
-      console.log(incomingEp);
-      incomingEp.save(function (err, saved) {
       if (err) {
-        res.status(500).end();
-        return;
-      }else {
-        const headers = {
-            'Location':'http://localhost:3000/upload'
-            // 'Location':'http://www.google.com'
-          };
-        res.writeHead(304,headers);
+        console.log("FORM error, not uploaded");
+        res.writeHead(304,{'Location':'http://localhost:3000/upload'});
         res.end();
+      }else {
+        incomingEp.save(function (err, saved) {
+        if (err) {
+          console.log('DB error, not saved');
+          res.writeHead(304,{'Location':'http://localhost:3000/upload'});
+          res.end();
+        }else {
+          console.log('ALL GOOD');
+          res.writeHead(304,{'Location':'http://localhost:3000/upload'});
+          res.end();
+        }
+      });
       }
-    });
   });
 });
 
