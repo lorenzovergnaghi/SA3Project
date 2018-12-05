@@ -4,7 +4,7 @@ const fs = require("fs");
 const mongoose = require('mongoose');
 const formidable = require('formidable');
 // mongoose.connect('mongodb://localhost/test');
-
+const util =require('util')
 const express = require('express');
 const router = express.Router();
 
@@ -17,77 +17,68 @@ router.get('/', function(req, res){
 })
 
 
-// router.post('/upload', function(req, res){
-//     var form = new formidable.IncomingForm(),
-//     files = [],
-//     fields = [];
-//     form.on('field', function(field, value) {
-//         fields.push([field, value]);
-//     })
-//     form.on('file', function(field, file) {
-//         console.log(file.name);
-//         files.push([field, file]);
-//     })
-//     form.on('end', function() {
-//         console.log('done');
-//         res.redirect('/forms');
-//     });
-//     form.parse(req);
-// });
+router.post('/',function(req, res){
+  // console.log('POSTING');
 
-router.post('/', function(req, res){
-  var folder ='./public/storage';
-  var xname;
-  var xpath;
+  var folderPath = './public/storage/';
 
-
+  var nname;
+  var npath;
 
   var form = new formidable.IncomingForm();
-    form.on('field', function(name, value) {
-      if (name === 'path') {
-        folder += value + '/';
-        // console.log(folder);
-        //check if folder exist, create if necessary
-      }
-    });
-    form.on('progress', function(bytesReceived, bytesExpected) {
-      // console.log(bytesReceived);
-    });
-		form.on('fileBegin', function(name, file) {
-			file.pathname = folder+file.name;
-			file.path = folder+file.name;
-      xname = file.name;
-      xpath = './'+file.path.substring(9);
-      console.log(xname,xpath);
-		});
-    form.on('error', function(err) {
-      console.log('error detected');
-    });
-    form.maxFileSize = 1024*1024*1000;
-    form.uploadDir=folder;
-    form.encoding = 'utf-8';
-    form.keepExtensions = true;
-    form.parse(req, (err, fields, files)=>{
-      let incomingEp = new Episode({name:xname , bookmarked:true, file : xpath});
-      if (err) {
-        console.log("FORM error, not uploaded");
-        res.writeHead(304,{'Location':'http://localhost:3000/upload'});
-        res.end();
-      }else {
-        incomingEp.save(function (err, saved) {
+
+  form.on('field',function(name,value){
+    // console.log('field name: ' + name);
+    // console.log('field value: ' + value);
+  });
+  form.on('progress', function(bytesReceived, bytesExpected) {
+    console.log(bytesReceived, bytesExpected);
+  });
+  form.on('fileBegin', function(name, file) {
+    // console.log('file.path = ' +file.path);
+		file.path = folderPath+file.name;
+    // console.log('file.path2 = ' +file.path);
+    nname = file.name;
+    npath = file.path;
+    // console.log('nname = '+nname);
+    // console.log('npath = '+npath);
+  });
+  form.on('end',function(err){
+    if (err) {
+      console.log('err end');
+    }else {
+      res.status(304,{'Location':'http://localhost:3000'});
+      res.end();
+    }
+  });
+  form.on('error',function(err){
+    if (err) {
+      console.log('err errror');
+    }
+  });
+  form.maxFileSize = 1024*1024*10000;
+  form.uploadDir=folderPath;
+  form.encoding = 'utf-8';
+  form.keepExtensions = true;
+  form.multiples = true;
+  form.parse(req, (err, fields, files)=>{
+
+    // console.log(util.inspect({fields: fields, files: files}));
+
+    files.file.forEach((el)=>{
+      let incomingEp = new Episode({name:el.name , bookmarked:false, file : el.path.replace('./public', '.')});
+      incomingEp.save(function (err, saved) {
         if (err) {
-          console.log('DB error, not saved');
-          res.writeHead(304,{'Location':'http://localhost:3000/upload'});
-          res.end();
+          console.log("err .save");
+          res.status(500).end();
         }else {
-          console.log('ALL GOOD');
-          res.writeHead(304,{'Location':'http://localhost:3000/upload'});
-          res.end();
+          console.log('saved | '+el.name);
         }
       });
-      }
+    });
   });
 });
+
 
 
 /** router for /upload */
