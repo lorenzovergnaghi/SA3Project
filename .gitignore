@@ -7,8 +7,17 @@ yarn-error.log*
 
 # ignore all video
 *.mp4
+
+
+#ignore all .idea files
+.idea/*
+#ignore Presentation folder contents
+Presentations/*
+
+
 #ignore ds store files
 .DS_Store
+
 # Runtime data
 pids
 *.pid

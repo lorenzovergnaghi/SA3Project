@@ -18,7 +18,7 @@
     <div class="main_content">
     <form id="upload-form" action="/upload" enctype="multipart/form-data" method="post">
       <input name='path' type='text'>
-	    <input id="upload-form-file" type="file" name="file" ><br>
+	    <input id="upload-form-file" type="file" name="file" multiple="multiple"><br>
 	    <input type="submit" name="submit">
 	    </form>
     </div>
