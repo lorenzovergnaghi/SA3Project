@@ -9,11 +9,9 @@ const router = express.Router();
 
 
 router.get('/', function(req,res){
-  console.log('~GET LOGIN');
+
   res.render('login');
 });
-
-
 
 router.post('/',
   passport.authenticate('local', { failureRedirect: '/login' }),
