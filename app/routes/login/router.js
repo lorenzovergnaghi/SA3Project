@@ -9,18 +9,15 @@ const router = express.Router();
 
 
 router.get('/', function(req,res){
+
   res.render('login');
 });
 
 router.post('/',
-  passport.authenticate('local'),
+  passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-    console.log('~ POST /login');
-    // If this function gets called, authentication was successful.
-    // `req.user` contains the authenticated user.
-    res.render('index');
+    res.writeHead(302,{'Location':'http://localhost:3000'}).end();
   });
-
 
 
 

@@ -6,8 +6,10 @@
 const mongoose = require('mongoose');
 require('./episode');
 require('./card');
+require('./User');
 
 module.exports = {
   'Episode' : mongoose.model('Episode'),
-  'Card' : mongoose.model('Card')
+  'Card' : mongoose.model('Card'),
+  'User' : mongoose.model('User')
 };
