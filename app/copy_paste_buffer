@@ -1,5 +1,4 @@
-require('../../models/User');
-const User = mongoose.model('User');
 
 
-https://github.com/passport/express-4.x-local-example/blob/master/db/users.js
+<video controls="" id="{.id}" src="{.file}" Fullscreen=false ></video>
+<button class="watch_button"id="bt{.id}">Watch {.name}!</button>
