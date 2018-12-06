@@ -7,37 +7,33 @@ const methodOverride = require('method-override');
 const dust_link = require('dustjs-linkedin');
 const dust_helpers = require('dustjs-helpers');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
-require('./models/User');
-const User = mongoose.model('User');
 
+
+require('./models/user');
+const User = mongoose.model('User');
+const app = express();
 //passport
     var passport = require('passport');
-    var Strategy = require('passport-local').Strategy;
+    var LocalStrategy = require('passport-local');
 
-    passport.use(new Strategy(
-  function(username, password, cb) {
-    db.users.findByUsername(username, function(err, user) {
-      if (err) { return cb(err); }
-      if (!user) { return cb(null, false); }
-      if (user.password != password) { return cb(null, false); }
-      return cb(null, user);
-    });
-  }));
+    passport.use(new LocalStrategy(
+    function(username, password, done) {
+      User.findOne({ username: username }, function (err, user) {
+        if (err) { return done(err); }
+        if (!user) { return done(null, false); }
+        if (user.password != password) { console.log('wrongPASS');return done(null, false); }
+        return done(null, user);
+      });
+    }
+  ));
 
-  passport.serializeUser(function(user, cb) {
-cb(null, user.id);
+passport.serializeUser(function(user, done) {
+  done(null, user);
 });
 
-passport.deserializeUser(function(id, cb) {
-db.users.findById(id, function (err, user) {
-  if (err) { return cb(err); }
-  cb(null, user);
+passport.deserializeUser(function(user, done) {
+  done(null, user);
 });
-});
-
-const app = express();
-//configure app
 //SET DUST ENGINE
 app.set('view engine', 'dust');
 app.set('views', __dirname + '/views');

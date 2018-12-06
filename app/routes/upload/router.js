@@ -3,7 +3,7 @@
 const fs = require("fs");
 const mongoose = require('mongoose');
 const formidable = require('formidable');
-// mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test');
 const util =require('util')
 const express = require('express');
 const router = express.Router();
@@ -32,7 +32,7 @@ router.post('/',function(req, res){
     // console.log('field value: ' + value);
   });
   form.on('progress', function(bytesReceived, bytesExpected) {
-    console.log(bytesReceived, bytesExpected);
+    // console.log(bytesReceived, bytesExpected);
   });
   form.on('fileBegin', function(name, file) {
     // console.log('file.path = ' +file.path);
@@ -47,6 +47,7 @@ router.post('/',function(req, res){
     if (err) {
       console.log('err end');
     }else {
+      console.log('saved all');
       res.status(304,{'Location':'http://localhost:3000'});
       res.end();
     }
@@ -63,10 +64,11 @@ router.post('/',function(req, res){
   form.multiples = true;
   form.parse(req, (err, fields, files)=>{
 
-    // console.log(util.inspect({fields: fields, files: files}));
-
+    console.log(util.inspect({fields: fields, files: files}));
     files.file.forEach((el)=>{
+      console.log('KAKAKAkA');
       let incomingEp = new Episode({name:el.name , bookmarked:false, file : el.path.replace('./public', '.')});
+      console.log(incomingEp);
       incomingEp.save(function (err, saved) {
         if (err) {
           console.log("err .save");
@@ -76,6 +78,7 @@ router.post('/',function(req, res){
         }
       });
     });
+
   });
 });
 

@@ -6,7 +6,7 @@
 const mongoose = require('mongoose');
 require('./episode');
 require('./card');
-require('./User');
+require('./user');
 
 module.exports = {
   'Episode' : mongoose.model('Episode'),

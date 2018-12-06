@@ -24,7 +24,7 @@ function insertVideo(event){
     newNode.id = '#ciao';
     newNode.src = obj.src;
     main.appendChild(newNode);
-  })
+  });
 }
 
 function init(){
