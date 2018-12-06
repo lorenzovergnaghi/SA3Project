@@ -10,11 +10,17 @@ const router = express.Router();
 
 require('../../models/episode');
 const Episode = mongoose.model('Episode');
+const login = require('connect-ensure-login');
 
-router.get('/', function(req, res){
-  console.log('/upload:get');
-  res.render('upload');
-})
+// router.get('/', function(req, res){
+//   console.log('/upload:get');
+//   res.render('upload');
+// })
+router.get('/',
+  login.ensureLoggedIn(),
+  function(req, res){
+    res.render('upload');
+  });
 
 
 router.post('/',function(req, res){

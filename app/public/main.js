@@ -31,6 +31,7 @@ function check () {
   }
 
 }
+
 function validation()
 {
 
@@ -48,8 +49,3 @@ function validation()
     }
   }
 }
-  console.log('INIT');
-
-}
-
-
