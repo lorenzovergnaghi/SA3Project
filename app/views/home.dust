@@ -1,0 +1,70 @@
+<html>
+<head>
+    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png">
+    <title>Gheorghita's Homepage</title>
+
+</head>
+<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+<script src="js/views.js"></script>
+<script src="js/fetch.js"></script>
+<script src="main.js"></script>
+<body>
+<!--total body div-->
+
+<!--header div-->
+<header>
+
+
+    <h1 class="MyName">Sergio Gheorghita</h1>
+    <img src="usilogo1.jpg"  class="usilogo" align="left">
+    <img src="usilogo1.jpg"  class="usilogo1" align="left">
+    <h1 class="HomePage">HomePage</h1>
+
+
+
+
+</header>
+
+<main>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html"><b>Home </b></a></li>
+            <li><a href="blog.html"><b>Blog   </b></a></li>
+            <li><a href="3d_print_service.html"><b>3D Printer </b></a></li>
+            <li><a href="picture.html"><b>Pictures </b></a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="sidebar">
+    <div class="sidebar_icons">
+        <a href="https://www.facebook.com/sergio.gheorghita" target="_blank"><img  src="facebook.png" alt="Facebook"></a>
+    </div>
+
+    <div class="sidebar_icons">
+        <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="instagram.png" alt="Instagram"></a>
+    </div>
+
+    <div class="sidebar_icons">
+        <a href="https://twitter.com" target="_blank"><img  src="twitter.png" alt="Twitter"></a>
+    </div>
+
+    <div class="sidebar_icons">
+        <a href="mailto:Sergiu.Gheorghita@usi.ch" id="img_mail" target="_blank"><img id="mail" src="mail.png" alt="Mail"></a>
+
+
+
+
+    </div>
+
+</main>
+
+<footer/>
+<p>&copy; Sergio Gheorghita	</p>
+</footer>
+
+
+</body>
+        </html>

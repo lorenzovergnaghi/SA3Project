@@ -65,6 +65,7 @@ app.use('/', routers.root);
 app.use('/watching', routers.watching);
 app.use('/upload', routers.upload);
 app.use('/login', routers.login);
+app.use('/home', routers.home);
 
 
 
