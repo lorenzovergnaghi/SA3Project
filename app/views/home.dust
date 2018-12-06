@@ -2,7 +2,7 @@
 <head>
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png">
-    <title>Gheorghita's Homepage</title>
+    <title>WorkInProgress's Homepage</title>
 
 </head>
 <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
@@ -16,9 +16,9 @@
 <header>
 
 
-    <h1 class="MyName">Sergio Gheorghita</h1>
-    <img src="usilogo1.jpg"  class="usilogo" align="left">
-    <img src="usilogo1.jpg"  class="usilogo1" align="left">
+    <h1 class="MyName">WorkInProgress</h1>
+    <img src="animeImages/usilogo1.jpg"  class="usilogo" align="left">
+    <img src="animeImages/usilogo1.jpg"  class="usilogo1" align="left">
     <h1 class="HomePage">HomePage</h1>
 
 
@@ -40,11 +40,11 @@
 
     <div class="sidebar">
     <div class="sidebar_icons">
-        <a href="https://www.facebook.com/sergio.gheorghita" target="_blank"><img  src="facebook.png" alt="Facebook"></a>
+        <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
     </div>
 
     <div class="sidebar_icons">
-        <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="instagram.png" alt="Instagram"></a>
+        <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
     </div>
 
     <div class="sidebar_icons">
