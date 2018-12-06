@@ -1,33 +1,55 @@
-function LOL(){
-  console.log('LOL LOL LOL');
+function load () {
+  document.getElementById('register').style="display:none;";
+  document.getElementById('check').value="Register";
 }
-
-
-function postVideo(event){
-  event.preventDefault();
-  let form = document.querySelector('#upload-form-file');
-  console.log(form.value);
-  doJSONRequest("POST", "/upload", {'Content-Type':'application/json'}, {name : 'a',file : 'b'}).then(function(obj){
-    console.log(obj);
-
-  })
+function register () {
+  document.getElementById('register').style="display:block;";
+  document.getElementById('login').style="display:none";
+  document.getElementById('check').value="Login";
+  //document.getElementById('header').style="display:none";
 }
-
-
-function insertVideo(event){
-  event.preventDefault();
-  console.log('pippa1');
-  doJSONRequest("GET", "/watching", {}, undefined).then(function(obj){
-    let main = document.querySelector('.main_content');
-    let newNode = document.createElement('video');
-    newNode.controls = true;
-    newNode.id = '#ciao';
-    newNode.src = obj.src;
-    main.appendChild(newNode);
-  });
+function login () {
+  document.getElementById('register').style="display:none;";
+  document.getElementById('login').style="display:block;";
+  document.getElementById('check').value="Register";
+  //document.getElementById('header').style="display:none";
 }
+function check () {
 
-function init(){
+  var che= document.getElementById('check').value;
+  if(che=="Login")
+  {
+    document.getElementById('register').style="display:none;";
+    document.getElementById('login').style="display:block;";
+    document.getElementById('check').value="Register";
+  }
+  else
+  {
+    document.getElementById('register').style="display:block;";
+    document.getElementById('login').style="display:none";
+    document.getElementById('check').value="Login";
+  }
+
+}
+function validation()
+{
+
+  var check=document.getElementById('email').type;
+  if(check=="email")
+  {
+    var value=document.getElementById('email').value;
+    if(value=="")
+    {
+
+
+      document.getElementById('error').innerHTML="Incorrect Email Address";
+
+
+    }
+  }
+}
   console.log('INIT');
 
 }
+
+

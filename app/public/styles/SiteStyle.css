@@ -1,0 +1,788 @@
+/*#################################################################################################################*/
+/*                                        this is the query for mobile                                             */
+/*#################################################################################################################*/
+
+@media (max-width: 768px) {
+html {
+  height: 100%;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+}
+
+
+body{
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "header"
+  "content"
+  "footer";
+  min-height: 100%;
+  text-align: center;
+}
+
+/*########################-Header-###############################################*/
+
+  header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+    border-radius: 10px;
+    max-height: 100px;
+    box-shadow: 0 0 15px 8px #0a0511;
+
+  }
+
+   .MyName {
+    font-size: 150%;
+    z-index: 1;
+    position: relative;
+    bottom: 10px;
+    background: -webkit-linear-gradient(goldenrod,orange,gold,goldenrod,gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+   .HomePage {
+    font-size: 275%;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 58px;
+    z-index: 1;
+    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  .BlogTitle{
+    text-align: center;
+    font-size: 180%;
+    position: relative;
+    bottom: 20px;
+    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .usilogo1 {
+  width: 20%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 8px #0a0511;
+  position: relative;
+  top: 25px;
+
+
+    }
+
+
+.usilogo{
+
+  display: none;
+}
+
+
+/*#######################################################################*/
+main {
+  grid-template-areas:
+  "nav"
+  "main"
+  "sidebar";
+  grid-template-rows: auto auto auto;
+  display: grid;
+
+}
+/*############################-Navigation bar-###########################*/
+  .navigation {
+    grid-area: nav;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+    background-color: rgba(22, 239, 224, 0.4);
+    padding: 0;
+    margin-top: 7px;
+
+
+  }
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    justify-content: space-around;
+
+  }
+
+  .navigation ul{
+    list-style-type: none;
+    text-align: center;
+    padding-right: 10px;
+  }
+
+  .navigation ul li{
+    font-size: 12px;
+  }
+
+  .navigation ul li a{
+    display: block;
+    color: orange;
+  }
+
+  .navigation li a:link {
+      text-decoration: none;
+      padding: 0px 10px 0px 10px;
+  }
+
+  .navigation li a:hover {
+      background-color: goldenrod;
+      border-radius: 10px;
+      color: black;
+
+  }
+/*#######################################################################*/
+/*############################-maincontent-###########################*/
+
+  .maincontent{
+    grid-area: main;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px 0px 0px 0px;
+    }
+
+    #CS{
+    margin: 0px;
+
+    }
+
+    #SergioGheorghita{
+      margin-top: -30px;
+    }
+
+    .identikit_list {
+    list-style-type: none;
+    color:#1dad3c;
+    text-align: left;
+    margin-left: -25px;
+    }
+    .identikit_list li a{
+      color: orange;
+      text-align: left;
+    }
+
+     .identikit_list li a:link {
+        text-decoration: none;
+        padding: 0px 10px 0px 10px;
+    }
+    .title{
+    margin-bottom: -10px;
+    margin-left: 9px;
+    }
+
+    .line{
+      width: 250px;
+      height: 1px;
+      border: 0px;
+      margin-left: 9px;
+      background-color: rgba(22, 239, 224, 0.8);
+
+    }
+
+    .line2{
+      height: 1px;
+      border: 0px;
+      margin-left: 9px;
+      background-color: rgba(22, 239, 224, 0.7);
+      width: 97%;
+
+
+    }
+
+
+
+
+
+/*#######################################################################*/
+/*############################-Sidebar-###########################*/
+
+  .sidebar{
+    grid-area: sidebar;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background-color: rgba(22, 239, 224, 0.4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  center;
+
+  }
+
+  .sidebar_icons{
+    opacity: 0.75;
+    transition: 0.20s;
+    width: 25%;
+    height: 25%;
+  }
+    .sidebar_icons:hover{
+      opacity: 1;
+  }
+
+  .sidebar_icons img{
+    width: 35%;
+    padding-top:  3%;
+    padding-bottom: 3%
+  }
+
+  #mail{
+  margin-top: 5.5%;
+  }
+
+  article ul li{
+    text-align: left;
+    margin-right: 1em;
+    margin-left: 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 5px;
+
+  }
+
+
+  .contact_me{
+
+    background-color: rgba(22, 239, 224, 0.4);
+    border-radius: 3%;
+    box-shadow: 0 0 15px 8px #0a0511;
+    margin: 3% 10% 3% 10%;
+
+  }
+  fieldset {
+    border: none;
+    margin: 0.5em 0;
+
+  }
+
+  .blog_article_title{
+    color: #51CDAA;
+    font-family: courier;
+    letter-spacing: -0.3px;
+
+
+
+  }
+  .blog_article_subtitle{
+    color: rgba(222,222,222,1);
+    font-family: arial;
+    text-decoration: underline;
+    letter-spacing: -0.8px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+  }
+
+  .article1{
+    width: 93%;
+    height:30%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 3%;
+    margin-left: 3.5%;
+    margin-bottom: 15px;
+    
+
+  }
+
+  article p {
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+    color: rgba(222,222,222,1);
+    background-color: rgba(0, 0, 0, 0.2);
+
+  }
+
+  article ul li{
+    text-align: left;
+    margin-left: 0;
+    color: rgba(222,222,222,1);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 5px;
+  }
+
+  footer{
+    grid-area: footer;
+    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+    border-radius:10px ;
+    text-align: center;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+  }
+
+  .pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+    .pix {
+      width: 280px;
+      height:160px;
+      margin: 0.5em 0.5em;
+      border-radius: 3%;
+      box-shadow: 0 0 15px 8px #0a0511;
+    }
+  }
+/*#################################################################################################################*/
+/*                                    this is the query for desktop                                                */
+/*#################################################################################################################*/
+@media (min-width: 768px) {
+
+  html {
+    height: 100%;
+  }
+
+  body{
+    position: relative;
+    display: grid;
+    grid-template-rows: 200px 1fr auto;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    min-height: 100%;
+    text-align: center;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+  }
+
+  main {
+    grid-template-areas: "nav main sidebar";
+    grid-template-columns: 200px auto 200px;
+    display: grid;
+
+  }
+
+  header{
+    grid-area: header;
+    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 8px #0a0511;
+  }
+
+  .MyName{
+    text-align: center;
+    font-size: 50px;
+    background: -webkit-linear-gradient(goldenrod,orange,gold,goldenrod,gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    position: relative;
+    top: 25px;
+    right: 85px;
+
+  }
+
+  .HomePage{
+  text-align: center;
+  font-size: 100px;
+  position: relative;
+  left: 45px;
+  margin: 0px 0px 0px -50px;
+  background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  }
+
+
+  .usilogo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 8px #0a0511;
+  position: static;
+  margin: 170px 10px 0px 0px;
+}
+  .usilogo1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 8px #0a0511;
+  position: static;
+  margin-left: -110px;
+  margin-top: -50px;
+      }
+
+  .BlogTitle{
+
+    font-size: 450%;
+    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+  .navigation {
+    grid-area: nav;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+    background-color: rgba(22, 239, 224, 0.4);
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    max-width: 200px;
+
+
+  }
+  .navigation ul{
+    list-style-type: none;
+    text-align: center;
+    padding-right: 30px;
+  }
+
+  .navigation ul li{
+    padding-top: 40px;
+    font-size: 30px;
+  }
+
+  .navigation ul li a{
+    display: block;
+    color: orange;
+  }
+
+  .navigation li a:link {
+      text-decoration: none;
+      padding: 0px 10px 0px 10px;
+  }
+
+  .navigation li a:hover {
+      background-color: goldenrod;
+      border-radius: 10px;
+      color: black;
+
+  }
+
+  .sidebar{
+    grid-area: sidebar;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+    margin-left:  10px;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    background-color: rgba(22, 239, 224, 0.4);
+    max-width: 250px;
+  }
+
+  .sidebar_icons{
+    padding: 10px;
+    opacity: 0.75;
+    transition: 0.20s;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .sidebar_icons img{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+  }
+
+  .sidebar_icons:hover{
+    opacity: 1;
+  }
+
+  #img_mail {
+    display: inline-block;
+    position: relative;
+  }
+
+  #img_mail:after {
+    position: absolute;
+    opacity: 0;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "Sergiu.Gheorghita@usi.ch";
+    color: gold;
+    transition: 0.25s;
+    border:3px solid orange;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #img_mail:hover::after {
+      opacity: 1;
+    }
+
+  #img_mail:link {
+        text-decoration: none;
+
+  }
+
+
+  .maincontent{
+    grid-area: main;
+    box-shadow: 0 0 15px 8px #0a0511;
+    border-radius: 10px;
+    padding: 0;
+    margin-left:  10px;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    grid-template-areas:
+    "identikit"
+    "secondhalf";
+  }
+
+  .identikit{
+    grid-area: identikit;
+    display: grid;
+    grid-template-areas:"pic list";
+    grid-template-columns: 50% 50%;
+    margin-top:50px;
+  }
+
+    .secondhalf{
+      grid-area:video_spotify;
+      display: grid;
+      grid-template-areas:"video song";
+      grid-template-columns: 50% 50%;
+      margin-top:50px;
+    }
+
+    .blog_article_title{
+    text-align: left;
+    margin-left: 0.5em;
+    color: #51CDAA;
+    font-family: courier;
+    letter-spacing: 0px;
+    }
+    .blog_article_subtitle{
+    text-align: left;
+    margin-left: 0.6em;
+    color: rgba(222,222,222,1);
+    font-family: arial;
+    text-decoration: underline;
+    letter-spacing: -0.8px;
+    }
+
+    .article1{
+      width: 93%;
+      height:30%;
+      max-width: 400px;
+      max-height: 250px;
+
+      border-radius: 50%;
+      box-shadow: 0 0 15px 8px #0a0511;
+      border-radius: 3%;
+      margin: 0.2em 1em 1em 1em;
+      text-align: left;
+      min-width: 200px;
+      display: block;
+    }
+
+    article p {
+      margin-right: 1em;
+      margin-left: 1em;
+      color: rgba(222,222,222,1);
+      background-color: rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+
+    article ul li{
+      text-align: left;
+      margin-right: 20%;
+      margin-left: 1em;
+      color: rgba(222,222,222,1);
+      background-color: rgba(0, 0, 0, 0.2);
+      padding-top: 5px;
+
+    }
+
+
+    .contact_me{
+
+      background-color: rgba(22, 239, 224, 0.4);
+      border-radius: 3%;
+      box-shadow: 0 0 15px 8px #0a0511;
+      max-width: 400px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      /* margin-top: 10%; */
+    }
+
+    fieldset {
+      border: none;
+      margin: 0.5em 0;
+    }
+
+    /* ###################################footer##################################### */
+      footer{
+        grid-area: footer;
+        background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+        border-radius:10px ;
+        text-align: center;
+        box-shadow: 0 0 15px 8px #0a0511;
+        border-radius: 10px;
+      }
+
+    .pictures {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin: 3%;
+    }
+
+    .pix {
+      width: 300px;
+      height: 200px;
+
+      margin: 0.5em 0.5em;
+      border-radius: 3%;
+      box-shadow: 0 0 15px 8px #0a0511;
+    }
+
+}
+
+  /*###################endend######################*/
+
+  .video-container{
+  grid-area:video
+  }
+
+  .video-container h1{
+    font-family: Impact, Charcoal, sans-serif;
+  }
+  .video_iframe{
+    width: 85%;
+    height: 80%;
+    box-shadow: 0 0 10px 8px #0a0511;
+    -moz-border-radius: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+/*#########################################*/
+  .spotify{
+    grid-area:song;
+    margin: 0;
+  }
+  #spotify_iframe{
+  width: 250px;
+  height: 80px;
+  box-shadow: 0 0 10px 8px #0a0511;
+  border-radius: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  }
+
+  #song{
+    margin-top: 5px;
+  }
+/*#########################################*/
+  .Sergione{
+    border-radius: 30%;
+    border: 3px solid #D9853B;
+    width: 200px;
+    height: 200px;
+    margin-top: -15px;
+  }
+  #CS{
+  margin: 0px;
+  }
+
+  #SergioGheorghita{
+    margin-top: -30px;
+  }
+
+  .identikit_pic{
+    grid-area: pic;
+  }
+
+  #title{
+  margin-top: -45px;
+  margin-bottom: -10px;
+  margin-left: 9px;
+  }
+
+  .line{
+    margin-left: 9px;
+    width: 300px;
+    height: 1px;
+    border: 0px;
+    background-color: rgba(22, 239, 224, 0.8);
+  }
+  .line2{
+    height: 1px;
+    border: 0px;
+    margin-left: 9px;
+    background-color: rgba(22, 239, 224, 0.7);
+    width: 97%;
+}
+
+  .identikit_list {
+  grid-area: list;
+  list-style-type: none;
+  color: goldenrod;
+  text-align: left;
+
+
+  }
+  .identikit_list li a{
+    grid-area: list;
+    color: orange;
+    text-align: left;
+  }
+
+   .identikit_list li a:link {
+      text-decoration: none;
+      padding: 0px 10px 0px 10px;
+  }
+/*#########################################*/
+
+  #explanation{
+      font-family:condensed;
+      text-align: center;
+      background: -webkit-linear-gradient(45deg,#FFF800,#FFF800,#FFF800);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: italic;
+      margin-right: 15%;
+      margin-left: 15%;
+  }
+  /* ###################################Blog-Main#####################################

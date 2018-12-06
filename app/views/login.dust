@@ -1,38 +1,73 @@
-<!-- DON'T MODIFY THIS FILE -->
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>SA3Project</title>
-    <link type= "text/css"rel="stylesheet" href="styles/style.css">
+    <title>SA3Project || Login </title>
+    <link type= "text/css"rel="stylesheet" href="styles/loginStyle.css">
 </head>
-<script src="js/fetch.js"></script>
+
 <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-<body onload="init()">
-  <header class="header" id="abcdefg">
-    UGLY DEMO
-  </header>
-  <div class='main'>
-    <div class="main_content">
+  <script src="js/login.js"></script>
 
-      <form action="/login" method="post">
-  	<div>
-  	<label>Username:</label>
-  	<input type="text" name="username"/><br/>
-  	</div>
-  	<div>
-  	<label>Password:</label>
-  	<input type="password" name="password"/>
-  	</div>
-  	<div>
-  	<input type="submit" value="Submit"/>
-  	</div>
-  </form>
+
+<body style="background-color:grey;"  onload="load()">
+
+<div class="header" id="header">
+        <a class="brand" href="">WorkInProgress WA3</a>
+
+    <ul class="left">
+        <li><input id="check" class="btn" type="button" onclick="check()" value=""></li>
+        <li><input class="btn" type="submit" target="about.php" value="About"></li>
+    </ul>
+</div>
+
+<!--<div class="outer" id="outer" >-->
+
+    <div class="boxx" id="login">
+
+        <form method="POST" action="">
+
+            <label for="email">User Name &nbsp;&nbsp;&nbsp;</label>
+            <input  type="email" class="box" name="email" id="email" value=""placeholder="Email ID" onkeyup="validation()" ><br>
+            <p style="color:red;" id="error"><br></p>
+
+            <label for="password">Password &nbsp;&nbsp;&nbsp;</label>
+            <input type="text"  class="box" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+            <input class="button" type="button" value="Register &nbsp;" onclick="register()">
+
+            <input type="submit" class="button"  value="Submit" >
+        </form>
     </div>
-  </div>
+
+
+    <div class="boxx" id="register">
+
+        <form method="POST" action="">
+
+
+            <label for-="lname">User Name &nbsp;&nbsp;&nbsp;</label>
+            <input class="box" type="text" name="lname" id="lname" value=""placeholder="Last Name"><br><br><br>
+
+            <label for="email">Email ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input class="box" type="email" name="email" id="email" value=""placeholder="Email ID"><br><br><br>
+
+            <label for="password">Password &nbsp;&nbsp;&nbsp;</label>
+            <input class="box" type="text" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+            <label for="password">Confirm &nbsp;&nbsp;&nbsp;</label>
+            <input class="box" type="text" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+            <input class="button" type="button" value="Login" onclick="login()">
+
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+
+
+<!--</div>-->
+
 </body>
 
 
