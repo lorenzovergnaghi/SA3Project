@@ -10,14 +10,16 @@ const util = require('util');
 const default_headers = {'Content-Type': 'text.html; cahrset = utf-8'};
 const http = require('http');
 const url	= require('url');
+const login = require('connect-ensure-login');
 
 
 
 
-
-router.get('/', function(req, res){
+router.get('/',
+  login.ensureLoggedIn(),
+  function(req, res){
     res.render('home');
-});
+  });
 
 
 /** router for /root */
