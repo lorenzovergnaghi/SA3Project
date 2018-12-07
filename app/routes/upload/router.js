@@ -15,8 +15,34 @@ const Saga = mongoose.model('Saga');
 const login = require('connect-ensure-login');
 
 
+router.get('/addep',//login.ensureLoggedIn(),
+function(req,res){
+  res.render('home');
+})
+
+router.get('/newsaga',//login.ensureLoggedIn(),
+function(req,res){
+  res.render('newSaga');
+})
+router.post('/newsaga',function(req,res){
+  console.log(req.body);
+  let incomingSaga = new Saga({name:req.body.sagaName});
+  console.log(incomingSaga);
+  incomingSaga.save(function(err,saved){
+    if (err) {
+      console.log('Error creating new Saga');
+      res.redirect('/upload/newSaga');
+    }else {
+      console.log('saved new saga');
+      console.log(saved);
+      res.redirect('/upload');
+    }
+  });
+});
+
+
 router.get('/',
-  login.ensureLoggedIn(),
+  // login.ensureLoggedIn(),
   function(req, res){
 
     //push one new saga
