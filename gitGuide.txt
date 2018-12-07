@@ -19,3 +19,12 @@ when you want to get on you’re local folder the new or modified files run:
 git pull
 
 
+get MASTERCONTENT to my MYBRANCH
+
+add + commit + push
+then->
+git checkout MYBRANCH
+git pull origin master
+
+put MYBRANCH content to MASTER
+pull request (github website ask Lorenzo)

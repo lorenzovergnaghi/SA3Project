@@ -46,7 +46,16 @@
     <!--===========================Maincontent-Upload====================================================================-->
 
     <div class='maincontent_upload'>
-
+    {#x}
+      <p>{.name}</p>
+    {/x}
+  </br></br>
+</br></br>
+  <form id="upload-form" action="/upload" enctype="multipart/form-data" method="post">
+    <input name='path' type='text'>
+    <input id="upload-form-file" type="file" name="file" multiple="multiple"><br>
+    <input type="submit" name="submit">
+    </form>
         <form action="upload" method="POST">
             <input type="file" multiple>
             <p>Drag your files here or click in this area.</p>

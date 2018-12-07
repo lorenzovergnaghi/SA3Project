@@ -10,7 +10,7 @@ const router = express.Router();
 
 require('../../models/episode');
 const Episode = mongoose.model('Episode');
-
+const login = require('connect-ensure-login');
 const util = require('util');
 const default_headers = {'Content-Type': 'text.html; cahrset = utf-8'};
 const http = require('http');
@@ -19,9 +19,9 @@ const url	= require('url');
 
 
 
-
-router.get('/', function(req, res){
-  Episode.find({},function(err,foundAll){//FIX non funge piu il DB
+//,login.ensureLoggedIn()
+router.get('/',login.ensureLoggedIn(), function(req, res){
+  Episode.find({},function(err,foundAll){
       if (err) {
         res.render('index');
       }else {
@@ -30,6 +30,7 @@ router.get('/', function(req, res){
         }
         res.render('index',mod);
       }});
+  // res.redirect('/home')
 });
 
 router.get('/storage/testFile.mp4',function(req,res){
