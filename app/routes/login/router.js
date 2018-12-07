@@ -13,7 +13,7 @@ const User = mongoose.model('User');
 
 
 router.get('/', function(req,res){
-  res.render('login');
+    res.render('login');
 });
 
 router.post('/',

@@ -18,7 +18,7 @@
 
     <h1 class="MyName">WorkInProgress</h1>
     <img src="animeImages/logoonepiece.png"  class="usilogo" align="left">
-    <h1 class="HomePage">HomePage</h1>
+    <h1 class="HomePage">Favourites</h1>
 
 
 
@@ -27,31 +27,31 @@
 
 <main>
 
-<!--===========================NavigationBar====================================================================-->
+    <!--===========================NavigationBar====================================================================-->
 
     <nav class="navigation">
         <ul>
             <li><a href="home"><b>Home </b></a></li>
             <li><a href="upload"><b> Upload   </b></a></li>
             <li><a href="favorites"><b>Favorites</b></a></li>
-            <li><a href="picture.html"><b>Pictures </b></a></li>
+            <li><a href="picture.html"><b> Pictures </b></a></li>
 
         </ul>
     </nav>
 
-<!--===========================Sidebar====================================================================-->
+    <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
-    <div class="sidebar_icons">
-        <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
-    </div>
+        <div class="sidebar_icons">
+            <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
+        </div>
 
-    <div class="sidebar_icons">
-        <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
-    </div>
+        <div class="sidebar_icons">
+            <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
+        </div>
 
-    <div class="sidebar_icons">
-        <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"></a>
-    </div>
+        <div class="sidebar_icons">
+            <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"></a>
+        </div>
 
 
 
@@ -65,4 +65,3 @@
 
 
 </body>
-        </html>

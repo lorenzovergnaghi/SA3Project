@@ -16,11 +16,14 @@ const login = require('connect-ensure-login');
 //   console.log('/upload:get');
 //   res.render('upload');
 // })
-router.get('/',
-  login.ensureLoggedIn(),
-  function(req, res){
-    res.render('upload');
-  });
+// router.get('/',
+//   login.ensureLoggedIn(),
+//   function(req, res){
+//     res.render('upload');
+//   });
+router.get('/',function(req,res){
+  res.render('upload');
+});
 
 
 router.post('/',function(req, res){
