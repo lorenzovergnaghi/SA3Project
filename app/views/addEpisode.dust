@@ -48,36 +48,13 @@
     <div class='maincontent_upload'>
   </br></br>
 </br></br>
-  <form id="upload-form" action="/upload" enctype="multipart/form-data" method="post">
-    <input name='path' type='text'>
-    <input id="upload-form-file" type="file" name="file" multiple="multiple"><br>
-    <input type="submit" name="submit">
-    </form>
-        <form action="upload" method="POST">
-            <input type="file" multiple>
-            <p>Drag your files here or click in this area.</p>
-            <button type="submit">Upload</button>
-        </form>
+  INSERIRE DUST QUI
+  {name}
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     </div>
     <!--===========================Sidebar====================================================================-->
-    <div class="sidebar">
-        <div class="sidebar_icons">
-            <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
-        </div>
-
-        <div class="sidebar_icons">
-            <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
-        </div>
-
-        <div class="sidebar_icons">
-            <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"></a>
-        </div>
-
-
-
-    </div>
+  
 
 </main>
 

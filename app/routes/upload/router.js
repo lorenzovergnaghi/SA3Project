@@ -15,12 +15,28 @@ const Saga = mongoose.model('Saga');
 const login = require('connect-ensure-login');
 
 
-router.get('/addep',//login.ensureLoggedIn(),
+router.get('/addep',login.ensureLoggedIn(),
 function(req,res){
   res.render('home');
 })
+router.post('/addep',login.ensureLoggedIn(),
+function(req,res){
+  console.log(req.body);
+  Saga.findById(req.body.sagaid,function(err, found){
+      if (err) {
+        res.status(404).end();
+        return
+      }else {
+        if(found){
+          console.log(found);
+          res.render('addEpisode',found);
+        }
+      }
+    });
 
-router.get('/newsaga',//login.ensureLoggedIn(),
+})
+
+router.get('/newsaga',login.ensureLoggedIn(),
 function(req,res){
   res.render('newSaga');
 })
@@ -42,7 +58,7 @@ router.post('/newsaga',function(req,res){
 
 
 router.get('/',
-  // login.ensureLoggedIn(),
+   login.ensureLoggedIn(),
   function(req, res){
 
     //push one new saga
