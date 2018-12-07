@@ -16,7 +16,17 @@ const url	= require('url');
 
 
 router.get('/', function(req, res){
-  res.status(302,{'Location':'localhost:3000/login'})
+  // let fakeU = new User({username:'s',password:"s"});
+  // fakeU.save(function(err,done){
+  //   if(err){
+  //     console.log('err saving fakeu');
+  //     res.redirect('/');
+  //   }else{
+  //     console.log('savedfakeu');
+  //     res.redirect('/');
+  //   }
+  // })
+  res.redirect('/login');
 });
 
 router.post('/',function(req,res){
