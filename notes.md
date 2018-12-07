@@ -6,7 +6,8 @@ Login module:
 	working
 	missing:
 		register new users
-	3 tentativi per la password -> reimposta password via email
+	-3 tentativi per la password -> reimposta password via email
+	-Aggiungere : onDisconnect => login.logOut();y
 Video Snapshots:
 	save a clip (episode:startClip to endClip)
 	to watch later;

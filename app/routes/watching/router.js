@@ -1,4 +1,4 @@
-/** @module favorite/router */
+/** @module favorite/watching */
 'use strict';
 
 const http = require('http');

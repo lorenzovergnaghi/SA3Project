@@ -10,47 +10,77 @@ const router = express.Router();
 
 require('../../models/episode');
 const Episode = mongoose.model('Episode');
+require('../../models/saga');
+const Saga = mongoose.model('Saga');
 const login = require('connect-ensure-login');
 
-// router.get('/', function(req, res){
-//   console.log('/upload:get');
-//   res.render('upload');
-// })
-// router.get('/',
-//   login.ensureLoggedIn(),
-//   function(req, res){
-//     res.render('upload');
-//   });
-router.get('/',function(req,res){
-  res.render('upload');
+
+router.get('/addep',//login.ensureLoggedIn(),
+function(req,res){
+  res.render('home');
+})
+
+router.get('/newsaga',//login.ensureLoggedIn(),
+function(req,res){
+  res.render('newSaga');
+})
+router.post('/newsaga',function(req,res){
+  console.log(req.body);
+  let incomingSaga = new Saga({name:req.body.sagaName});
+  console.log(incomingSaga);
+  incomingSaga.save(function(err,saved){
+    if (err) {
+      console.log('Error creating new Saga');
+      res.redirect('/upload/newSaga');
+    }else {
+      console.log('saved new saga');
+      console.log(saved);
+      res.redirect('/upload');
+    }
+  });
 });
 
 
+router.get('/',
+  // login.ensureLoggedIn(),
+  function(req, res){
+
+    //push one new saga
+    // let fakeSaga = new Saga({name:'afroSamu'});
+    // fakeSaga.save(function (err, saved) {
+    //   if (err) {
+    //     console.log("err .save");
+    //   }else {
+    // console.log('saved!');
+    // console.log(1);
+      Saga.find({},function(err,foundAll){//FIX non funge piu il DB
+          if (err) {
+            res.render('upload');
+          }else {
+            let mod = {
+              x : foundAll
+            }
+            console.log(mod);
+            res.render('upload',mod);
+          }});
+    //   }
+    // });
+  });
+
+
 router.post('/',function(req, res){
-  // console.log('POSTING');
-
   var folderPath = './public/storage/';
-
   var nname;
   var npath;
-
   var form = new formidable.IncomingForm();
-
   form.on('field',function(name,value){
-    // console.log('field name: ' + name);
-    // console.log('field value: ' + value);
   });
   form.on('progress', function(bytesReceived, bytesExpected) {
-    // console.log(bytesReceived, bytesExpected);
   });
   form.on('fileBegin', function(name, file) {
-    // console.log('file.path = ' +file.path);
 		file.path = folderPath+file.name;
-    // console.log('file.path2 = ' +file.path);
     nname = file.name;
     npath = file.path;
-    // console.log('nname = '+nname);
-    // console.log('npath = '+npath);
   });
   form.on('end',function(err){
     if (err) {
@@ -91,38 +121,6 @@ router.post('/',function(req, res){
   });
 });
 
-// function readURL(input) {
-//   if (input.files && input.files[0]) {
-//
-//     var reader = new FileReader();
-//
-//     reader.onload = function(e) {
-//       $('.image-upload-wrap').hide();
-//
-//       $('.file-upload-image').attr('src', e.target.result);
-//       $('.file-upload-content').show();
-//
-//       $('.image-title').html(input.files[0].name);
-//     };
-//
-//     reader.readAsDataURL(input.files[0]);
-//
-//   } else {
-//     removeUpload();
-//   }
-// }
-//
-// function removeUpload() {
-//   $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-//   $('.file-upload-content').hide();
-//   $('.image-upload-wrap').show();
-// }
-// $('.image-upload-wrap').bind('dragover', function () {
-//   $('.image-upload-wrap').addClass('image-dropping');
-// });
-// $('.image-upload-wrap').bind('dragleave', function () {
-//   $('.image-upload-wrap').removeClass('image-dropping');
-// });
 
 
 /** router for /upload */
