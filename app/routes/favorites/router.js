@@ -21,7 +21,7 @@ const login = require('connect-ensure-login');
 //     res.render('home');
 //   });
 router.get('/',function(req,res){
-    res.render('home');
+    res.render('favorites');
 });
 
 

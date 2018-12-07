@@ -46,9 +46,6 @@
     <!--===========================Maincontent-Upload====================================================================-->
 
     <div class='maincontent_upload'>
-    {#x}
-      <p>{.name}</p>
-    {/x}
   </br></br>
 </br></br>
   <form id="upload-form" action="/upload" enctype="multipart/form-data" method="post">
