@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>SA3Project</title>
 </head>
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-    <script src="js/views.js"></script>
-    <script src="js/fetch.js"></script>
-<body onload="init()">
+<script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="../js/views.js"></script>
+    <script src="../js/fetch.js"></script>
+<body>
   <header class="header" id="abcdefg">
     UGLY DEMO
   </header>
@@ -20,7 +20,7 @@
     <form method="POST" action="/upload/newsaga">
 
         <input  type="text" name="sagaName" placeholder="NEW SAGA NAME"><br>
-
+        <input type="file" name="image" accept="image/png, image/jpeg"></br>
         <button class="button" type="submit">SUBMIT NEW SAGA</button>
     </form>
 

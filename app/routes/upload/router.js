@@ -39,36 +39,37 @@ function(req,res){
 router.get('/newsaga',login.ensureLoggedIn(),
 function(req,res){
   res.render('newSaga');
-})
-router.post('/newsaga',function(req,res){
-  console.log(req.body);
-  let incomingSaga = new Saga({name:req.body.sagaName});
-  console.log(incomingSaga);
-  incomingSaga.save(function(err,saved){
-    if (err) {
-      console.log('Error creating new Saga');
-      res.redirect('/upload/newSaga');
-    }else {
-      console.log('saved new saga');
-      console.log(saved);
-      res.redirect('/upload');
-    }
-  });
 });
+router.post('/newsaga',function(req, res){
+  console.log('POSTING '+JSON.stringify(req.body));
+  var sagaform = new formidable.IncomingForm();
+  sagaform.parse(req, (err, fields, files)=>{
+    console.log(err, fields, files);
+    res.status(200).end();
+  });
+  console.log(sagaform.file);
+  res.status(200).end();
+});
+// router.post('/newsaga',function(req,res){
+//   console.log(req.body);
+//   let incomingSaga = new Saga({name:req.body.sagaName});
+//   console.log(incomingSaga);
+//   incomingSaga.save(function(err,saved){
+//     if (err) {
+//       console.log('Error creating new Saga');
+//       res.redirect('/upload/newSaga');
+//     }else {
+//       console.log('saved new saga');
+//       console.log(saved);
+//       res.redirect('/upload');
+//     }
+//   });
+// });
 
 
 router.get('/',
-   login.ensureLoggedIn(),
+   // login.ensureLoggedIn(),
   function(req, res){
-
-    //push one new saga
-    // let fakeSaga = new Saga({name:'afroSamu'});
-    // fakeSaga.save(function (err, saved) {
-    //   if (err) {
-    //     console.log("err .save");
-    //   }else {
-    // console.log('saved!');
-    // console.log(1);
       Saga.find({},function(err,foundAll){//FIX non funge piu il DB
           if (err) {
             res.render('upload');
@@ -79,8 +80,6 @@ router.get('/',
             console.log(mod);
             res.render('upload',mod);
           }});
-    //   }
-    // });
   });
 
 

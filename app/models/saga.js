@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const SagaSchema = new mongoose.Schema(
   {
     name : {type: String, required : true},
-    files : {type:[String], required : false}
+    files : {type:[String], required : false},
+    image : {type:String, required:true}
   }
 );
 mongoose.model('Saga', SagaSchema);
