@@ -3,16 +3,16 @@
 
 <html>
 <head>
-    <link href="styles/SiteStyle.css" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png">
     <title>WorkInProgress's Homepage</title>
 
 </head>
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-<script src="js/views.js"></script>
-<script src="js/fetch.js"></script>
-<script src="main.js"></script>
-<script  src="js/upload.js"></script>
+<script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+<script src="../js/views.js"></script>
+<script src="../js/fetch.js"></script>
+<script src="../main.js"></script>
+
 
 <body>
 <!--total body div-->
@@ -48,13 +48,21 @@
     <div class='maincontent_upload'>
   </br></br>
 </br></br>
-  INSERIRE DUST QUI
-  {name}
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <p style="color:white;">{name}</p>
+  <image src=".{image}" style="width:200; height:130;"></image>
+    <form method="POST", action="/upload" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{_id}">
+    <input type="file" name="file" multiple>
+    <input type="submit">
+  </form>
+  {files}
 
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     </div>
     <!--===========================Sidebar====================================================================-->
-  
+
 
 </main>
 

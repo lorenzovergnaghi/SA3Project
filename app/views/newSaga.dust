@@ -17,10 +17,9 @@
 
 
 
-    <form method="POST" action="/upload/newsaga">
-
+    <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
         <input  type="text" name="sagaName" placeholder="NEW SAGA NAME"><br>
-        <input type="file" name="image" accept="image/png, image/jpeg"></br>
+        <input type="file" name="file" accept="image/png, image/jpeg"></br>
         <button class="button" type="submit">SUBMIT NEW SAGA</button>
     </form>
 
