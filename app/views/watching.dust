@@ -1,34 +1,76 @@
-<!-- DON'T MODIFY THIS FILE -->
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>SA3Project</title>
-    <script src="../js/watching.js"></script>
+  <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+  <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+  <script src="../js/views.js"></script>
+  <script src="../js/fetch.js"></script>
+  <script src="../main.js"></script>
+  <script src="../js/watching.js"></script>
+  <title>WorkInProgress's Homepage</title>
 </head>
 
-
-
-
 <body>
-  <header class="header" id="abcdefg">
-    UGLY DEMO
+<!--total body div-->
+
+<!--header div-->
+  <header>
+    <h1 class="Title">WorkInProgress</h1>
+    <img src="../animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+    <h1 class="current_Page">Watching</h1>
+
+
+
   </header>
-  <div class='main'>
-    <div class="main_content">
-      {#x}
-      {.name}</br>
-      {/x}
-      {#z}
-      {.name}
-      <video style="max-width:300px; max-height:200px;" controls class="bigone" src="../{.file}"></video>
-      {/z}
-      {#y}
-      <button onclick="setWatching('../{.file}')">Watch {.name}</button>
-      {/y}
+
+  <main>
+
+<!--===========================NavigationBar====================================================================-->
+
+      <nav class="navigation">
+        <ul>
+          <li><a href="../home"><b>Home </b></a></li>
+          <li><a href="../upload"><b> Upload   </b></a></li>
+          <li><a href="../favorites"><b>Favorites</b></a></li>
+          <li><a href="../picture.html"><b>Pictures </b></a></li>
+
+        </ul>
+      </nav>
+
+
+    <div class="maincontent_watching">
+
+        {#x}
+        <h3 class="">{.name}</h3>
+        {/x}
+        {#z}
+        {.name}<br/>
+        <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+        {/z}
+        {#y}
+        <button  class="next_episodes" onclick="setWatching('../{.file}')">Watch {.name}</button><br/>
+        {/y}
 
     </div>
-  </div>
+
+    <div class="sidebar">
+      <div class="sidebar_icons">
+        <a href="" target="_blank"><img  src="../animeImages/favorites.png" alt="Facebook"/></a>
+      </div>
+
+      <div class="sidebar_icons">
+        <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="../animeImages/favorites.png" alt="Instagram"/></a>
+      </div>
+
+      <div class="sidebar_icons">
+        <a href="https://twitter.com" target="_blank"><img  src="../animeimages/twitter.png" alt="Twitter"/></a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; WorkInProgress	</p>
+  </footer>
 </body>
 
 </html>

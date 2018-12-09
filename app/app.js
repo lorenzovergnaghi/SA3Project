@@ -65,7 +65,7 @@ app.use('/login', routers.login);
 app.use('/home', routers.home);
 app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
-
+app.use('/search', routers.search);
 
 
 

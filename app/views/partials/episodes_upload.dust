@@ -1,0 +1,7 @@
+{#x}
+<form method="POST" action="/upload/addep">
+    <input  type="hidden" name="sagaid" value="{._id}"><br>
+    <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="100" width="150">
+    <button class="button" type="submit">EDIT {.name}</button>
+</form>
+{/x}

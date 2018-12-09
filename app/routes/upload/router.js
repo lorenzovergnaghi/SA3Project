@@ -19,20 +19,11 @@ router.get('/addep',
 login.ensureLoggedIn(),
 function(req,res){
   res.render('home');
-});
-
-router.get("/addep"),
-    login.ensureLoggedIn(),
-    function(req,res){
-  res.render ("addEpisode")
-};
-
-
+})
 
 router.post('/addep',
 login.ensureLoggedIn(),
 function(req,res){
-  console.log(req.body);
   Saga.findById(req.body.sagaid,function(err, found){
       if (err) {
         res.status(404).end();
@@ -90,30 +81,14 @@ function(req, res){
           res.redirect('/upload');
         }
       });
-
   });
 });
-// router.post('/newsaga',function(req,res){
-//   console.log(req.body);
-//   let incomingSaga = new Saga({name:req.body.sagaName});
-//   console.log(incomingSaga);
-//   incomingSaga.save(function(err,saved){
-//     if (err) {
-//       console.log('Error creating new Saga');
-//       res.redirect('/upload/newSaga');
-//     }else {
-//       console.log('saved new saga');
-//       console.log(saved);
-//       res.redirect('/upload');
-//     }
-//   });
-// });
 
 
 router.get('/',
    login.ensureLoggedIn(),
   function(req, res){
-      Saga.find({},function(err,foundAll){//FIX non funge piu il DB
+      Saga.find({},function(err,foundAll){
           if (err) {
             res.render('upload');
           }else {
@@ -143,11 +118,10 @@ function(req, res){
   });
   form.on('end',function(err){
     if (err) {
-      console.log('err end');
+      // console.log('err end');
     }else {
-      console.log('saved all');
-      res.status(304,{'Location':'http://localhost:3000'});
-      res.end();
+      // console.log('saved all');
+      res.redirect('/upload');
     }
   });
   form.on('error',function(err){
@@ -162,8 +136,7 @@ function(req, res){
   form.multiples = true;
   form.parse(req, (err, fields, files)=>{
 
-    // console.log(util.inspect({fields: fields, files: files}));
-    // console.log(fields);
+// TODO: files.file e' un array NON SORTATO
     files.file.forEach((el)=>{
       // console.log(el);
       Saga.findById(fields.id,function(err, found) {
@@ -171,8 +144,6 @@ function(req, res){
             res.status(404).end();
           } else {
             let incomingEp = new Episode({name:el.name , bookmarked:false, file : el.path.replace('./public', '.')});
-            // console.log(found);
-            // console.log(incomingEp);
             found.episodes.push(incomingEp);
             console.log(found);
             found.save(function (err, saved) {
@@ -185,19 +156,7 @@ function(req, res){
             });
           }
       });
-      // console.log('KAKAKAkA');
-      // let incomingEp = new Episode({name:el.name , bookmarked:false, file : el.path.replace('./public', '.')});
-      // console.log(incomingEp);
-      // incomingEp.save(function (err, saved) {
-      //   if (err) {
-      //     console.log("err .save");
-      //     res.status(500).end();
-      //   }else {
-      //     console.log('saved | '+el.name);
-      //   }
-      // });
     });
-
   });
 });
 
