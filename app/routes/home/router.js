@@ -12,6 +12,7 @@ const http = require('http');
 const url	= require('url');
 require('../../models/saga');
 const Saga = mongoose.model('Saga');
+const login = require('connect-ensure-login');
 
 
 
@@ -20,14 +21,15 @@ const Saga = mongoose.model('Saga');
 //   function(req, res){
 //     res.render('home');
 //   });
-router.get('/',function(req,res){
+router.get('/',
+login.ensureLoggedIn(),
+function(req,res){
   Saga.find({},function(err, found){
       if (err) {
         res.status(404).end();
         return
       }else {
         if(found){
-          console.log(found);
           res.render('home',{x:found});
         }
       }
