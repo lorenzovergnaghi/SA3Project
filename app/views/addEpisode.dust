@@ -11,7 +11,7 @@
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-    <script  src="js/upload.js"></script>
+    <script  src="../js/upload.js"></script>
 
     <title>WorkInProgress's Homepage</title>
 
@@ -31,21 +31,21 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b>Home </b></a></li>
-                <li><a href="upload"><b>Upload</b></a></li>
-                <li><a href="favorites"><b>Favorites</b></a></li>
+                <li><a href="../home"><b>Home </b></a></li>
+                <li><a href="../upload"><b>Upload</b></a></li>
+                <li><a href="../favorites"><b>Favorites</b></a></li>
                 <li><a href="picture.html"><b>Pictures</b></a></li>
 
             </ul>
         </nav>
     <!--===========================Maincontent-Upload====================================================================-->
 
-        <div class='maincontent_upload'>
+        <div class='maincontent'>
             <br/>
             <br/>
             <p style="color:white;">{name}</p>
             <image src=".{image}" style="width:200px"/>
-            <form method="POST" action="/upload" enctype="multipart/form-data">
+            <form  class="upload_form" method="POST" action="/upload" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="{_id}"/>
                 <input type="file" name="file" multiple=""/>
                 <input type="submit"/>

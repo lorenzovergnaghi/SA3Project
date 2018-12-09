@@ -19,7 +19,16 @@ router.get('/addep',
 login.ensureLoggedIn(),
 function(req,res){
   res.render('home');
-})
+});
+
+router.get("/addep"),
+    login.ensureLoggedIn(),
+    function(req,res){
+  res.render ("addEpisode")
+};
+
+
+
 router.post('/addep',
 login.ensureLoggedIn(),
 function(req,res){
