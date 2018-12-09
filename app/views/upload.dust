@@ -1,90 +1,86 @@
-
-
-
 <html>
-
 <head>
 
-    <link href="styles/SiteStyle.css" rel="stylesheet"/>
-
-    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png">
     <title>WorkInProgress's Homepage</title>
 
-    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-    <script src="js/views.js"></script>
-    <script src="js/fetch.js"></script>
-    <script src="main.js"></script>
-    <script  src="js/upload.js"></script>
-
 </head>
+<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+<script src="js/views.js"></script>
+<script src="js/fetch.js"></script>
+<script src="main.js"></script>
+<script  src="js/upload.js"></script>
 
 <body>
+<!--total body div-->
 
-    <header>
-        <h1 class="Title"> WorkInProgress </h1>
-        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-        <h1 class="current_Page"> Upload   </h1>
-    </header>
+<!--header div-->
+<header>
 
-    <main>
+
+    <h1 class="MyName">WorkInProgress</h1>
+    <img src="animeImages/logoonepiece.png"  class="usilogo" align="left">
+    <h1 class="HomePage">Upload </h1>
+
+
+
+
+</header>
+
+<main>
 
     <!--===========================NavigationBar====================================================================-->
-        <nav class="navigation">
-            <ul>
-                <li><a href="home"><b>Home </b></a></li>
-                <li><a href="upload"><b> Upload   </b></a></li>
-                <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="picture.html"><b>Pictures </b></a></li>
 
-            </ul>
-        </nav>
+    <nav class="navigation">
+        <ul>
+            <li><a href="home"><b>Home </b></a></li>
+            <li><a href="upload"><b> Upload   </b></a></li>
+            <li><a href="favorites"><b>Favorites</b></a></li>
+            <li><a href="picture.html"><b>Pictures </b></a></li>
+
+        </ul>
+    </nav>
     <!--===========================Maincontent-Upload====================================================================-->
 
-        <div class='maincontent'>
-            <!--questo bottone ridirige a /upload/newsaga-->
-            {#x}
-                <div class="flex-item">
-                    <form method="POST" action="upload/addep">
+    <div class='maincontent_upload'>
+        <a style="color:red;" href="/upload/newsaga">CREATE NEW SAGA</a>
+        {#x}
+        <form method="POST" action="/upload/addep">
+            <input  type="hidden" name="sagaid" value="{._id}"><br>
+            <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="100" width="150">
+            <button class="button" type="submit">EDIT {.name}</button>
+        </form>
+        {/x}
+    </br></br>
+</br></br>
 
-                        <input  type="hidden" name="sagaid" value="{._id}"/><br/>
-                        {.name}<br/>
-                        <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="100" width="150"/><br/>
-                        <button class="button" type="submit">EDIT {.name}</button>
-                    </form>
-                </div>
-            {/x}<br/>
-
-                <form method="GET" action="">
-                    <button class="" type="submit" >
-                        <img src="animeImages/gh.png"  height="100" width="100"/><br/>
-                    </button>
-                </form>
-            <br/>
-            <br/>
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
         </div>
-    <!--===========================Sidebar====================================================================-->
-        <div class="sidebar">
-            <div class="sidebar_icons">
-                <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
-            </div>
+        <!--===========================Sidebar====================================================================-->
+<div class="sidebar">
+<div class="sidebar_icons">
+    <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
+</div>
 
-            <div class="sidebar_icons">
-                <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
-            </div>
+<div class="sidebar_icons">
+    <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
+</div>
 
-            <div class="sidebar_icons">
-                <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; WorkInProgress	</p>
-    </footer>
+<div class="sidebar_icons">
+    <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"></a>
+</div>
 
 
-</body>
 
-</html>
+</div>
+
+        </main>
+
+<footer/>
+<p>&copy; WorkInProgress </p>
+        </footer>
+
+
+        </body>
+        </html>

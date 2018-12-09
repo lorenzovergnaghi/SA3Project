@@ -1,207 +1,20 @@
-/*#################################################################################################################*/
-/*                                        this is the query for mobile                                             */
-/*#################################################################################################################*/
-
-@media (max-width: 768px) {
-
-html {
-  height: 100%;
+ar_icons img{
+  width: 35%;
+  padding-top:  3%;
+  padding-bottom: 3%
 }
 
-  body{
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-  "header"
-  "core"
-  "footer";
-  min-height: 100%;
+footer{
+  grid-area: footer;
+  background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+  border-radius:10px ;
   text-align: center;
-  background-image: url("/animeImages/sss.jpg");
-  }
-
-/*########################-Header-###############################################*/
-  header {
-    position: relative;
-    display: flex;
-    /*justify-content: center;*/
-    flex-direction: column;
-    border-radius: 10px;
-    max-height: 100px;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    background-color: rgba(0,0,0,0.5);
-    margin: 5px;
-
-  }
-
-   .Title {
-    font-size: 150%;
-    position: relative;
-    background: -webkit-linear-gradient(goldenrod,orange,gold,goldenrod,gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-     z-index: 0;
-  }
-
-   .current_Page{
-     position: relative;
-     bottom: 45px;
-    font-size: 275%;
-    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-     z-index: 0;
-  }
-
-  .usilogo {
-  display: none;
-  }
-
-
-
-
-/*#######################################################################*/
-content {
-  grid-area: core;
-  grid-template-areas:
-  "nav"
-  "main"
-  "sidebar";
-  grid-template-rows: auto auto auto;
-  display: grid;
+  box-shadow: 0 0 15px 8px #0a0511;
+  border-radius: 10px;
+}
 
 
 }
-/*############################-Navigation bar-###########################*/
-  .navigation {
-    grid-area: nav;
-    box-shadow: 0 0 10px 8px #0a0511 ;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.5);
-    margin: 5px;
-  }
-  .navigation ul {
-    display: flex;
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
-    padding: 0 1em;
-    justify-content: space-around;
-
-  }
-
-  .navigation ul{
-    list-style-type: none;
-    text-align: center;
-    padding-right: 10px;
-  }
-
-  .navigation ul li{
-    font-size: 12px;
-  }
-
-  .navigation ul li a{
-    display: block;
-    color: orange;
-
-  }
-
-  .navigation li a:link {
-      text-decoration: none;
-      padding: 0px 10px 0px 10px;
-  }
-
-  .navigation li a:hover {
-      background-color: goldenrod;
-      border-radius: 10px;
-      color: black;
-
-  }
-  /*====================================================================*/
-  /*====================================================================*/
-
-
-
-
-/*############################-maincontent-###########################*/
-
-  .maincontent{
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin:5px;
-    background: rgba(0,0,0,0.5);
-      padding: 0;
-      margin: 0;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      justify-content: space-around;
-
-    }
-
-
-  .flex-item{
-      margin: 10px;
-  }
-  /*====================================================================*/
-  /*====================================================================*/
-
-
-
-/*############################-Sidebar-###########################*/
-
-  .sidebar{
-    grid-area: sidebar;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    margin: 10px 5px;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:  center;
-    max-height: 50px;
-  }
-
-  .sidebar_icons{
-    opacity: 0.75;
-    transition: 0.20s;
-    width: 25%;
-    height: 25%;
-  }
-    .sidebar_icons:hover{
-      opacity: 1;
-  }
-
-  .sidebar_icons img{
-    width: 35%;
-    padding-top:  3%;
-    padding-bottom: 3%
-  }
-  /*====================================================================*/
-  /*====================================================================*/
-
-  /*==============================Footer===========================*/
-  footer{
-    grid-area: footer;
-    background: rgba(0,0,0, 0.5);
-    border-radius:10px ;
-    text-align: center;
-    box-shadow: 0 0 15px 8px #0a0511;
-    border-radius: 10px;
-    color: gold;
-    margin: 5px;
-  }
-
-
-}
-/*====================================================================*/
-/*====================================================================*/
-
 /*#################################################################################################################*/
 /*                                    this is the query for desktop                                                */
 /*#################################################################################################################*/
@@ -378,9 +191,11 @@ content {
   .sidebar_icons:hover {
     opacity: 1;
   }
-  /*++++++++++++++++++++++++++++++++++++++++++++main-content******************************************************************/
-  /*++++++++++++++++++++++++++++++++++++++++++++main-content*****************************************************************/
-  .maincontent{
+  /*++++++++++++++++++++++++++++++++++++++++++++Upload-Style******************************************************************/
+  /*++++++++++++++++++++++++++++++++++++++++++++U
+
+pload-Style*****************************************************************/
+  .maincontent_upload{
     background: rgba(0,0,0,0.5);
     grid-area: main;
     box-shadow: 0 0 8px 8px #0a0511 ;
@@ -388,25 +203,8 @@ content {
     margin-top: 20px;
     margin-bottom: 13px;
     margin-left: 20px;
-    padding: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-
   }
-
-
-  .flex-item{
-    margin: 10px;
-  }
-
-    /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
-    /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
-  .upload_form{
+  form{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -416,7 +214,7 @@ content {
     height: 200px;
     border: 4px dashed #fff;
   }
-    .upload_form p{
+  form p{
     width: 100%;
     height: 100%;
     text-align: center;
@@ -424,7 +222,7 @@ content {
     color: #ffffff;
     font-family: Arial;
   }
-    .upload_form input{
+  form input{
     position: absolute;
     margin: 0;
     padding: 0;
@@ -433,7 +231,7 @@ content {
     outline: none;
     opacity: 0;
   }
-    .upload_form button{
+  form button{
     margin: 0;
     color: #fff;
     background: #16a085;
@@ -447,11 +245,11 @@ content {
     transition: all .2s ease;
     outline: none;
   }
-    .upload_form button:hover{
+  form button:hover{
     background: #149174;
     color: #0C5645;
   }
-    .upload_form button:active{
+  form button:active{
     border:0;
   }
 
@@ -462,7 +260,7 @@ content {
     background: rgba(0,0,0, 0.5);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 8px 8px #0a0511 ;
+    box-shadow: 0 0 15px 8px #0a0511;
     border-radius: 10px;
     color: gold;
   }
