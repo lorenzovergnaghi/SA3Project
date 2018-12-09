@@ -1,32 +1,64 @@
-<!-- DON'T MODIFY THIS FILE -->
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <title>SA3Project</title>
-</head>
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+
+    <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
+</head>
+
 <body onload="init()">
+
   <header class="header" id="abcdefg">
-    UGLY DEMO
+      <h1 class="Title">WorkInProgress</h1>
+      <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+      <h1 class="current_Page">Favourites</h1>
   </header>
-  <div class='main'>
-    <div class="main_content">
 
+  <main>
+      <!--===========================NavigationBar====================================================================-->
 
+      <nav class="navigation">
+          <ul>
+              <li><a href="home"><b>Home </b></a></li>
+              <li><a href="upload"><b> Upload   </b></a></li>
+              <li><a href="favorites"><b>Favorites</b></a></li>
+              <li><a href="picture.html"><b> Pictures </b></a></li>
 
-    <form method="POST" action="/upload/newsaga">
+          </ul>
+      </nav>
 
-        <input  type="text" name="sagaName" placeholder="NEW SAGA NAME"><br>
+      <div class="maincontent">
 
-        <button class="button" type="submit">SUBMIT NEW SAGA</button>
-    </form>
+          <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
+              <input  type="text" name="sagaName" placeholder="NEW SAGA NAME"/><br/>
+              <input type="file" name="file" accept="image/png, image/jpeg"/><br/>
+              <button class="button" type="submit">SUBMIT NEW SAGA</button>
+          </form>
 
 
     </div>
-  </div>
+      <div class="sidebar">
+          <div class="sidebar_icons">
+              <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
+          </div>
+
+          <div class="sidebar_icons">
+              <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
+          </div>
+
+          <div class="sidebar_icons">
+              <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
+          </div>
+      </div>
+  </main>
+
+  <footer>
+  <p>&copy; WorkInProgress	</p>
+  </footer>
+
 </body>
 
 </html>

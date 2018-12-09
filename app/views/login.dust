@@ -1,14 +1,15 @@
 <html>
 <head>
     <title>SA3Project || Login </title>
-    <link type= "text/css"rel="stylesheet" href="styles/loginStyle.css">
-</head>
-
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <link type= "text/css"rel="stylesheet" href="styles/loginStyle.css"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-  <script src="js/login.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+
 
 
 <body style="background-color:grey;"  onload="load()">
@@ -17,8 +18,8 @@
         <a class="brand" href="">WorkInProgress WA3</a>
 
     <ul class="left">
-        <li><input id="check" class="btn" type="button" onclick="check()" value=""></li>
-        <li><input class="btn" type="submit" target="about.php" value="About"></li>
+        <li><input id="check" class="btn" type="button" onclick="check()" value=""/></li>
+        <li><input class="btn" type="submit" target="about.php" value="About"/></li>
     </ul>
 </div>
 
@@ -29,13 +30,13 @@
       <form method="POST" action="/login">
 
           <label for="email">User Name &nbsp;&nbsp;&nbsp;</label>
-          <input  type="text" class="box" name="username" id="email" value=""placeholder="USERNAME"><br>
-          <p style="color:red;" id="error"><br></p>
+          <input  type="text" class="box" name="username" id="email" value=""placeholder="USERNAME"/><br/>
+          <p style="color:red;" id="error"><br/></p>
 
           <label for="password">Password &nbsp;&nbsp;&nbsp;</label>
-          <input type="text"  class="box" name="password" id="password" value=""placeholder="Password"><br><br><br>
+          <input type="text"  class="box" name="password" id="password" value="" placeholder="Password"/><br/><br/><br/>
 
-          <input class="button" type="button" value="Register &nbsp;" onclick="register()">
+          <input class="button" type="button" value="Register &nbsp;" onclick="register()"/>
 
           <button class="button" type="submit">LOGIN</button>
       </form>
@@ -45,20 +46,20 @@
     <div class="boxx" id="register">
       <form method="POST" action="/register">
         <label for-="lname">User Name &nbsp;&nbsp;&nbsp;</label>
-        <input class="box" type="text" name="lname" id="lname" value=""placeholder="Last Name"><br><br><br>
+        <input class="box" type="text" name="lname" id="lname" value="" placeholder="Last Name"/><br/><br/><br/>
 
         <label for="email">Email ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input class="box" type="email" name="email" id="email" value=""placeholder="Email ID"><br><br><br>
+        <input class="box" type="email" name="email" id="email" value="" placeholder="Email ID"/><br/><br/><br/>
 
         <label for="password">Password &nbsp;&nbsp;&nbsp;</label>
-        <input class="box" type="text" name="password" id="password" value=""placeholder="Password"><br><br><br>
+        <input class="box" type="text" name="password" id="password" value="" placeholder="Password"/><br/><br/><br/>
 
         <label for="password">Confirm &nbsp;&nbsp;&nbsp;</label>
-        <input class="box" type="text" name="password" id="password" value=""placeholder="Password"><br><br><br>
+        <input class="box" type="text" name="password" id="password" value="" placeholder="Password"/><br/><br/><br/>
 
-        <input class="button" type="button" value="Login" onclick="login()">
+        <input class="button" type="button" value="Login" onclick="login()"/>
 
-        <input class="button" type="submit" value="Submit">
+        <input class="button" type="submit" value="Submit"/>
       </form>
     </div>
 

@@ -1,4 +1,4 @@
-SETUP:
+ safSETUP:
 go to
  https://github.com/lorenzovergnaghi/SA3Project
 clone the repository

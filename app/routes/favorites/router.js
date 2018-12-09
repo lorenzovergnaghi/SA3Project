@@ -20,7 +20,9 @@ const login = require('connect-ensure-login');
 //   function(req, res){
 //     res.render('home');
 //   });
-router.get('/',function(req,res){
+router.get('/',
+login.ensureLoggedIn(),
+function(req,res){
     res.render('favorites');
 });
 

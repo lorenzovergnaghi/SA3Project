@@ -1,0 +1,34 @@
+<!-- DON'T MODIFY THIS FILE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SA3Project</title>
+    <script src="../js/watching.js"></script>
+</head>
+
+
+
+
+<body>
+  <header class="header" id="abcdefg">
+    UGLY DEMO
+  </header>
+  <div class='main'>
+    <div class="main_content">
+      {#x}
+      {.name}</br>
+      {/x}
+      {#z}
+      {.name}
+      <video style="max-width:300px; max-height:200px;" controls class="bigone" src="../{.file}"></video>
+      {/z}
+      {#y}
+      <button onclick="setWatching('../{.file}')">Watch {.name}</button>
+      {/y}
+
+    </div>
+  </div>
+</body>
+
+</html>
