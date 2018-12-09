@@ -3,124 +3,88 @@
 /*#################################################################################################################*/
 
 @media (max-width: 768px) {
-html {
-  height: 100%;
-}
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: url("/animeImages/sss.jpg");
-}
+  html {
+    height: 100%;
+  }
 
   body{
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-  "header"
-  "content"
-  "footer";
-  min-height: 100%;
-  text-align: center;
-}
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+            "header"
+            "core"
+            "footer";
+    min-height: 100%;
+    text-align: center;
+    background-image: url("/animeImages/sss.jpg");
+  }
 
-/*########################-Header-###############################################*/
-
+  /*########################-Header-###############################################*/
   header {
     position: relative;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-direction: column;
-    align-content: center;
-    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
     border-radius: 10px;
     max-height: 100px;
-    box-shadow: 0 0 15px 8px #0a0511;
+    box-shadow: 0 0 8px 8px #0a0511 ;
+    background-color: rgba(0,0,0,0.5);
+    margin: 5px;
 
   }
 
-   .MyName {
+  .Title {
     font-size: 150%;
-    z-index: 1;
     position: relative;
-    bottom: 10px;
     background: -webkit-linear-gradient(goldenrod,orange,gold,goldenrod,gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    z-index: 0;
   }
 
-   .HomePage {
+  .current_Page{
+    position: relative;
+    bottom: 45px;
     font-size: 275%;
-    margin-bottom: 20px;
-    position: relative;
-    bottom: 58px;
-    z-index: 1;
     background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    z-index: 0;
   }
 
-  .BlogTitle{
-    text-align: center;
-    font-size: 180%;
-    position: relative;
-    bottom: 20px;
-    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .usilogo {
+    display: none;
   }
 
 
-  .usilogo1 {
-  width: 20%;
-  height: 100%;
-  /*border-radius: 50%;*/
-  box-shadow: 0 0 15px 8px #0a0511;
-  position: relative;
-  top: 25px;
 
 
-    }
+  /*#######################################################################*/
+  content {
+    grid-area: core;
+    grid-template-areas:
+            "nav"
+            "main"
+            "sidebar";
+    grid-template-rows: auto auto auto;
+    display: grid;
 
 
-.usilogo{
-
-  display: none;
-}
-
-
-/*#######################################################################*/
-main {
-  grid-template-areas:
-  "nav"
-  "main"
-  "sidebar";
-  grid-template-rows: auto auto auto;
-  display: grid;
-
-}
-/*############################-Navigation bar-###########################*/
+  }
+  /*############################-Navigation bar-###########################*/
   .navigation {
     grid-area: nav;
-    box-shadow: 0 0 15px 8px #0a0511;
+    box-shadow: 0 0 10px 8px #0a0511 ;
     border-radius: 10px;
-    background-color: rgba(22, 239, 224, 0.4);
-    padding: 0;
-    margin-top: 7px;
-
-
+    background-color: rgba(0,0,0,0.5);
+    margin: 5px;
   }
   .navigation ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     padding: 0 1em;
     justify-content: space-around;
 
@@ -143,42 +107,70 @@ main {
   }
 
   .navigation li a:link {
-      text-decoration: none;
-      padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    padding: 0px 10px 0px 10px;
   }
 
   .navigation li a:hover {
-      background-color: goldenrod;
-      border-radius: 10px;
-      color: black;
+    background-color: goldenrod;
+    border-radius: 10px;
+    color: black;
 
   }
-/*#######################################################################*/
-/*############################-maincontent-###########################*/
+  /*====================================================================*/
+  /*====================================================================*/
+
+
+
+
+  /*############################-maincontent-###########################*/
 
   .maincontent{
     grid-area: main;
-    box-shadow: 0 0 15px 8px #0a0511;
+    box-shadow: 0 0 8px 8px #0a0511 ;
     border-radius: 10px;
+    margin:5px;
+    background: rgba(0,0,0,0.5);
     padding: 0;
-    margin: 5px 0px 0px 0px;
-    }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
 
-/*#######################################################################*/
-/*############################-Sidebar-###########################*/
+  }
+
+
+  .flex-item{
+    margin: 10px;
+  }
+
+  .newSaga{
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  /*====================================================================*/
+  /*====================================================================*/
+
+
+
+  /*############################-Sidebar-###########################*/
 
   .sidebar{
     grid-area: sidebar;
-    box-shadow: 0 0 15px 8px #0a0511;
     border-radius: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    background-color: rgba(22, 239, 224, 0.4);
+    box-shadow: 0 0 8px 8px #0a0511 ;
+    margin: 10px 5px;
+    background: rgba(0,0,0,0.5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:  center;
-
+    max-height: 50px;
   }
 
   .sidebar_icons{
@@ -187,8 +179,8 @@ main {
     width: 25%;
     height: 25%;
   }
-    .sidebar_icons:hover{
-      opacity: 1;
+  .sidebar_icons:hover{
+    opacity: 1;
   }
 
   .sidebar_icons img{
@@ -196,18 +188,26 @@ main {
     padding-top:  3%;
     padding-bottom: 3%
   }
+/*====================================================================*/
+  /*====================================================================*/
 
+  /*==============================Footer===========================*/
   footer{
     grid-area: footer;
-    background: -webkit-linear-gradient(-45deg,#000101,#012845,#019ECE,#012845,#000101);
+    background: rgba(0,0,0, 0.5);
     border-radius:10px ;
     text-align: center;
     box-shadow: 0 0 15px 8px #0a0511;
     border-radius: 10px;
+    color: gold;
+    margin: 5px;
   }
 
 
 }
+/*====================================================================*/
+/*====================================================================*/
+
 /*#################################################################################################################*/
 /*                                    this is the query for desktop                                                */
 /*#################################################################################################################*/
@@ -234,7 +234,7 @@ main {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url("/animeImages/night.jpg");
+    background-image: url("/animeImages/sss.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -258,7 +258,7 @@ main {
 
 
 
-  .MyName {
+  .Title {
     text-align: center;
     font-size: 50px;
     background: -webkit-linear-gradient(goldenrod, orange, gold, goldenrod, gold);
@@ -271,7 +271,7 @@ main {
 
   }
 
-  .HomePage {
+  .current_Page {
     text-align: center;
     font-size: 100px;
     position: relative;
@@ -384,9 +384,9 @@ main {
   .sidebar_icons:hover {
     opacity: 1;
   }
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-Style******************************************************************/
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-Style*****************************************************************/
-  .maincontent_upload{
+  /*++++++++++++++++++++++++++++++++++++++++++++main-content******************************************************************/
+  /*++++++++++++++++++++++++++++++++++++++++++++main-content*****************************************************************/
+  .maincontent{
     background: rgba(0,0,0,0.5);
     grid-area: main;
     box-shadow: 0 0 8px 8px #0a0511 ;
@@ -394,8 +394,29 @@ main {
     margin-top: 20px;
     margin-bottom: 13px;
     margin-left: 20px;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: left;
+
   }
-  form{
+
+
+  .flex-item{
+    margin: 10px;
+  }
+  .newSaga{
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
+  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
+  .upload_form{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -405,7 +426,7 @@ main {
     height: 200px;
     border: 4px dashed #fff;
   }
-  form p{
+  .upload_form p{
     width: 100%;
     height: 100%;
     text-align: center;
@@ -413,7 +434,7 @@ main {
     color: #ffffff;
     font-family: Arial;
   }
-  form input{
+  .upload_form input{
     position: absolute;
     margin: 0;
     padding: 0;
@@ -422,7 +443,7 @@ main {
     outline: none;
     opacity: 0;
   }
-  form button{
+  .upload_form button{
     margin: 0;
     color: #fff;
     background: #16a085;
@@ -436,14 +457,28 @@ main {
     transition: all .2s ease;
     outline: none;
   }
-  form button:hover{
+  .upload_form button:hover{
     background: #149174;
     color: #0C5645;
   }
-  form button:active{
+  .upload_form button:active{
     border:0;
   }
+  /*============================Main-Watching=================================*/
+  .maincontent_watching{
+    background: rgba(0,0,0,0.5);
+    grid-area: main;
+    box-shadow: 0 0 8px 8px #0a0511 ;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    margin-left: 20px;
+    padding: 0;
 
+  }
+  .search0{
+
+  }
 
   /* ###################################footer##################################### */
   footer {
@@ -451,7 +486,7 @@ main {
     background: rgba(0,0,0, 0.5);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px 8px #0a0511;
+    box-shadow: 0 0 8px 8px #0a0511 ;
     border-radius: 10px;
     color: gold;
   }

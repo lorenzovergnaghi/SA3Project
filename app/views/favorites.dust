@@ -1,67 +1,76 @@
 <html>
 <head>
-
-    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png">
+    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <title>WorkInProgress's Homepage</title>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
 
 </head>
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-<script src="js/views.js"></script>
-<script src="js/fetch.js"></script>
-<script src="main.js"></script>
+
 <body>
-<!--total body div-->
 
-<!--header div-->
-<header>
+    <header>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page">Favourites</h1>
+    </header>
 
-
-    <h1 class="MyName">WorkInProgress</h1>
-    <img src="animeImages/logoonepiece.png"  class="usilogo" align="left">
-    <h1 class="HomePage">Favourites</h1>
-
-
-
-
-</header>
-
-<main>
+    <main>
 
     <!--===========================NavigationBar====================================================================-->
 
-    <nav class="navigation">
-        <ul>
-            <li><a href="home"><b>Home </b></a></li>
-            <li><a href="upload"><b> Upload   </b></a></li>
-            <li><a href="favorites"><b>Favorites</b></a></li>
-            <li><a href="picture.html"><b> Pictures </b></a></li>
+        <nav class="navigation">
+            <ul>
+                <li><a href="home"><b>Home </b></a></li>
+                <li><a href="upload"><b> Upload   </b></a></li>
+                <li><a href="favorites"><b>Favorites</b></a></li>
+                <li><a href="picture.html"><b> Pictures </b></a></li>
 
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 
-    <!--===========================Sidebar====================================================================-->
-    <div class="sidebar">
-        <div class="sidebar_icons">
-            <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"></a>
+    <!--===========================Maincontent-Upload====================================================================-->
+
+        <div class='maincontent'>
+
+            To all our readers in Switzerland,
+            We will get straight to the point:
+            today we ask you to protect Wikipedia's independence.
+            We depend on donations averaging about CHF 15.
+            Over 99% of our readers don't give.
+            If everyone reading this gave CHF 5, we could keep Wikipedia thriving for years to come.
+            The price of your coffee today is all we need. When we made Wikipedia a non-profit,
+            people warned us we'd regret it. But if Wikipedia became commercial,
+            it would be a great loss to the world.
+            Wikipedia is a place for you to learn, not a place for advertising.
+            It unites all of us who love knowledge: contributors, readers and the donors who keep us thriving.
+            The heart and soul of Wikipedia is a community of people working to bring you unlimited access to reliable,
+            neutral information. Please take one minute to help us keep Wikipedia growing. Thank you.
+
         </div>
+        <!--===========================Sidebar====================================================================-->
+        <div class="sidebar">
+            <div class="sidebar_icons">
+                <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
+            </div>
 
-        <div class="sidebar_icons">
-            <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"></a>
+            <div class="sidebar_icons">
+                <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
+            </div>
+
+            <div class="sidebar_icons">
+                <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
+            </div>
         </div>
+    </main>
 
-        <div class="sidebar_icons">
-            <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"></a>
-        </div>
-
-
-
-    </div>
-
-</main>
-
-<footer/>
-<p>&copy; WorkInProgress	</p>
-</footer>
-
+    <footer>
+        <p>&copy; WorkInProgress	</p>
+    </footer>
 
 </body>
+</html>

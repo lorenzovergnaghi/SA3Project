@@ -58,12 +58,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routers = require('./routes/routers');
 app.use(methodOverride('_method'));
 app.use('/', routers.root);
+
 app.use('/watching', routers.watching);
 app.use('/upload', routers.upload);
 app.use('/login', routers.login);
 app.use('/home', routers.home);
 app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
+app.use('/search', routers.search);
 
 
 

@@ -13,15 +13,18 @@ const util = require('util');
 const default_headers = {'Content-Type': 'text.html; cahrset = utf-8'};
 const http = require('http');
 const url	= require('url');
+const login = require('connect-ensure-login');
 
-router.get('/', function(req, res){
+router.get('/',
+    login.ensureLoggedIn(),
+    function(req, res){
   res.status(302,{'Location':'localhost:3000/login'})
 });
 
 router.post('/',
 function(req,res){
   console.log(req.body);
-  res.render('upload');
+  res.redirect('login');
 });
 
 /** router for /root */

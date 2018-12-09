@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>SA3Project</title>
-
+    <link type= "text/css"rel="stylesheet" href="styles/style.css">
 </head>
 <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
