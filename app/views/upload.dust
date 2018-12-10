@@ -31,39 +31,40 @@
             <li><a href="home"><b>Home </b></a></li>
             <li><a href="upload"><b> Upload   </b></a></li>
             <li><a href="favorites"><b>Favorites</b></a></li>
-            <li><a href="picture.html"><b>Pictures </b></a></li>
-            <li><h2>Search<input class='search' type="text"></input></h2></li>
+            <li><a href="picture.html"><b>Live Room </b></a></li>
+
         </ul>
     </nav>
     <!--===========================Maincontent-Upload====================================================================-->
 
     <div class='maincontent'>
 
-        <div class="search0">
-
-
+        <div class="div_search_mobile">
+            <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
         </div>
-        <!--questo bottone ridirige a /upload/newsaga-->
-        <div class="newSaga">
-            <form method="GET" action="/upload/newsaga" >
-                <button class="button" type="submit" >
-                    <img src="animeImages/gh.png"  height="150" width="100"/><br/>
-                </button>
-            </form>
-        </div>
+
         <div class="output">
-        {#x}
-        <div class="flex-item">
+            <div class="newSaga">
+                <form method="GET" action="/upload/newsaga" >
+                    <button class="button_plus" type="submit" >
 
-            <form method="POST" action="upload/addep">
+                            <img class="plus_saga" src="animeImages/button.png"  height="190" width="250"  />
 
-                <input  type="hidden" name="sagaid" value="{._id}"/><br/>
-                {.name}<br/>
-                <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="150" width="100"/><br/>
-                <button class="button" type="submit">EDIT {.name}</button>
-            </form>
-        </div>
-        {/x}
+                    </button>
+                </form>
+            </div>
+            {#x}
+                <div class="flex-item">
+
+                    <form class="new" method="POST" action="upload/addep">
+
+                        <input  type="hidden" name="sagaid" value="{._id}"/>
+                        {.name}<br/>
+                        <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                        <button class="button" type="submit">EDIT {.name}</button>
+                    </form>
+                </div>
+            {/x}
         </div>
         <br/>
 
@@ -74,19 +75,12 @@
 
 
     </div>
+    <br/>
     <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
-        <div class="sidebar_icons">
-            <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
-        </div>
 
-        <div class="sidebar_icons">
-            <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
-        </div>
 
-        <div class="sidebar_icons">
-            <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
-        </div>
+
     </div>
 </main>
 

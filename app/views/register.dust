@@ -14,13 +14,13 @@
 
 <body style="background-color:grey;">
 
- {#x}
+{#x}
 <p>
-  Our administrators are being notifyed of you're register request. and will review it ASAP.<br/>
-<br/><br/><br/>
-  NAME : {lname}<br/>
-  EMAIL : {email}<br/>
-  PASSWORD : {password[0]}<br/>
+    Our administrators are being notifyed of you're register request. and will review it ASAP.<br/>
+    <br/><br/><br/>
+    NAME : {lname}<br/>
+    EMAIL : {email}<br/>
+    PASSWORD : {password[0]}<br/>
 </p>
 {/x}
 </body>

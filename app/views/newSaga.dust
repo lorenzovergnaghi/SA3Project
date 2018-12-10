@@ -14,7 +14,7 @@
   <header class="header" id="abcdefg">
       <h1 class="Title">WorkInProgress</h1>
       <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-      <h1 class="current_Page">New Saga Creation</h1>
+      <h1 class="current_Page">New Anime</h1>
   </header>
 
   <main>
@@ -25,33 +25,24 @@
               <li><a href="../home"><b>Home </b></a></li>
               <li><a href="../upload"><b> Upload   </b></a></li>
               <li><a href="../favorites"><b>Favorites</b></a></li>
-              <li><a href="../picture.html"><b>Pictures </b></a></li>
+              <li><a href="../picture.html"><b>Live Room </b></a></li>
 
           </ul>
       </nav>
 
       <div class="maincontent">
 
-          <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
-              <input  type="text" name="sagaName" placeholder="NEW SAGA NAME"/><br/>
-              <input type="file" name="file" accept="image/png, image/jpeg"/><br/>
-              <button class="button" type="submit">SUBMIT NEW SAGA</button>
-          </form>
+          <div class="newCollection">
+              <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
+                  <input  type="text" name="sagaName" placeholder="Anime's Title"/><br/><br/>
+                  <input type="file" name="file" placeholder="add cover" accept="image/png, image/jpeg"/><br/><br/>
+                  <button class="button" type="submit">Create Collection </button>
+              </form>
+          </div>
+      </div>
 
-
-    </div>
       <div class="sidebar">
-          <div class="sidebar_icons">
-              <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
-          </div>
 
-          <div class="sidebar_icons">
-              <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
-          </div>
-
-          <div class="sidebar_icons">
-              <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
-          </div>
       </div>
   </main>
 

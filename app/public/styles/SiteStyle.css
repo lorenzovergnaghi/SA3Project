@@ -84,16 +84,11 @@
   .navigation ul {
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
-    padding: 0 1em;
+    flex-wrap: wrap;
+    padding: 2px 1em;
     justify-content: space-around;
-
-  }
-
-  .navigation ul{
     list-style-type: none;
     text-align: center;
-    padding-right: 10px;
   }
 
   .navigation ul li{
@@ -129,9 +124,12 @@
     grid-area: main;
     box-shadow: 0 0 8px 8px #0a0511 ;
     border-radius: 10px;
-    margin:5px;
+    margin: 0 5px;
     background: rgba(0,0,0,0.5);
     padding: 0;
+  }
+
+  .output{
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -139,12 +137,35 @@
     display: flex;
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
+  }
 
+  .search{
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: darkblue;
+    background:rgba(255,255,255,0.3);
+    color: black;
+  }
+  .search:hover{
+    background:rgba(255,255,255,0.8);
   }
 
 
+  .search_img{
+    position: relative;
+    top: 10px;
+  }
+
+  /*.div_search_mobile {*/
+    /*border: 10px;*/
+    /*border: #0a0511;*/
+    /*padding: 0px;*/
+  /*}*/
+
+
   .flex-item{
-    margin: 10px;
+    margin: 25px 10px 10px 10px;
   }
 
   .newSaga{
@@ -152,6 +173,22 @@
     margin-left: 30px;
     margin-right: 20px;
   }
+  .plus_saga{
+    border-radius: 15px;
+    background:rgba(255,255,255,0.5);
+    color: black;
+  }
+  .button_plus{
+
+    background: none;
+    border: none;
+    border-radius: 15px;
+  }
+  /*.newCollection{*/
+    /*position: relative;*/
+    /*top: 50px;*/
+  /*}*/
+  /*==========================Upload-FORM==========================================*/
 
   /*====================================================================*/
   /*====================================================================*/
@@ -164,13 +201,13 @@
     grid-area: sidebar;
     border-radius: 10px;
     box-shadow: 0 0 8px 8px #0a0511 ;
-    margin: 10px 5px;
+    margin: 0 5px 10px 5px;
     background: rgba(0,0,0,0.5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:  center;
-    max-height: 50px;
+    min-height: 50px;
   }
 
   .sidebar_icons{
@@ -206,6 +243,7 @@
 
 }
 /*====================================================================*/
+
 /*====================================================================*/
 
 /*#################################################################################################################*/
@@ -395,75 +433,65 @@
     margin-bottom: 13px;
     margin-left: 20px;
     padding: 0;
+    min-height: 700px;
+  }
+
+  .output{
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    justify-content: left;
-
+    justify-content: space-around;
   }
 
+
+  .search{
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: darkblue;
+    background:rgba(255,255,255,0.3);
+    color: black;
+  }
+  .search:hover{
+    background:rgba(255,255,255,0.8);
+  }
+
+
+  .search_img{
+    position: relative;
+    top: 10px;
+  }
 
   .flex-item{
-    margin: 10px;
+    margin: 25px 10px 10px 10px;
+
   }
+
   .newSaga{
     margin-top: 45px;
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  .plus_saga{
+    border-radius: 15px;
+    background:rgba(255,255,255,0.5);
+    color: black;
+  }
+  .button_plus{
+
+    background: none;
+    border: none;
+    border-radius: 15px;
+  }
+
+
   /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
   /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
-  .upload_form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -250px;
-    width: 500px;
-    height: 200px;
-    border: 4px dashed #fff;
-  }
-  .upload_form p{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 170px;
-    color: #ffffff;
-    font-family: Arial;
-  }
-  .upload_form input{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    opacity: 0;
-  }
-  .upload_form button{
-    margin: 0;
-    color: #fff;
-    background: #16a085;
-    border: none;
-    width: 508px;
-    height: 35px;
-    margin-top: -20px;
-    margin-left: -4px;
-    border-radius: 4px;
-    border-bottom: 4px solid #117A60;
-    transition: all .2s ease;
-    outline: none;
-  }
-  .upload_form button:hover{
-    background: #149174;
-    color: #0C5645;
-  }
-  .upload_form button:active{
-    border:0;
-  }
+
   /*============================Main-Watching=================================*/
   .maincontent_watching{
     background: rgba(0,0,0,0.5);
@@ -474,11 +502,10 @@
     margin-bottom: 13px;
     margin-left: 20px;
     padding: 0;
-
   }
-  .search0{
 
-  }
+
+
 
   /* ###################################footer##################################### */
   footer {

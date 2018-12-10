@@ -19,7 +19,7 @@ router.get('/addep',
 login.ensureLoggedIn(),
 function(req,res){
   res.redirect('http://localhost:3000/upload');
-})
+});
 
 router.post('/addep',
 login.ensureLoggedIn(),

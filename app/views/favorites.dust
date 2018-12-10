@@ -16,7 +16,7 @@
     <header>
         <h1 class="Title">WorkInProgress</h1>
         <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-        <h1 class="current_Page">Favourites</h1>
+        <h1 class="current_Page">Favorites</h1>
     </header>
 
     <main>
@@ -28,7 +28,7 @@
                 <li><a href="home"><b>Home </b></a></li>
                 <li><a href="upload"><b> Upload   </b></a></li>
                 <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="picture.html"><b> Pictures </b></a></li>
+                <li><a href="picture.html"><b> Live Room </b></a></li>
 
             </ul>
         </nav>
@@ -37,34 +37,16 @@
 
         <div class='maincontent'>
 
-            To all our readers in Switzerland,
-            We will get straight to the point:
-            today we ask you to protect Wikipedia's independence.
-            We depend on donations averaging about CHF 15.
-            Over 99% of our readers don't give.
-            If everyone reading this gave CHF 5, we could keep Wikipedia thriving for years to come.
-            The price of your coffee today is all we need. When we made Wikipedia a non-profit,
-            people warned us we'd regret it. But if Wikipedia became commercial,
-            it would be a great loss to the world.
-            Wikipedia is a place for you to learn, not a place for advertising.
-            It unites all of us who love knowledge: contributors, readers and the donors who keep us thriving.
-            The heart and soul of Wikipedia is a community of people working to bring you unlimited access to reliable,
-            neutral information. Please take one minute to help us keep Wikipedia growing. Thank you.
+
+
+
+
 
         </div>
+        <br/>
         <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-            <div class="sidebar_icons">
-                <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
-            </div>
 
-            <div class="sidebar_icons">
-                <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
-            </div>
-
-            <div class="sidebar_icons">
-                <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
-            </div>
         </div>
     </main>
 
