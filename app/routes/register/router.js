@@ -16,15 +16,20 @@ const url	= require('url');
 const login = require('connect-ensure-login');
 
 router.get('/',
-    login.ensureLoggedIn(),
+    // login.ensureLoggedIn(),
     function(req, res){
-  res.status(302,{'Location':'localhost:3000/login'})
+  res.redirect('login');
 });
 
 router.post('/',
 function(req,res){
   console.log(req.body);
-  res.redirect('login');
+  if (req.body.password[0] === req.body.password[1]) {
+      res.render('register', {x:req.body});
+  }else {
+    let msg = ["passwords don't match",undefined];
+    res.render('register', {x:{lname:req.body.lname, email:req.body.email, password:msg}});
+  }
 });
 
 /** router for /root */
