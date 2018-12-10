@@ -16,7 +16,7 @@ const url	= require('url');
 const login = require('connect-ensure-login');
 
 router.get('/',
-    // login.ensureLoggedIn(),
+    login.ensureLoggedIn(),
     function(req, res){
   res.redirect('login');
 });

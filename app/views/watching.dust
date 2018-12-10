@@ -45,11 +45,11 @@
         <h3 class="">{.name}</h3>
         {/x}
         {#z}
-        {.name}<br/>
+        <p class="title_asdf">{.name}<p><br/>
         <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
         {/z}
         {#y}
-        <button  class="next_episodes" onclick="setWatching('../{.file}')">Watch {.name}</button><br/>
+        <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
         {/y}
 
     </div>
