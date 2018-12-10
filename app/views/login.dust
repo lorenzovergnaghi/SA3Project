@@ -34,7 +34,7 @@
           <p style="color:red;" id="error"><br/></p>
 
           <label for="password">Password &nbsp;&nbsp;&nbsp;</label>
-          <input type="text"  class="box" name="password" id="password" value="" placeholder="Password"/><br/><br/><br/>
+          <input type="password"  class="box" name="password" id="password" value="" placeholder="Password"/><br/><br/><br/>
 
           <input class="button" type="button" value="Register &nbsp;" onclick="register()"/>
 

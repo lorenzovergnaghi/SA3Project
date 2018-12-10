@@ -38,6 +38,12 @@ function(req, res){
 router.get('/storage',function(req,res){
   req.status(200).end();
 });
+router.post('/',function(req,res){
+  console.log(req.query);
+  console.log(req.body);
+  res.redirect('/');
+}
+)
 
 /** router for /root */
 module.exports = router;
