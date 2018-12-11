@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <title>WorkInProgress's Homepage</title>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page">Favorites</h1>
+    </header>
+
+    <main>
+
+    <!--===========================NavigationBar====================================================================-->
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home"><b>Home </b></a></li>
+                <li><a href="upload"><b> Upload   </b></a></li>
+                <li><a href="favorites"><b>Favorites</b></a></li>
+                <li><a href="all_rooms"><b> Live Room </b></a></li>
+
+            </ul>
+        </nav>
+
+    <!--===========================Maincontent-Upload====================================================================-->
+
+        <div class='maincontent'>
+
+
+
+
+
+
+        </div>
+        <br/>
+        <!--===========================Sidebar====================================================================-->
+        <div class="sidebar">
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; WorkInProgress	</p>
+    </footer>
+
+</body>
+</html>

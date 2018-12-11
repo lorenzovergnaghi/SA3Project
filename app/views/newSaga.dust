@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>SA3Project</title>
+
+    <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+</head>
+
+<body onload="init()">
+
+  <header class="header" id="abcdefg">
+      <h1 class="Title">WorkInProgress</h1>
+      <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+      <h1 class="current_Page">New Anime</h1>
+  </header>
+
+  <main>
+      <!--===========================NavigationBar====================================================================-->
+
+      <nav class="navigation">
+          <ul>
+              <li><a href="../home"><b>Home </b></a></li>
+              <li><a href="../upload"><b> Upload   </b></a></li>
+              <li><a href="../favorites"><b>Favorites</b></a></li>
+              <li><a href="../picture.html"><b>Live Room </b></a></li>
+
+          </ul>
+      </nav>
+
+      <div class="maincontent">
+
+          <div class="newCollection">
+              <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
+                  <input  type="text" name="sagaName" placeholder="Anime's Title"/><br/><br/>
+                  <input type="file" name="file" placeholder="add cover" accept="image/png, image/jpeg"/><br/><br/>
+                  <button class="button" type="submit">Create Collection </button>
+              </form>
+          </div>
+      </div>
+
+      <div class="sidebar">
+
+      </div>
+  </main>
+
+  <footer>
+  <p>&copy; WorkInProgress	</p>
+  </footer>
+
+</body>
+
+</html>

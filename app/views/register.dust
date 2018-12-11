@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>SA3Project || Login </title>
+    <link type= "text/css"rel="stylesheet" href="styles/siteStyle.css"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+
+
+
+<body style="background-color:grey;">
+
+{#x}
+<p>
+    Our administrators are being notifyed of you're register request. and will review it ASAP.<br/>
+    <br/><br/><br/>
+    NAME : {lname}<br/>
+    EMAIL : {email}<br/>
+    PASSWORD : {password[0]}<br/>
+</p>
+{/x}
+</body>
+
+
+</html>

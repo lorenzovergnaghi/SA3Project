@@ -6,14 +6,6 @@ const EpisodeSchema = new mongoose.Schema(
     file : {type:String, required:true}
   }
 );
-
 mongoose.model('Episode', EpisodeSchema);
-
 const Episode = mongoose.model('Episode');
-
-
-
-
-
-
 module.exports = EpisodeSchema;
