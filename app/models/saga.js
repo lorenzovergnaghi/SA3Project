@@ -4,9 +4,9 @@ const SagaSchema = new mongoose.Schema(
   {
     name : {type: String, required : true},
     episodes : {type:[Episode], required : true,defauld:[]},
-    image : {type:String, required:true},
-    last_watched : {type: Number, required : true, defauld:0},
-    last_watched_time : {type: Number, required:true, default:0}
+    image : {type:String, required:false},
+    last_watched : {type: Number, required : false, defauld:0},
+    last_watched_time : {type: Number, required:false, default:0}
   }
 );
 mongoose.model('Saga', SagaSchema);

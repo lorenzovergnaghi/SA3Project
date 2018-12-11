@@ -1,7 +1,18 @@
-{#x}
-<form method="POST" action="/upload/addep">
-    <input  type="hidden" name="sagaid" value="{._id}"><br>
-    <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="100" width="150">
-    <button class="button" type="submit">EDIT {.name}</button>
-</form>
-{/x}
+
+
+
+
+
+        {#x}
+        <div class="flex-item">
+
+            <form class="new" method="POST" action="upload/addep">
+
+                <input  type="hidden" name="sagaid" value="{._id}"/>
+                {.name}<br/>
+                <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                <button class="button" type="submit">EDIT {.name}</button>
+            </form>
+        </div>
+        {/x}
+

@@ -33,8 +33,8 @@
                 <li><a href="home"><b>Home </b></a></li>
                 <li><a href="upload"><b> Upload   </b></a></li>
                 <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="picture.html"><b>Pictures </b></a></li>
-                <li><h2>Search<input class='search' type="text"></input></h2></li>
+                <li><a href="all_rooms"><b> Live Room</b></a></li>
+
 
             </ul>
         </nav>
@@ -43,81 +43,27 @@
 
 
 
-    <div class='maincontent'>
+        <div class='maincontent'>
+            <div class="div_search_mobile">
+                <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
+            </div>
 
-        <div class="search0">
-
-            <script>
-                var OUT = undefined;
-                let events = ['keyup'];
-                events.forEach(function(ev){
-                    document.querySelector('.search').addEventListener(ev , function(event){
-                        event.preventDefault();
-                        let filter = document.querySelector('.search').value;
-                        if (filter !== "") {
-                            doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
-                                var model = {
-                                    x : obj
-                                };
-                                dust.render('partials/episodes_home',model,function(err, out){
-                                    if (err) {
-                                        console.log('err!');
-                                    }
-                                    var latestEl = document.querySelector('.output');
-                                    latestEl.innerHTML = out;
-                                })
-                            })
-                        }else {
-
-                            doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
-                                var model = {
-                                    x : obj
-                                };
-                                dust.render('partials/episodes_home',model,function(err, out){
-                                    if (err) {
-                                        console.log('err!');
-                                    }
-                                    var latestEl = document.querySelector('.output');
-                                    latestEl.innerHTML = out;
-                                })
-                            })
-                        }
-                    });
-                })
-
-            </script>
+            <div class="output">
+                {#x}
+                   <div class="flex-item" >
+                        <p style="color:white;">{.name}</p>
+                       <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                        <form action="/watching/:{._id}" method="get">
+                         <button>WATCH {.name}</button>
+                        </form>
+                    </div>
+                {/x}
+            </div>
         </div>
         <br/>
-
-        <div class="output">
-            {#x}
-               <div class="flex-item" >
-                    <p style="color:white;">{.name}</p>
-                    <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="100" width="150"/>
-                    <form action="/watching/:{._id}" method="get">
-                     <button>WATCH {.name}</button>
-                    </form>
-                </div>
-            {/x}
-        </div>
-        <br/>
-        <br/>
-            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    </div>
-
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-            <div class="sidebar_icons">
-                <a href="" target="_blank"><img  src="animeImages/favorites.png" alt="Facebook"/></a>
-            </div>
 
-            <div class="sidebar_icons">
-                <a href="https://www.instagram.com/sergius_gh/" target="_blank"><img  src="/animeImages/favorites.png" alt="Instagram"/></a>
-            </div>
-
-            <div class="sidebar_icons">
-                <a href="https://twitter.com" target="_blank"><img  src="animeimages/twitter.png" alt="Twitter"/></a>
-            </div>
         </div>
 
     </main>
@@ -126,6 +72,46 @@
     <p>&copy; WorkInProgress	</p>
     </footer>
 
-
 </body>
-        </html>
+
+<script>
+    var OUT = undefined;
+    let events = ['keyup'];
+    events.forEach(function(ev){
+        document.querySelector('.search').addEventListener(ev , function(event){
+            event.preventDefault();
+            let filter = document.querySelector('.search').value;
+            if (filter !== "") {
+                doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_home',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }else {
+
+                doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_home',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }
+        });
+    })
+
+</script>
+
+</html>

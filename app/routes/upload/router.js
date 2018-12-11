@@ -18,8 +18,8 @@ const login = require('connect-ensure-login');
 router.get('/addep',
 login.ensureLoggedIn(),
 function(req,res){
-  res.render('home');
-})
+  res.redirect('http://localhost:3000/upload');
+});
 
 router.post('/addep',
 login.ensureLoggedIn(),
