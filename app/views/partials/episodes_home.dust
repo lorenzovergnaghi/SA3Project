@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+    {#x}
+    <div class="flex-item" >
+      <p style="color:white;">{.name}</p>
+      <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+      <form action="/watching/:{._id}" method="get">
+        <button>WATCH {.name}</button>
+      </form>
+    </div>
+    {/x}
+
