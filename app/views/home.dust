@@ -48,7 +48,10 @@
             <div class="output">
                 {#x}
                    <div class="flex-item" >
-                       <img src="{.image}" alt="CANT LOAD TEST IMAGE"/><br/>
+                       <div class="parent">
+                       <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
+                       <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
+                       </div>
                         <form action="/watching/:{._id}" method="get">
                             <p id="series-title">{.name}</p>
                          <button type="button">WATCH {.name}</button>

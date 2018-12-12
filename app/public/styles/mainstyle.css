@@ -280,15 +280,39 @@
         color:white;
         font-weight: bold;
     }
-    .flex-item img{
+    .parent{
+        position: relative;
+    }
+    #img1{
+        position: relative;
         width: 250;
         height: 190;
+        top: 0;
+        left: 0;
     }
-    .flex-item img:hover{
+    #img2{
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        width:100;
+        height: 100;
+        visibility: hidden;
+
+
+    }
+    #img1:hover{
         transform: scale(1.1);
         opacity:0.5;
-        /*width:250;*/
-        /*height:190;*/
+    }
+    #img2:hover{
+        visibility: visible;
+    }
+    #img2:hover #img1{
+        transform: scale(1.1);
+        opacity:0.5;
+    }
+    #img1:hover +#img2{
+        visibility: visible;
     }
     /*.send img{*/
     /*position: relative;*/
