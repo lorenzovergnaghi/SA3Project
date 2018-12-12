@@ -26,7 +26,6 @@ x.addEventListener('click', function() {
       handle: handle.value
     });
   }
-  ;
 });
 
 message.addEventListener('keypress', function(){
@@ -39,11 +38,18 @@ socket.on('chat', function(data){
   feedback.innerHTML = "";
   output.innerHTML += '<p><strong>' + data.handle + ' </strong><br>'  + data.message + '</p>';
   message.value = "";
-})
+});
 
 socket.on('typing', function(data){
   feedback.innerHTML = '<p><em>' + data +  ' is typing a message.. </em></p>';
 });
+socket.on('play_pause',function(data){
+  if (data.pause) {
+    document.querySelector('.bigone').pause();
+  }else {
+    document.querySelector('.bigone').play();
+  }
+})
 
 
 // Trigger button click on enter
@@ -54,3 +60,13 @@ input.addEventListener("keyup", function(event) {
     document.querySelector('.send').click();
   }
 });
+
+
+//video play pause emitters
+
+document.querySelector('.bigone').addEventListener('play',function(event){
+    socket.emit('play_pause',{pause:false});
+})
+document.querySelector('.bigone').addEventListener('pause',function(event){
+    socket.emit('play_pause',{pause:true});
+})

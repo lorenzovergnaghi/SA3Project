@@ -54,7 +54,7 @@ login.ensureLoggedIn(),
                   let x = found;
                   let y = found.episodes;
                   let z = found.episodes[found.last_watched];
-                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z,k:room_name});
+                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z,k:room_name,username: req.user.username});
                 }
               }
             });
