@@ -120,80 +120,6 @@
 
   /*############################-maincontent-###########################*/
 
-  .maincontent{
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin: 0 5px;
-    background: rgba(0,0,0,0.5);
-    padding: 0;
-  }
-
-  .output{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-  .search{
-    height: 30px;
-    width: 300px;
-    border-radius: 10px;
-    border-color: darkblue;
-    background:rgba(255,255,255,0.3);
-    color: black;
-  }
-  .search:hover{
-    background:rgba(255,255,255,0.8);
-  }
-
-
-  .search_img{
-    position: relative;
-    top: 10px;
-  }
-
-  /*.div_search_mobile {*/
-    /*border: 10px;*/
-    /*border: #0a0511;*/
-    /*padding: 0px;*/
-  /*}*/
-
-
-  .flex-item{
-    margin: 25px 10px 10px 10px;
-  }
-
-  .newSaga{
-    margin-top: 40px;
-    margin-left: 30px;
-    margin-right: 20px;
-  }
-  .plus_saga{
-    border-radius: 15px;
-    background:rgba(255,255,255,0.5);
-    color: black;
-  }
-  .button_plus{
-
-    background: none;
-    border: none;
-    border-radius: 15px;
-  }
-  /*.newCollection{*/
-    /*position: relative;*/
-    /*top: 50px;*/
-  /*}*/
-  /*==========================Upload-FORM==========================================*/
-
-  /*====================================================================*/
-  /*====================================================================*/
-
-
 
   /*############################-Sidebar-###########################*/
 
@@ -259,7 +185,10 @@
     position: relative;
     display: grid;
     grid-template-rows: 200px 1fr auto;
-    grid-template-areas: "header" "content" "footer";
+    grid-template-areas:
+            "header"
+            "content"
+            "footer";
     min-height: 100%;
     text-align: center;
   }
@@ -400,6 +329,7 @@
     margin-bottom: 13px;
     background: rgba(0,0,0, 0.5);
     max-width: 250px;
+
   }
 
   .sidebar_icons {
@@ -424,88 +354,6 @@
   }
   /*++++++++++++++++++++++++++++++++++++++++++++main-content******************************************************************/
   /*++++++++++++++++++++++++++++++++++++++++++++main-content*****************************************************************/
-  .maincontent{
-    background: rgba(0,0,0,0.5);
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    margin-left: 20px;
-    padding: 0;
-    min-height: 700px;
-  }
-
-  .output{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-
-  .search{
-    height: 30px;
-    width: 300px;
-    border-radius: 10px;
-    border-color: darkblue;
-    background:rgba(255,255,255,0.3);
-    color: black;
-  }
-  .search:hover{
-    background:rgba(255,255,255,0.8);
-  }
-
-
-  .search_img{
-    position: relative;
-    top: 10px;
-  }
-
-  .flex-item{
-    margin: 25px 10px 10px 10px;
-
-  }
-
-  .newSaga{
-    margin-top: 45px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .plus_saga{
-    border-radius: 15px;
-    background:rgba(255,255,255,0.5);
-    color: black;
-  }
-  .button_plus{
-
-    background: none;
-    border: none;
-    border-radius: 15px;
-  }
-
-
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
-
-  /*============================Main-Watching=================================*/
-  .maincontent_watching{
-    background: rgba(0,0,0,0.5);
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    margin-left: 20px;
-    padding: 0;
-  }
-
-
-
 
   /* ###################################footer##################################### */
   footer {

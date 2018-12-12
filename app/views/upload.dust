@@ -2,7 +2,8 @@
 
 <head>
 
-    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+  <link href="styles/SiteStyle.css" rel="stylesheet"/>
+      <link href="styles/mainstyle.css" rel="stylesheet"/>
 
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <title>WorkInProgress's Homepage</title>

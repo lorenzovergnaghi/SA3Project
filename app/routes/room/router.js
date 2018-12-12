@@ -15,7 +15,6 @@ const Saga = mongoose.model('Saga');
 require('../../models/room');
 const Room = mongoose.model('Room');
 const login = require('connect-ensure-login');
-const eventBus = require('../../pubsub');
 
 
 
@@ -25,7 +24,6 @@ const eventBus = require('../../pubsub');
 router.get('/:_id',
 login.ensureLoggedIn(),
  function(req,res){
-   eventBus.emit('prova',{message:"CIAO"});
   let xid = req.params._id;
   let room_name = xid;
   if (xid.charAt(0) == ':') {
@@ -56,8 +54,7 @@ login.ensureLoggedIn(),
                   let x = found;
                   let y = found.episodes;
                   let z = found.episodes[found.last_watched];
-                  // console.log(x,y);
-                  res.render('room_tamplate',{x:x,y:y,z:z,k:room_name});
+                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z,k:room_name});
                 }
               }
             });

@@ -1,0 +1,276 @@
+/*#################################################################################################################*/
+/*                                        this is the query for mobile                                             */
+/*#################################################################################################################*/
+@media (max-width: 768px) {
+    .maincontent{
+        grid-area: main;
+        box-shadow: 0 0 8px 8px #0a0511 ;
+        border-radius: 10px;
+        margin: 0 5px;
+        background: rgba(0,0,0,0.5);
+        padding: 0;
+    }
+
+    .output{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .search{
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        border-color: darkblue;
+        background:rgba(255,255,255,0.3);
+        color: black;
+    }
+    .search:hover{
+        background:rgba(255,255,255,0.8);
+    }
+
+
+    .search_img{
+        position: relative;
+        top: 10px;
+    }
+
+
+    .flex-item{
+        margin: 25px 10px 10px 10px;
+    }
+
+    .newSaga{
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+    .plus_saga{
+        border-radius: 15px;
+        background:rgba(255,255,255,0.5);
+        color: black;
+    }
+    .button_plus{
+
+        background: none;
+        border: none;
+        border-radius: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*#################################################################################################################*/
+/*                                    this is the query for desktop                                                */
+/*#################################################################################################################*/
+@media (min-width: 768px) {
+    .maincontent{
+        background: rgba(211,200,0,0.5);
+        box-shadow: 0 0 8px 8px #0a0511 ;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+        margin-left: 20px;
+        padding: 0;
+        min-height: 700px;
+    }
+
+    .output{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+
+    .search{
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        border-color: darkblue;
+        background:rgba(255,255,255,0.3);
+        color: black;
+    }
+    .search:hover{
+        background:rgba(255,255,255,0.8);
+    }
+
+
+    .search_img{
+        position: relative;
+        top: 10px;
+    }
+
+    .flex-item{
+        margin: 25px 10px 10px 10px;
+
+    }
+
+    .newSaga{
+        margin-top: 45px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .plus_saga{
+        border-radius: 15px;
+        background:rgba(255,255,255,0.5);
+        color: black;
+    }
+    .button_plus{
+
+        background: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+
+    /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
+    /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
+
+    /*============================Main-Watching=================================*/
+    .maincontent_watching{
+        background: rgba(0,0,0,0.5);
+        box-shadow: 0 0 8px 8px #0a0511 ;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+        margin-left: 20px;
+        padding: 0;
+    }
+
+
+
+    /*++++++++++++++++++++++++++++++++++++++++++++ROOM-MAIN******************************************************************/
+    /*++++++++++++++++++++++++++++++++++++++++++++ROOM-MAIN******************************************************************/
+    .maincontent_room{
+        background: rgba(211,200,0,0.5);
+        box-shadow: 0 0 8px 8px #0a0511 ;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+        margin-left: 20px;
+        padding: 0;
+        grid-template-areas:
+                "conatiner1"
+                "container2";
+        grid-template-rows: 60% 40%;
+        display: grid;
+
+    }
+    /*grid are container 1*/
+    container1 {grid-area: container_video;}
+    /*grid are container 1*/
+    container2{ grid-area: container_rest;}
+
+
+    .container_video{
+        margin: 20px;
+    }
+
+
+    .container_rest{
+        grid-template-areas: "area1 area2 area3 " ;
+        grid-template-columns: 30% 20%  50%;
+        display: grid;
+    }
+
+    area1{ grid-area: c1}
+    area2{ grid-area: c2}
+    area3{ grid-area: c3}
+
+    .c1{
+        margin: 5px;
+    }
+
+    .c2{
+        margin: 5px;
+    }
+
+    .c3{
+        margin: 10px 10px 10px 10px;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 15px;
+        background: #FE01D4;
+
+    }
+    .window{
+        height: 250px;
+        overflow: scroll;
+        background: #1B222C;
+        border-radius: 15px;
+        margin:  0 0 10px 0 ;
+    }
+
+    .output p{
+        padding: 5px 0; /*top/bottom - right/left*/
+        margin: 0 20px;
+        color: white;
+    }
+
+    .feedback p{
+        color: #676767;
+        padding: 5px 0px;
+        margin: 0 15px;
+    }
+
+    .output strong{
+        color: #00d1b2;
+    }
+
+
+    .handle{
+        padding: 10px 10px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        width: 98.75%;
+        background: #fff;
+        font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+        font-size: 17px;
+        margin: 4px;
+        border: none;
+    }
+    .message{
+        padding: 10px 10px;
+        border-radius: 15px;
+        width: 80%;
+        background: #fff;
+        font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+        font-size: 17px;
+        margin: 4px;
+        border: none;
+        position: relative;
+        right: 30px;
+    }
+
+    .send {
+        box-shadow: 0 0 8px 2px #0a0511 ;
+        color: #0a0511;
+        border: 0;
+        border-radius: 10px;
+        position: relative;
+        top: 10px;
+        right: 28px;
+
+    }
+    /*.send img{*/
+        /*position: relative;*/
+        /*bottom: 30px;*/
+    /*}*/
+
+
+}
