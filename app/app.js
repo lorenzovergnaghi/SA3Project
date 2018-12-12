@@ -70,6 +70,7 @@ app.use('/home', routers.home);
 app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
 app.use('/search', routers.search);
+app.use('/logout', routers.logout);
 
 
 

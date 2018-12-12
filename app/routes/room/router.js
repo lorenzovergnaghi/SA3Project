@@ -27,6 +27,7 @@ login.ensureLoggedIn(),
  function(req,res){
    eventBus.emit('prova',{message:"CIAO"});
   let xid = req.params._id;
+  let room_name = xid;
   if (xid.charAt(0) == ':') {
     xid = xid.substring(1);
   }
@@ -56,7 +57,7 @@ login.ensureLoggedIn(),
                   let y = found.episodes;
                   let z = found.episodes[found.last_watched];
                   // console.log(x,y);
-                  res.render('room_tamplate',{x:x,y:y,z:z});
+                  res.render('room_tamplate',{x:x,y:y,z:z,k:room_name});
                 }
               }
             });

@@ -7,7 +7,7 @@
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-    <title>WorkInProgress's Homepage</title>
+    <title>WorkInProgress's Homepage </title>
 
 </head>
 
@@ -16,7 +16,7 @@
 
 <!--header div-->
     <header>
-        <h1 class="Title">WorkInProgress</h1>
+        <h1 class="Title">WorkInProgress {username}</h1>
         <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
         <h1 class="current_Page">HomePage</h1>
 
@@ -63,7 +63,7 @@
         <br/>
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-
+          <a href="logout"><b>LOGOUT</b></a>
         </div>
 
     </main>
