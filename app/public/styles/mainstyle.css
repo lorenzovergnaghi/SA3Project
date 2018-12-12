@@ -76,7 +76,7 @@
 /*#################################################################################################################*/
 @media (min-width: 768px) {
     .maincontent{
-        background: rgba(211,200,0,0.5);
+        background: rgba(1,200,0,0.5);
         grid-area: main;
         box-shadow: 0 0 8px 8px #0a0511 ;
         border-radius: 10px;
