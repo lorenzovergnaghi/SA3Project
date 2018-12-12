@@ -51,8 +51,9 @@ login.ensureLoggedIn(),
                 if(found){
                   let x = found;
                   let y = found.episodes;
+                  let z = found.episodes[found.last_watched];
                   console.log(x,y);
-                  res.render('room_tamplate',{x:x,y:y});
+                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z});
                 }
               }
             });

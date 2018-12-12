@@ -31,10 +31,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b>Home </b></a></li>
-                <li><a href="upload"><b> Upload   </b></a></li>
+                <li><a href="home"><b>Home</b></a></li>
+                <li><a href="upload"><b>Upload</b></a></li>
                 <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="all_rooms"><b> Live Room</b></a></li>
+                <li><a href="all_rooms"><b>Live Room</b></a></li>
 
 
             </ul>
@@ -45,9 +45,8 @@
 
 
         <div class='maincontent'>
-            <div class="div_search_mobile">
+
                 <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
-            </div>
 
             <div class="output">
                 {#x}

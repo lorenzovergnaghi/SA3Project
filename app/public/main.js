@@ -50,3 +50,7 @@ function validation()
   }
 }
 
+function f() {
+  dust.render('partials/')
+
+}
