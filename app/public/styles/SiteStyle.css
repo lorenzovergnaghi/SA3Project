@@ -79,6 +79,7 @@
     box-shadow: 0 0 10px 8px #0a0511 ;
     border-radius: 10px;
     background-color: rgba(0,0,0,0.5);
+    font-family: 'Roboto', sans-serif;
     margin: 5px;
   }
   .navigation ul {
@@ -201,7 +202,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url("/animeImages/sss.jpg");
+    background-image: url("/animeImages/cosmos-1853491_1280.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -218,23 +219,24 @@
   header {
     grid-area: header;
     height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 8px #0a0511  ;
-    background: rgba(0,0,0, 0.75);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /*box-shadow: 0 0 8px 8px #0a0511  ;*/
+    background: rgba(20,20,20,0.8);
   }
 
 
 
   .Title {
     text-align: center;
-    font-size: 50px;
-    background: -webkit-linear-gradient(goldenrod, orange, gold, goldenrod, gold);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+    background:white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0px;
     position: relative;
-    top: 25px;
-    right: 85px;
+    top: 70px;
 
   }
 
@@ -242,7 +244,7 @@
     text-align: center;
     font-size: 100px;
     position: relative;
-    left: 45px;
+    /*left: 45px;*/
     margin: 0px 0px 0px -50px;
     background: -webkit-linear-gradient(45deg, #A019C1, #A019C1, #FE01D4, #FF1361, #FFF800, #FFF800);
     -webkit-background-clip: text;
@@ -254,10 +256,8 @@
   .usilogo {
     width: 100px;
     height: 100px;
-    /*border-radius: 50%;*/
-    box-shadow: 0 0 15px 8px #0a0511;
     position: static;
-    margin: -10px 10px 10px 40px;
+    margin: -10px 30px 30px 55px;
   }
 
   .usilogo1 {
@@ -271,7 +271,6 @@
   }
 
   .BlogTitle {
-
     font-size: 450%;
     background: -webkit-linear-gradient(45deg, #A019C1, #A019C1, #FE01D4, #FF1361, #FFF800, #FFF800);
     -webkit-background-clip: text;
@@ -281,12 +280,13 @@
 
   .navigation {
     grid-area: nav;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    background: rgba(0,0,0, 0.5);
+    /*box-shadow: 0 0 8px 8px #0a0511 ;*/
+    /*border-radius: 10px;*/
+    background: rgba(20,20,20,0.8);
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
-    margin-top: 20px;
-    margin-bottom: 13px;
+    border-bottom-left-radius: 10px;
+    /*margin-bottom: 2px;*/
     max-width: 200px;
 
 
@@ -304,8 +304,9 @@
   }
 
   .navigation ul li a {
+    color:white;
     display: block;
-    color: orange;
+    /*color: black;*/
   }
 
   .navigation li a:link {
@@ -314,20 +315,21 @@
   }
 
   .navigation li a:hover {
-    background-color: goldenrod;
+    text-decoration: underline rgba(137,221,241);
     border-radius: 10px;
-    color: black;
-
+    width:100px;
+  }
+  .navigation li a{
+    transition: width 2s;
+  }
+  #current-page{
+    text-decoration: underline rgba(137,221,241);
   }
 
   .sidebar {
     grid-area: sidebar;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    background: rgba(0,0,0, 0.5);
+    border-bottom-right-radius: 10px;
+    background: rgba(20,20,20,0.8);
     max-width: 250px;
 
   }
@@ -361,9 +363,13 @@
     background: rgba(0,0,0, 0.5);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    color: gold;
+    /*box-shadow: 0 0 8px 8px #0a0511 ;*/
+    /*border-radius: 10px;*/
+    color:rgba(137,221,241);
+  }
+  #Homeimage{
+    height: 30px;
+    width: 30px;
   }
 
 

@@ -58,10 +58,10 @@ login.ensureLoggedIn(),
                 }
               }
             });
+          }
         }
-      }
+      });
     });
-});
 
 
 router.post('/',function(req,res){
@@ -74,27 +74,27 @@ router.post('/',function(req,res){
     xid = xid.substring(0,24);
   }
   Saga.findById(xid,function(err, found){
-      if (err) {
-        console.log('NOT FOUND : SAGA');
-        res.status(404).end();
-        return
-      }else {
-        if(found){
-          let kk = new Room({name:req.body.newRoomName,saga_id:found._id});
-          // console.log(kk);
-          kk.save(function(err,saved){
-            if (err) {
-              console.warn('Error creating new Room');
-              console.log(err);
-              res.redirect('all_rooms');
-            }else {
-              console.warn('saved new saga');
-              res.redirect('all_rooms');
-            }
-          });
-        }
+    if (err) {
+      console.log('NOT FOUND : SAGA');
+      res.status(404).end();
+      return
+    }else {
+      if(found){
+        let kk = new Room({name:req.body.newRoomName,saga_id:found._id});
+        // console.log(kk);
+        kk.save(function(err,saved){
+          if (err) {
+            console.warn('Error creating new Room');
+            console.log(err);
+            res.redirect('all_rooms');
+          }else {
+            console.warn('saved new saga');
+            res.redirect('all_rooms');
+          }
+        });
       }
-    });
+    }
+  });
 
 })
 
