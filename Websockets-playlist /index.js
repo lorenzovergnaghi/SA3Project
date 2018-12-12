@@ -14,7 +14,13 @@ app.use(express.static('public')) //show content of public folder on route root 
 //Socket setup
 var io = socket(server);
 io.on('connection', function(socket){
-  console.log("socket connection OK", socket.id);
+  console.log("socket connection done", socket.id);
+
+  socket.on("disconnect", function () {
+    console.log("socket DISCONNECT", socket.id);
+  });
+
+
 
 // Handle chat event
   socket.on('chat', function(data){
