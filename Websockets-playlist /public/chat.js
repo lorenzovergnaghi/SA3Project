@@ -1,12 +1,14 @@
 // Make connection
-var socket = io.connect("http://localhost:4000");
+var socket = io.connect();
 
 //Query DOM
-var message = document.getElementById('message');
-handle = document.getElementById('handle'),
+var message = document.getElementById('message'),
+    handle = document.getElementById('handle'),
     btn = document.getElementById('send'),
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback');
+
+
 
 
 
@@ -32,6 +34,7 @@ socket.on('chat', function(data){
   feedback.innerHTML = "";
   output.innerHTML += '<p><strong>' + data.handle + ' </strong><br>'  + data.message + '</p>';
   message.value = "";
+  document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
 })
 
 socket.on('typing', function(data){
@@ -45,6 +48,7 @@ input.addEventListener("keyup", function(event) {
   event.preventDefault();
   if (event.keyCode === 13) {
     document.getElementById("send").click();
+    document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
   }
 });
 
