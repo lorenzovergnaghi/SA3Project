@@ -1,0 +1,67 @@
+<html>
+<head>
+  <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+  <link href="../styles/mainstyle.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+  <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+  <script src="../js/views.js"></script>
+  <script src="../js/fetch.js"></script>
+  <script src="../main.js"></script>
+  <script src="../js/watching.js"></script>
+  <title>WorkInProgress's Homepage</title>
+</head>
+
+<body>
+<!--total body div-->
+
+<!--header div-->
+  <header>
+    <h1 class="Title">WorkInProgress</h1>
+    <img src="../animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+    <h1 class="current_Page">Watching</h1>
+
+
+
+  </header>
+
+  <main>
+
+<!--===========================NavigationBar====================================================================-->
+
+      <nav class="navigation">
+        <ul>
+          <li><a href="../home"><b>Home </b></a></li>
+          <li><a href="../upload"><b> Upload   </b></a></li>
+          <li><a href="../favorites"><b>Favorites</b></a></li>
+          <li><a href="../all_rooms"><b>Live Room </b></a></li>
+
+        </ul>
+      </nav>
+
+
+    <div class="maincontent_watching">
+
+        {#x}
+        <h3 class="">{.name}</h3>
+        {/x}
+        {#z}
+        <p class="title_asdf">{.name}<p><br/>
+        <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+        {/z}
+        {#y}
+        <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+        {/y}
+
+    </div>
+
+    <div class="sidebar">
+
+    </div>
+  </main>
+  <footer>
+    <p>&copy; WorkInProgress	</p>
+  </footer>
+</body>
+
+</html>

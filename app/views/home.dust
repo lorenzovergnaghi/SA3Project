@@ -1,0 +1,117 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+    <link href="styles/mainstyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
+    <title>WorkInProgress's Homepage </title>
+
+</head>
+
+<body>
+<!--total body div-->
+
+<!--header div-->
+    <header>
+        <h1 class="Title">StreamFast</h1>
+        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
+    </header>
+
+    <main>
+
+<!--===========================NavigationBar====================================================================-->
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
+                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
+                <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
+                <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+
+
+            </ul>
+        </nav>
+
+        <!--===========================Maincontent-Upload====================================================================-->
+
+        <div class='maincontent'>
+            <div class="div_search_mobile">
+                <div <b id="Search-text">Search</b> </div>
+                <input class='search' type="text" ></input>
+            </div>
+
+            <div class="output">
+                {#x}
+                   <div class="flex-item" >
+                       <div class="parent">
+                       <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
+                       <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
+                       </div>
+                        <form action="/watching/:{._id}" method="get">
+                            <p id="series-title">{.name}</p>
+                         <button type="button">WATCH {.name}</button>
+                        </form>
+                    </div>
+                {/x}
+            </div>
+        </div>
+        <br/>
+    <!--===========================Sidebar====================================================================-->
+        <div class="sidebar">
+          <a href="logout"><b>LOGOUT</b></a>
+        </div>
+
+    </main>
+
+    <footer>
+    <p>&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
+    </footer>
+
+</body>
+
+<script>
+    var OUT = undefined;
+    let events = ['keyup'];
+    events.forEach(function(ev){
+        document.querySelector('.search').addEventListener(ev , function(event){
+            event.preventDefault();
+            let filter = document.querySelector('.search').value;
+            if (filter !== "") {
+                doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_home',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }else {
+
+                doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_home',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }
+        });
+    })
+
+</script>
+
+</html>

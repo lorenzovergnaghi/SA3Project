@@ -1,0 +1,76 @@
+
+
+
+<html>
+<head>
+
+    <link href="../../styles/SiteStyle.css" rel="stylesheet"/>
+    <link href="../../styles/mainstyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
+    <script  src="../js/upload.js"></script>
+
+    <title>WorkInProgress's Homepage</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page"> New Episodes </h1>
+    </header>
+
+    <main>
+
+    <!--===========================NavigationBar====================================================================-->
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="../home"><b>Home </b></a></li>
+                <li><a href="../upload"><b>Upload</b></a></li>
+                <li><a href="../favorites"><b>Favorites</b></a></li>
+                <li><a href="picture.html"><b>Live Room</b></a></li>
+
+            </ul>
+        </nav>
+    <!--===========================Maincontent-Upload====================================================================-->
+
+        <div class='maincontent'>
+            <br/>
+
+            <h3 style="color:white;" >{name}</h3>
+            <image src=".{image}" style="width:200px"/>
+            <form  class="upload_form" method="POST" action="/upload" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{_id}"/><br/>
+                <input type="file" name="file" multiple=""/><br/>
+                <input type="submit"/><br/>
+            </form>
+            <br/>
+            {files}
+
+        </div>
+        <br/>
+
+
+
+    <!--===========================Sidebar====================================================================-->
+        <div class="sidebar">
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; WorkInProgress	</p>
+    </footer>
+
+
+</body>
+</html>

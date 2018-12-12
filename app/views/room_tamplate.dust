@@ -1,0 +1,105 @@
+<html>
+<head>
+    <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+    <link href="../styles/mainstyle.css" rel="stylesheet"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <title>WorkInProgress's Homepage</title>
+    <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../../js/views.js"></script>
+    <script src="../../js/fetch.js"></script>
+    <script src="../main.js"></script>
+    <script src="../../js/watching.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1 class="Title">WorkInProgress</h1>
+    <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+    <h1 class="current_Page"></h1>
+</header>
+
+<main>
+
+    <!--===========================NavigationBar====================================================================-->
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="../home"><b>Home </b></a></li>
+            <li><a href="../upload"><b> Upload   </b></a></li>
+            <li><a href="../favorites"><b>Favorites</b></a></li>
+            <li><a href="all_rooms"><b> Live Room </b></a></li>
+
+
+        </ul>
+    </nav>
+
+    <!--===========================Maincontent-Upload====================================================================-->
+
+
+    <div class='maincontent_room'>
+    <input class="unique_room_name" type="hidden" value="{k}">
+        <div class="container_video">
+
+
+            <br/>
+
+
+            {#last_watched}
+            {#saga}
+            <h3 class="">{.name}</h3>
+            {/saga}
+            <video  controls  class="bigone" src="../{.file}"></video>
+            {/last_watched}
+
+
+
+        </div>
+
+        <div class="container_rest">
+            <div class="c1">
+                {#saga}
+                <div>
+                    {.name}<br/><br/>
+                    <image style='max-height:250px;' src='../{.image}'/>
+                    <br/>
+                </div>
+                {/saga}
+            </div>
+            <div class="c2">
+
+            {#episode_list}
+
+            <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+            {/episode_list}
+            </div>
+
+            <div class="c3">
+                <div class="window">
+                    <div class ="output"></div>
+                    <div class ="feedback"></div>
+                </div>
+                <input class="handle" type="text" value="{username}"/>
+                <input class="message" type="text" placeholder="Type a message..."/>
+                <button class="send">  <img class="" src="../animeImages/send_icon.png" height="30" width="30"/>   </button>
+            </div>
+        </div>
+    </div>
+
+    <!--===========================Sidebar====================================================================-->
+    <div class="sidebar">
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; WorkInProgress	</p>
+</footer>
+
+</body>
+<script src="../../js/socket_main.js"></script>
+</html>
