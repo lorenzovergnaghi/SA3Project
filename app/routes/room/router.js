@@ -20,29 +20,31 @@ const login = require('connect-ensure-login');
 
 
 
+
 router.get('/:_id',
-    login.ensureLoggedIn(),
-    function(req,res){
-      let xid = req.params._id;
-      if (xid.charAt(0) == ':') {
-        xid = xid.substring(1);
-      }
-      Room.findById(xid,function(err, found){
-        if (err) {
-          console.log('NOT FOUND : ROOM');
-          res.status(404).end();
-          return
-        }else {
-          if(found){
-            let xid = found.saga_id;
-            if (xid.charAt(0) == ':') {
-              xid = xid.substring(1);
-            }
-            let len = xid.length;
-            if (xid.charAt(len-1) == '!') {
-              xid = xid.substring(0,24);
-            }
-            Saga.findById(xid,function(err, found){
+login.ensureLoggedIn(),
+ function(req,res){
+  let xid = req.params._id;
+  let room_name = xid;
+  if (xid.charAt(0) == ':') {
+    xid = xid.substring(1);
+  }
+  Room.findById(xid,function(err, found){
+      if (err) {
+        console.log('NOT FOUND : ROOM');
+        res.status(404).end();
+        return
+      }else {
+        if(found){
+          let xid = found.saga_id;
+          if (xid.charAt(0) == ':') {
+            xid = xid.substring(1);
+          }
+          let len = xid.length;
+          if (xid.charAt(len-1) == '!') {
+            xid = xid.substring(0,24);
+          }
+          Saga.findById(xid,function(err, found){
               if (err) {
                 console.log('NOT FOUND : SAGA');
                 res.status(404).end();
@@ -52,8 +54,7 @@ router.get('/:_id',
                   let x = found;
                   let y = found.episodes;
                   let z = found.episodes[found.last_watched];
-                  console.log(x,y);
-                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z});
+                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z,k:room_name,username: req.user.username});
                 }
               }
             });
