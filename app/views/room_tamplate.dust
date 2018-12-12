@@ -1,0 +1,45 @@
+<!-- DON'T MODIFY THIS FILE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A ROOM</title>
+    <link type= "text/css"rel="stylesheet" href="../styles/style.css">
+</head>
+<script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="../js/views.js"></script>
+    <script src="../js/fetch.js"></script>
+    <script src="../main.js"></script>
+    <script src="../../js/watching.js"></script>
+    <script src="../../js/socket_main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+<body>
+  <header class="header" id="abcdefg">
+    UGLY DEMO
+  </header>
+  <div class='main'>
+    <div class="main_content">
+      {#x}
+      <h3 class="">{.name}</h3>
+      {/x}
+      {#z}
+      <p class="title_asdf">{.name}<p><br/>
+      <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+      {/z}
+      {#y}
+      <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+      {/y}
+      <script>
+      var socket = io();
+      function emit(){
+        socket.emit('prova',{a:'a'});
+        }
+      </script>
+      <button onclick="emit()">EMIT!</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

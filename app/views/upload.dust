@@ -1,0 +1,132 @@
+<html>
+
+<head>
+
+    <link href="styles/SiteStyle.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
+    <title>WorkInProgress's Homepage</title>
+
+    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="main.js"></script>
+    <script  src="js/upload.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1 class="Title"> WorkInProgress </h1>
+    <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+    <h1 class="current_Page"> Upload   </h1>
+</header>
+
+<main>
+
+    <!--===========================NavigationBar====================================================================-->
+    <nav class="navigation">
+        <ul>
+            <li><a href="home"><b>Home </b></a></li>
+            <li><a href="upload"><b> Upload   </b></a></li>
+            <li><a href="favorites"><b>Favorites</b></a></li>
+            <li><a href="all_rooms"><b>Live Room </b></a></li>
+
+        </ul>
+    </nav>
+    <!--===========================Maincontent-Upload====================================================================-->
+
+    <div class='maincontent'>
+
+        <div class="div_search_mobile">
+            <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
+        </div>
+
+        <div class="output">
+            <div class="newSaga">
+                <form method="GET" action="/upload/newsaga" >
+                    <button class="button_plus" type="submit" >
+
+                            <img class="plus_saga" src="animeImages/button.png"  height="190" width="250"  />
+
+                    </button>
+                </form>
+            </div>
+            {#x}
+                <div class="flex-item">
+
+                    <form class="new" method="POST" action="upload/addep">
+
+                        <input  type="hidden" name="sagaid" value="{._id}"/>
+                        {.name}<br/>
+                        <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                        <button class="button" type="submit">EDIT {.name}</button>
+                    </form>
+                </div>
+            {/x}
+        </div>
+        <br/>
+
+
+
+        <br/>
+        <br/>
+
+
+    </div>
+    <br/>
+    <!--===========================Sidebar====================================================================-->
+    <div class="sidebar">
+
+
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; WorkInProgress </p>
+</footer>
+
+
+</body>
+<script>
+    var OUT = undefined;
+    let events = ['keyup'];
+    events.forEach(function(ev){
+        document.querySelector('.search').addEventListener(ev , function(event){
+            event.preventDefault();
+            let filter = document.querySelector('.search').value;
+            if (filter !== "") {
+                doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_upload',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }else {
+
+                doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episodes_upload',model,function(err, out){
+                        if (err) {
+                            console.log('err!');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }
+        });
+    })
+
+</script>
+</html>
