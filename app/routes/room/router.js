@@ -21,28 +21,28 @@ const login = require('connect-ensure-login');
 
 
 router.get('/:_id',
-login.ensureLoggedIn(),
- function(req,res){
-  let xid = req.params._id;
-  if (xid.charAt(0) == ':') {
-    xid = xid.substring(1);
-  }
-  Room.findById(xid,function(err, found){
-      if (err) {
-        console.log('NOT FOUND : ROOM');
-        res.status(404).end();
-        return
-      }else {
-        if(found){
-          let xid = found.saga_id;
-          if (xid.charAt(0) == ':') {
-            xid = xid.substring(1);
-          }
-          let len = xid.length;
-          if (xid.charAt(len-1) == '!') {
-            xid = xid.substring(0,24);
-          }
-          Saga.findById(xid,function(err, found){
+    login.ensureLoggedIn(),
+    function(req,res){
+      let xid = req.params._id;
+      if (xid.charAt(0) == ':') {
+        xid = xid.substring(1);
+      }
+      Room.findById(xid,function(err, found){
+        if (err) {
+          console.log('NOT FOUND : ROOM');
+          res.status(404).end();
+          return
+        }else {
+          if(found){
+            let xid = found.saga_id;
+            if (xid.charAt(0) == ':') {
+              xid = xid.substring(1);
+            }
+            let len = xid.length;
+            if (xid.charAt(len-1) == '!') {
+              xid = xid.substring(0,24);
+            }
+            Saga.findById(xid,function(err, found){
               if (err) {
                 console.log('NOT FOUND : SAGA');
                 res.status(404).end();
@@ -51,15 +51,16 @@ login.ensureLoggedIn(),
                 if(found){
                   let x = found;
                   let y = found.episodes;
+                  let z = found.episodes[found.last_watched];
                   console.log(x,y);
-                  res.render('room_tamplate',{x:x,y:y});
+                  res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z});
                 }
               }
             });
+          }
         }
-      }
+      });
     });
-});
 
 
 router.post('/',function(req,res){
@@ -72,27 +73,27 @@ router.post('/',function(req,res){
     xid = xid.substring(0,24);
   }
   Saga.findById(xid,function(err, found){
-      if (err) {
-        console.log('NOT FOUND : SAGA');
-        res.status(404).end();
-        return
-      }else {
-        if(found){
-          let kk = new Room({name:req.body.newRoomName,saga_id:found._id});
-          // console.log(kk);
-          kk.save(function(err,saved){
-            if (err) {
-              console.warn('Error creating new Room');
-              console.log(err);
-              res.redirect('all_rooms');
-            }else {
-              console.warn('saved new saga');
-              res.redirect('all_rooms');
-            }
-          });
-        }
+    if (err) {
+      console.log('NOT FOUND : SAGA');
+      res.status(404).end();
+      return
+    }else {
+      if(found){
+        let kk = new Room({name:req.body.newRoomName,saga_id:found._id});
+        // console.log(kk);
+        kk.save(function(err,saved){
+          if (err) {
+            console.warn('Error creating new Room');
+            console.log(err);
+            res.redirect('all_rooms');
+          }else {
+            console.warn('saved new saga');
+            res.redirect('all_rooms');
+          }
+        });
       }
-    });
+    }
+  });
 
 })
 

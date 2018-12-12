@@ -199,7 +199,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url("/animeImages/sss.jpg");
+    background-image: url("/animeImages/Background.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -219,21 +219,21 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     /*box-shadow: 0 0 8px 8px #0a0511  ;*/
-    background: rgba(20,20,20);
+    background: rgba(20,20,20,0.5);
   }
 
 
 
   .Title {
     text-align: center;
-    font-size: 50px;
-    background: -webkit-linear-gradient(goldenrod, orange, gold, goldenrod, gold);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+    background:white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0px;
     position: relative;
-    top: 25px;
-    right: 85px;
+    top: 70px;
 
   }
 
@@ -253,10 +253,8 @@
   .usilogo {
     width: 100px;
     height: 100px;
-    /*border-radius: 50%;*/
-    box-shadow: 0 0 15px 8px #0a0511;
     position: static;
-    margin: -10px 10px 10px 40px;
+    margin: -10px 30px 30px 55px;
   }
 
   .usilogo1 {
@@ -281,12 +279,12 @@
     grid-area: nav;
     /*box-shadow: 0 0 8px 8px #0a0511 ;*/
     /*border-radius: 10px;*/
-    background: rgba(20,20,20);
+    background: rgba(20,20,20,0.5);
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     border-bottom-left-radius: 10px;
-    /*margin-top: 20px;*/
-    /*margin-bottom: 13px;*/
+    border-bottom-right-radius: 10px;
+    margin-bottom: 13px;
     max-width: 200px;
 
 
@@ -315,21 +313,18 @@
   }
 
   .navigation li a:hover {
-    background-color: goldenrod;
+    text-decoration: underline rgba(20,20,20);
     border-radius: 10px;
-    color: black;
+    color: purple;
 
   }
 
   .sidebar {
     grid-area: sidebar;
-    /*box-shadow: 0 0 8px 8px #0a0511 ;*/
-    /*border-radius: 10px;*/
-    /*margin-left: 20px;*/
-    /*margin-top: 20px;*/
-    /*margin-bottom: 13px;*/
+    margin-bottom: 13px;
     border-bottom-right-radius: 10px;
-    background: rgba(20,20,20);
+    border-bottom-left-radius: 10px;
+    background: rgba(20,20,20,0.5);
     max-width: 250px;
   }
 
