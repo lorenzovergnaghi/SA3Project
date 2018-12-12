@@ -1,4 +1,0 @@
-
-
-<video controls="" id="{.id}" src="{.file}" Fullscreen=false ></video>
-<button class="watch_button"id="bt{.id}">Watch {.name}!</button>
