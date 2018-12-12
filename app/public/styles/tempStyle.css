@@ -1,0 +1,38 @@
+html{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+.header{
+  color: white;
+  background-color: tomato;
+  height: 5%;
+}
+.main{
+
+
+}
+.cards {
+  background-color: pink;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.oneCard{
+  background-color: brown;
+  display: flex;
+  flex-flow: row wrap;
+}
+.cards img {
+  margin: 10px;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 200px;
+  max-height: 200px;
+}

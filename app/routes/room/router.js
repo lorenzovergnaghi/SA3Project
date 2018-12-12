@@ -15,6 +15,11 @@ const Saga = mongoose.model('Saga');
 require('../../models/room');
 const Room = mongoose.model('Room');
 const login = require('connect-ensure-login');
+<<<<<<< HEAD
+=======
+const eventBus = require('../../pubsub');
+
+>>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
 
 
 
@@ -23,7 +28,13 @@ const login = require('connect-ensure-login');
 router.get('/:_id',
 login.ensureLoggedIn(),
  function(req,res){
+<<<<<<< HEAD
   let xid = req.params._id;
+=======
+   eventBus.emit('prova',{message:"CIAO"});
+  let xid = req.params._id;
+  let room_name = xid;
+>>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
   if (xid.charAt(0) == ':') {
     xid = xid.substring(1);
   }
@@ -52,8 +63,13 @@ login.ensureLoggedIn(),
                   let x = found;
                   let y = found.episodes;
                   let z = found.episodes[found.last_watched];
+<<<<<<< HEAD
                   console.log(x,y);
                   res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z});
+=======
+                  // console.log(x,y);
+                  res.render('room_tamplate',{x:x,y:y,z:z,k:room_name});
+>>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
                 }
               }
             });

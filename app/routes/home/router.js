@@ -1,4 +1,4 @@
-/** @module root/router */
+/** @module root/home */
 'use strict';
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
@@ -30,11 +30,14 @@ function(req,res){
         return
       }else {
         if(found){
-          res.render('home',{x:found});
+          res.render('home',{x:found,
+          username: req.user.username});
         }
       }
     });
 });
+
+
 
 
 /** router for /root */

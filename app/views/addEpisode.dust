@@ -5,8 +5,11 @@
 <head>
 
     <link href="../../styles/SiteStyle.css" rel="stylesheet"/>
+<<<<<<< HEAD
     <link href="../../styles/mainstyle.css" rel="stylesheet"/>
 
+=======
+>>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
@@ -20,6 +23,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 
     <header>
         <h1 class="Title">WorkInProgress</h1>
@@ -27,6 +31,15 @@
         <h1 class="current_Page"> New Episodes </h1>
     </header>
 
+=======
+
+    <header>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page"> New Episodes </h1>
+    </header>
+
+>>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <main>
 
     <!--===========================NavigationBar====================================================================-->
