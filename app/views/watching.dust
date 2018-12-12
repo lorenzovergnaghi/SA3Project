@@ -49,7 +49,7 @@
         <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
         {/z}
         {#y}
-        <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+        <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
         {/y}
 
     </div>

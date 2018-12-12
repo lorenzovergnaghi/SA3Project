@@ -12,6 +12,8 @@ const mongoose = require('mongoose');
 require('./models/user');
 const User = mongoose.model('User');
 const app = express();
+var http = require('http');
+var io = require('socket.io')(http);
 //passport
     var passport = require('passport');
     var LocalStrategy = require('passport-local');

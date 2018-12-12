@@ -10,26 +10,18 @@ var server = app.listen(app.get('port'), function() {
 
 
 //Sockets
-// const eventBus = require('../pubsub');
+const eventBus = require('../pubsub');
 
-// const io = require('socket.io')(server);
-// io.on('connection', function(socket) {
-//   console.log('client connected');
-//
-//   socket.join("Publish and Subscribe");
-//
-//   socket.on('disconnect', function() {
-//     console.log('client disconnected');
-//   });
-// });
-//
-// eventBus.on('favorite.deleted', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.deleted', event);
-// });
-// eventBus.on('favorite.created', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.created', event)
-// });
-//
-// eventBus.on('favorite.updated', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.updated', event)
-// });
+const io = require('socket.io')(server);
+io.on('connection', function(socket) {
+  console.log('client connected');
+
+  socket.join("Publish and Subscribe");
+
+  socket.on('disconnect', function() {
+    console.log('client disconnected');
+  });
+  socket.on('prova',function(event){
+    console.log('==================PROVA!');
+  })
+});
