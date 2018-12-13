@@ -285,14 +285,14 @@
     .parent{
         position: relative;
     }
-    #img1{
+    .img1{
         position: relative;
         width: 250;
         height: 190;
         top: 0;
         left: 0;
     }
-    #img2{
+    .img2{
         position: absolute;
         top: 50px;
         left: 70px;
@@ -302,15 +302,15 @@
 
 
     }
-    #img1:hover{
+    .img1:hover{
         transform: scale(1.1);
         opacity:0.5;
     }
-    #img2:hover{
+    .img2:hover{
         visibility: visible;
     }
 
-    #img1:hover +#img2{
+    .img1:hover +.img2{
         visibility: visible;
     }
 

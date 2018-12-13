@@ -8,18 +8,7 @@
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#img2").on({
-                mouseenter: function () {
-                    $("#img1").css({"transform":"scale(1.1)", "opacity":"0.5"});
-                },
-                mouseleave: function(){
-                    $("#img1").css({"transform":"scale(1)", "opacity":"1"});
-                },
-            })
-        });
-    </script>
+    <script src="js/util.js"></script>
     <!--Jquery-->
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
@@ -62,8 +51,8 @@
                 {#x}
                    <div class="flex-item" >
                        <div class="parent">
-                       <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
-                       <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
+                       <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
+                       <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
                        </div>
                         <form action="/watching/:{._id}" method="get">
                             <p id="series-title">{.name}</p>

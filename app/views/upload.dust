@@ -44,8 +44,7 @@
             <div class="newSaga">
                 <form method="GET" action="/upload/newsaga" >
                     <button class="button_plus" type="submit" >
-
-                            <img class="plus_saga" src="animeImages/button.png"  height="190" width="250"  />
+                            <img class="plus_saga" src="animeImages/plus.svg"  height="190" width="250"  />
 
                     </button>
                 </form>
