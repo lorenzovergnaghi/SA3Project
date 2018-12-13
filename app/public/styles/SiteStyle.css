@@ -233,7 +233,7 @@
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 70px;
-    background:white;
+    background:rgba(226,18,32);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0px;
@@ -313,7 +313,7 @@
   }
 
   .navigation li a:hover {
-    text-decoration: underline rgba(137,221,241);
+    text-decoration: underline rgba(226,18,32);
     border-radius: 10px;
     width:100px;
   }
@@ -321,7 +321,7 @@
     transition: width 2s;
   }
   #current-page{
-    text-decoration: underline rgba(137,221,241);
+    text-decoration: underline rgba(226,18,32);
   }
 
   .sidebar {
@@ -366,7 +366,7 @@
     color: white;
   }
   .sidebar li a:hover {
-    text-decoration: underline rgba(137,221,241);
+    text-decoration: underline rgba(226,18,32);
     border-radius: 10px;
     width:100px;
   }
