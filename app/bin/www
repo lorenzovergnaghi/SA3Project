@@ -47,3 +47,9 @@ io.on('connection', function(socket) {
       socket.to(room).emit('play_pause', data);
   });
 });
+
+
+
+
+
+

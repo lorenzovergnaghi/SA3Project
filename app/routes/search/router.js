@@ -28,7 +28,8 @@ router.get('/all',function(req,res){
               }
             }
           });
-})
+});
+
 router.get('/',function(req,res){
   // console.log(req.query);
   let nname = undefined;

@@ -61,6 +61,7 @@ const routers = require('./routes/routers');
 app.use(methodOverride('_method'));
 app.use('/', routers.root);
 
+app.use('/delete', routers.delete);
 app.use('/room', routers.room);
 app.use('/all_rooms', routers.all_rooms);
 app.use('/watching', routers.watching);
@@ -71,7 +72,7 @@ app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
 app.use('/search', routers.search);
 app.use('/logout', routers.logout);
-app.use('/home', routers.delete);
+
 
 
 

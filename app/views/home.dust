@@ -1,6 +1,7 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
+    <script src="/socket.io/socket.io.js"></script>
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link href="styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -28,10 +29,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
-                <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
-                <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a href="home" id="Current-page"><b><img id="Homeimage" src="animeImages/friend.svg"/> Home </b></a></li>
+                <li><a href="upload"><b><img id="Homeimage" src="animeImages/exit.svg"/> Upload </b></a></li>
+                <li><a href="favorites"><b><img id="Homeimage" src="animeImages/stars.svg"/>Starred</b></a></li>
+                <li><a href="all_rooms"><b><img id="Homeimage" src="animeImages/group.svg"/><br> Live Room </br></b></a></li>
 
 
             </ul>
@@ -41,7 +42,7 @@
 
         <div class='maincontent'>
             <div class="div_search_mobile">
-                <div <b id="Search-text">Search</b> </div>
+                <div> <b id="Search-text">Search</b> </div>
                 <input class='search' type="text" ></input>
             </div>
 
@@ -52,10 +53,12 @@
                        <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
                        <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
                        </div>
-                        <form action="/watching/:{._id}" method="get">
+                        <form action="/watching/:{._id}" method="GET">
                             <p id="series-title">{.name}</p>
-                         <button type="button">WATCH {.name}</button>
+                            <button type="submit">WATCH {.name}</button>
                         </form>
+                       <input class="hiddenIds" type="hidden" value={._id}/>
+                       <div class="editable"></div>
                     </div>
                 {/x}
             </div>
@@ -63,7 +66,15 @@
         <br/>
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-          <a href="logout"><b>LOGOUT</b></a>
+
+            <ul>
+                <li><a href="logout"><b>LOGOUT</b></a></li><br/>
+
+                <li><form action="/home"  ><button type="button" id="editButton" onclick="edit()">Edit Anime</button></form></li>
+                <!--<li></li>-->
+                <!--<li></li>-->
+                <!--<li><a href="https://plus.google.com/u/0/110960581361779283407?tab=wX" target="_blank"> <img src="img/g.png" width="30" height="30"> </a></li>-->
+            </ul>
         </div>
 
     </main>

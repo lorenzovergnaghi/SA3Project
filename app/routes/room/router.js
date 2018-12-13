@@ -96,7 +96,7 @@ router.post('/',function(req,res){
     }
   });
 
-})
+});
 
 
 /** router for /root */

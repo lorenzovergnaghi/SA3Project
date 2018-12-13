@@ -1,12 +1,12 @@
 //SOCKET
-var socket = io();
+let socket = io();
 
 socket.on('connect', function() {
   //  manda il nome della room
   let room_name = document.querySelector('.unique_room_name').value;
   console.log(room_name);
   socket.emit('join',{room_name:room_name});
-})
+});
 //Query DOM
 var message = document.querySelector('.message');
 var handle = document.querySelector('.handle');
@@ -66,7 +66,11 @@ input.addEventListener("keyup", function(event) {
 
 document.querySelector('.bigone').addEventListener('play',function(event){
     socket.emit('play_pause',{pause:false});
-})
+});
 document.querySelector('.bigone').addEventListener('pause',function(event){
     socket.emit('play_pause',{pause:true});
-})
+});
+
+
+
+

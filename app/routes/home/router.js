@@ -22,7 +22,7 @@ const login = require('connect-ensure-login');
 //     res.render('home');
 //   });
 router.get('/',
-login.ensureLoggedIn(),
+    login.ensureLoggedIn(),
 function(req,res){
   Saga.find({},function(err, found){
       if (err) {
