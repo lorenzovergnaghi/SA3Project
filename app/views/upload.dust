@@ -3,11 +3,7 @@
 <head>
 
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
-<<<<<<< HEAD
     <link href="styles/mainstyle.css" rel="stylesheet"/>
-=======
-
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <title>WorkInProgress's Homepage</title>
 
@@ -53,7 +49,6 @@
                     <button class="button_plus" type="submit" >
 
                             <img class="plus_saga" src="animeImages/button.png"  height="190" width="250"  />
-<<<<<<< HEAD
 
                     </button>
                 </form>
@@ -63,17 +58,6 @@
 
                     <form class="new" method="POST" action="upload/addep">
 
-=======
-
-                    </button>
-                </form>
-            </div>
-            {#x}
-                <div class="flex-item">
-
-                    <form class="new" method="POST" action="upload/addep">
-
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
                         <input  type="hidden" name="sagaid" value="{._id}"/>
                         {.name}<br/>
                         <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
@@ -83,14 +67,7 @@
             {/x}
         </div>
         <br/>
-<<<<<<< HEAD
 
-=======
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
-
-
-        <br/>
-        <br/>
 
 
         <br/>

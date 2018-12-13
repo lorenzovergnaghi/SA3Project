@@ -71,6 +71,8 @@ app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
 app.use('/search', routers.search);
 app.use('/logout', routers.logout);
+app.use('/home', routers.delete);
+
 
 
 module.exports = app;

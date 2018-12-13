@@ -1,21 +1,15 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
-<<<<<<< HEAD
     <link href="styles/mainstyle.css" rel="stylesheet"/>
-=======
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-<<<<<<< HEAD
-    <title>WorkInProgress's Homepage</title>
-=======
     <title>WorkInProgress's Homepage </title>
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
 
 </head>
 
@@ -24,76 +18,43 @@
 
 <!--header div-->
     <header>
-<<<<<<< HEAD
-        <h1 class="Title">WorkInProgress</h1>
-        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-        <h1 class="current_Page">HomePage</h1>
-=======
-        <h1 class="Title">WorkInProgress {username}</h1>
-        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-        <h1 class="current_Page">HomePage</h1>
-
-
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
-
+        <h1 class="Title">StreamFast</h1>
+        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
     </header>
 
-<<<<<<< HEAD
-
-    </header>
-
-=======
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <main>
 
 <!--===========================NavigationBar====================================================================-->
 
         <nav class="navigation">
             <ul>
-<<<<<<< HEAD
-                <li><a href="home"><b>Home</b></a></li>
-                <li><a href="upload"><b>Upload</b></a></li>
-                <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="all_rooms"><b>Live Room</b></a></li>
+                <li><a href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
+                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
+                <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
+                <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
 
 
             </ul>
         </nav>
 
         <!--===========================Maincontent-Upload====================================================================-->
-
-
-
-        <div class='maincontent'>
-
-                <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
-=======
-                <li><a href="home"><b>Home </b></a></li>
-                <li><a href="upload"><b> Upload   </b></a></li>
-                <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="all_rooms"><b> Live Room</b></a></li>
-
-
-            </ul>
-        </nav>
-
-        <!--===========================Maincontent-Upload====================================================================-->
-
-
 
         <div class='maincontent'>
             <div class="div_search_mobile">
-                <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
+                <div <b id="Search-text">Search</b> </div>
+                <input class='search' type="text" ></input>
             </div>
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
 
             <div class="output">
                 {#x}
                    <div class="flex-item" >
-                        <p style="color:white;">{.name}</p>
-                       <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                       <div class="parent">
+                       <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
+                       <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
+                       </div>
                         <form action="/watching/:{._id}" method="get">
-                         <button>WATCH {.name}</button>
+                            <p id="series-title">{.name}</p>
+                         <button type="button">WATCH {.name}</button>
                         </form>
                     </div>
                 {/x}
@@ -102,21 +63,13 @@
         <br/>
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-<<<<<<< HEAD
-
-        </div>
-
-    </main>
-
-=======
           <a href="logout"><b>LOGOUT</b></a>
         </div>
 
     </main>
 
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
     <footer>
-    <p>&copy; WorkInProgress	</p>
+    <p>&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
     </footer>
 
 </body>

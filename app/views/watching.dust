@@ -1,6 +1,7 @@
 <html>
 <head>
   <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+  <link href="../styles/mainstyle.css" rel="stylesheet"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
   <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
@@ -49,11 +50,7 @@
         <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
         {/z}
         {#y}
-<<<<<<< HEAD
-        <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
-=======
         <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
->>>>>>> 367f933840334ad9f74c0fb2e6a07be53e307244
         {/y}
 
     </div>
