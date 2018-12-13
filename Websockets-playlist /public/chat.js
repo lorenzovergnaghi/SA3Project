@@ -29,8 +29,8 @@ btn.addEventListener('click', function() {
     socket.emit("chat", {
       message: message.value,
       handle: handle.value,
-      color: handle.style.color
-
+      color_handle: handle.style.color,
+      color_message: message.style.color
     });
     console.log(handle.style.color);
   }
@@ -48,10 +48,11 @@ message.addEventListener('keyup', function(){
 //Listen for addEventListener
 socket.on('chat', function(data){
   feedback.innerHTML = "";
-  output.innerHTML += '<p><strong>' + data.handle + ' </strong><br>'  + data.message + '</p>';
+  output.innerHTML += "<strong><p style='color:"+data.color_handle+";'>"+data.handle+"</p></strong><p id='border' style='color:"+data.color_message+";'>"+data.message+"</p>"
   message.value = "";
   document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
 });
+//
 
 socket.on('typing', function(data){
   feedback.innerHTML = '<p><em>' + data +  ' is typing a message.. </em></p>';
