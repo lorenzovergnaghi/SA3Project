@@ -9,7 +9,18 @@ var message = document.getElementById('message'),
     feedback = document.getElementById('feedback');
 
 
+function randomColorGenerator() {
+  let values = [];
+  for(let i = 0; i < 3;i++){
+    let num = Math.floor(Math.random() * 256);
+    values.push(num);
+  }
+  let myRGB = 'rgb(' + values[0] + ',' + values[1] + ',' + values[2] + ')';
+  return myRGB
+}
 
+handle.style.color = randomColorGenerator();
+message.style.color = randomColorGenerator();
 
 //Emit events
 //emit a message than the WebSockets on the Server
@@ -18,8 +29,10 @@ btn.addEventListener('click', function() {
     socket.emit("chat", {
       message: message.value,
       handle: handle.value,
+      color: handle.style.color
 
     });
+    console.log(handle.style.color);
   }
 });
 
@@ -48,7 +61,6 @@ socket.on('typing', function(data){
 
 socket.on('notype', function () {
   feedback.innerHTML = "";
-
 })
 
 
@@ -62,6 +74,10 @@ input.addEventListener("keyup", function(event) {
     document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
   }
 });
+
+
+
+
 
 
 
