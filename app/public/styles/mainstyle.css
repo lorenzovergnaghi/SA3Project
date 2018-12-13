@@ -140,8 +140,10 @@
 
     .plus_saga{
         border-radius: 15px;
-        background:rgba(255,255,255,0.5);
         color: black;
+    }
+    .plus_saga:hover{
+        transform: scale(1.1);
     }
     .button_plus{
         background: none;

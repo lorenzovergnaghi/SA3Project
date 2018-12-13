@@ -7,8 +7,6 @@ $(document).ready(function(){
             $(e.target).prev().css({"transform":"scale(1)", "opacity":"1"})
         },
         click:function(e){
-            console.log(e);
-
         }
     })
 });
