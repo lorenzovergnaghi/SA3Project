@@ -12,6 +12,8 @@ const mongoose = require('mongoose');
 require('./models/user');
 const User = mongoose.model('User');
 const app = express();
+var http = require('http');
+var io = require('socket.io')(http);
 //passport
     var passport = require('passport');
     var LocalStrategy = require('passport-local');
@@ -68,6 +70,7 @@ app.use('/home', routers.home);
 app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
 app.use('/search', routers.search);
+app.use('/logout', routers.logout);
 
 
 

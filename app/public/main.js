@@ -34,19 +34,13 @@ function check () {
 
 function validation()
 {
-
   var check=document.getElementById('email').type;
   if(check=="email")
   {
     var value=document.getElementById('email').value;
     if(value=="")
     {
-
-
       document.getElementById('error').innerHTML="Incorrect Email Address";
-
-
     }
   }
 }
-
