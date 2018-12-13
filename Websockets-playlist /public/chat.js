@@ -8,14 +8,6 @@ var message = document.getElementById('message'),
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback');
 
-var avatar = document.getElementById('avatar')
-
-var image = document.createElement("IMG");
-image.setAttribute("src", "./img/avatar.png");
-
-
-
-
 
 
 
@@ -29,35 +21,35 @@ btn.addEventListener('click', function() {
 
     });
   }
-
 });
 
-message.addEventListener('keypress', function(){
-  socket.emit('typing', handle.value);
+message.addEventListener('keyup', function(){
+  if(message.value !== ""){
+    socket.emit('typing', handle.value);
+  }
+  if(message.value === ""){
+    socket.emit('notype');
+  }
 });
-
 
 //Listen for addEventListener
 socket.on('chat', function(data){
   feedback.innerHTML = "";
-
-  output.appendChild(image);
   output.innerHTML += '<p><strong>' + data.handle + ' </strong><br>'  + data.message + '</p>';
-
-
   message.value = "";
   document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
-})
+});
 
 socket.on('typing', function(data){
-
-
   feedback.innerHTML = '<p><em>' + data +  ' is typing a message.. </em></p>';
-
-
   document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
 
 });
+
+socket.on('notype', function () {
+  feedback.innerHTML = "";
+
+})
 
 
 
@@ -70,6 +62,8 @@ input.addEventListener("keyup", function(event) {
     document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
   }
 });
+
+
 
 
 
