@@ -8,6 +8,13 @@ var message = document.getElementById('message'),
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback');
 
+var avatar = document.getElementById('avatar')
+
+var image = document.createElement("IMG");
+image.setAttribute("src", "./img/avatar.png");
+
+
+
 
 
 
@@ -18,10 +25,11 @@ btn.addEventListener('click', function() {
   if (message.value && handle.value) {
     socket.emit("chat", {
       message: message.value,
-      handle: handle.value
+      handle: handle.value,
+
     });
   }
-  ;
+
 });
 
 message.addEventListener('keypress', function(){
@@ -32,7 +40,11 @@ message.addEventListener('keypress', function(){
 //Listen for addEventListener
 socket.on('chat', function(data){
   feedback.innerHTML = "";
+
+  output.appendChild(image);
   output.innerHTML += '<p><strong>' + data.handle + ' </strong><br>'  + data.message + '</p>';
+
+
   message.value = "";
   document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
 })
@@ -58,3 +70,6 @@ input.addEventListener("keyup", function(event) {
     document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
   }
 });
+
+
+
