@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#img2").on({
+                mouseenter: function () {
+                    $("#img1").css({"transform":"scale(1.1)", "opacity":"0.5"});
+                },
+                mouseleave: function(){
+                    $("#img1").css({"transform":"scale(1)", "opacity":"1"});
+                },
+            })
+        });
+    </script>
+    <!--Jquery-->
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
@@ -32,8 +47,6 @@
                 <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
                 <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
                 <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
-
-
             </ul>
         </nav>
 
@@ -69,7 +82,7 @@
     </main>
 
     <footer>
-    <p>&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
+    <p id="footer">&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
     </footer>
 
 </body>
