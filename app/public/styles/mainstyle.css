@@ -101,8 +101,6 @@
         background:rgba(255,255,255,0.3);
         color: black;
         margin-top:10px;
-        background-image: url('searchicon.png');
-        background-position: 10px 10px;
     }
     .search:hover{
         background:rgba(255,255,255,0.8);
@@ -156,21 +154,26 @@
     /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
 
     /*============================Main-Watching=================================*/
+    .series_title{
+        color:White;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 30px;
+    }
+    .movie_title{
+        color:white;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 20px;
+    }
     .maincontent_watching{
-        background: rgba(0,0,0,0.5);
+        background: rgba(25,25,25,0.9);
         grid-area: main;
-        box-shadow: 0 0 8px 8px #0a0511 ;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 13px;
-        margin-left: 20px;
         padding: 0;
+        min-height: 700px;
     }
 
     /*++++++++++++++++++++++++++++++++++++++++++++ROOM-MAIN******************************************************************/
     /*++++++++++++++++++++++++++++++++++++++++++++ROOM-MAIN******************************************************************/
     .maincontent_room{
-        background: rgba(211,200,0,0.5);
         box-shadow: 0 0 8px 8px #0a0511 ;
         border-radius: 10px;
         margin-top: 20px;
@@ -318,7 +321,5 @@
     .img1:hover +.img2{
         visibility: visible;
     }
-
-
 
 }
