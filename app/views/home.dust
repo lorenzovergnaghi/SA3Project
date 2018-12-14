@@ -50,13 +50,11 @@
             <div class="output">
                 {#x}
                    <div class="flex-item" >
-                       <!--<div class="parent">-->
-                       <!--<img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>-->
-                       <!--<img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>-->
-                       <!--</div>-->
                        <a href="/watching/:{._id}"><div class="parent">
                            <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
                            <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
+                           <br/>
+                           <a>"{.name}"</a>
                        </div></a>
                     </div>
                 {/x}
