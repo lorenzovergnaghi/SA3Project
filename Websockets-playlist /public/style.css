@@ -21,10 +21,7 @@ body{
 #output p{
     padding: 2px 0px; /*top/bottom - right/left*/
     margin: 0 20px;
-}
-
-#border{
-    border-bottom: 1px solid black;
+    color: black;
 }
 
 #feedback p{
