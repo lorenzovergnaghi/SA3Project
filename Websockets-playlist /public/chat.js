@@ -34,7 +34,7 @@ btn.addEventListener('click', function() {
       handle: handle.value,
       color_handle: handle.style.color
     });
-    
+    output.innerHTML += '<p class="rightAlign" style="color:' +handle.style.color+'"><strong>'+handle.value+'</strong></p>'+'<p class="rightAlign">'+ message.value+ '</p>';
   }
   if(message.value !== ""){
     socket.emit('afterSendingDelete');
