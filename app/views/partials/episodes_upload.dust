@@ -5,9 +5,7 @@
 
         {#x}
         <div class="flex-item">
-
             <form class="new" method="POST" action="upload/addep">
-
                 <input  type="hidden" name="sagaid" value="{._id}"/>
                 {.name}<br/>
                 <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
@@ -15,4 +13,3 @@
             </form>
         </div>
         {/x}
-

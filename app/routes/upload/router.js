@@ -43,13 +43,15 @@ login.ensureLoggedIn(),
 function(req,res){
   res.render('newSaga');
 });
+
+//saga image
 router.post('/newsaga',
 login.ensureLoggedIn(),
 function(req, res){
   var folderPath = './public/storage/saga_covers';
   var form = new formidable.IncomingForm();
   form.on('fileBegin', function(name, file) {
-		file.path = folderPath+'/'+file.name;
+        file.path = folderPath+'/'+file.name;
   });
   form.on('end',function(err){
     if (err) {
@@ -100,7 +102,7 @@ router.get('/',
           }});
   });
 
-
+//episodi
 router.post('/',
 login.ensureLoggedIn(),
 function(req, res){
@@ -137,8 +139,8 @@ function(req, res){
   form.parse(req, (err, fields, files)=>{
 
 // TODO: files.file e' un array NON SORTATO
+
     files.file.forEach((el)=>{
-      // console.log(el);
       Saga.findById(fields.id,function(err, found) {
           if (err) {
             res.status(404).end();

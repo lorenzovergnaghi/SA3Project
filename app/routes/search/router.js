@@ -106,21 +106,5 @@ router.get('/room/',function(req,res){
           });
 });
 
-// "/search/room?name="+filter, {}, undefined).then(function(obj){
-//    var model = {
-//        x : obj
-//    };
-//    dust.render('partials/episodes_home',model,function(err, out){
-//        if (err) {
-//            console.log('err!');
-//        }
-//        var latestEl = document.querySelector('.output');
-//        latestEl.innerHTML = out;
-//    })
-// })
-// }else {
-//
-// doJSONRequest("GET", "/search/room/all", {}, undefined).then(function(obj){
-//    var model = {
 
 module.exports = router;
