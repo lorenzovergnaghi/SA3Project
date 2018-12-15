@@ -17,13 +17,13 @@
 <body style="background-color:grey;">
 
 {#x}
-<div style="font-size: 30pt;color:white;">
-    {y}
+<p>
+    Our administrators are being notifyed of you're register request. and will review it ASAP.<br/>
     <br/><br/><br/>
     NAME : {lname}<br/>
     EMAIL : {email}<br/>
-    PASSWORD : {password}<br/>
-</div>
+    PASSWORD : {password[0]}<br/>
+</p>
 {/x}
 </body>
 

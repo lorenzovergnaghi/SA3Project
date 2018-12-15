@@ -1,17 +1,22 @@
 
 
-
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/util.js"></script>
+        <!--Jquery-->
 
 
 
 
     {#x}
     <div class="flex-item" >
-      <p style="color:white;">{.name}</p>
-      <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
-      <form action="/watching/:{._id}" method="get">
-        <button>WATCH {.name}</button>
-      </form>
+        <a href="/watching/:{._id}"><div class="parent">
+            <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
+            <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
+            <br/>
+            <br/>
+            <a id="series-title">{.name}</a>
+        </div></a>
     </div>
     {/x}
 

@@ -1,8 +1,8 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
     <link href="../styles/SiteStyle.css" rel="stylesheet"/>
     <link href="../styles/mainstyle.css" rel="stylesheet"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <title>WorkInProgress's Homepage</title>
@@ -47,11 +47,13 @@
 
 
             <br/>
+
+
             {#last_watched}
             {#saga}
             <h3 class="">{.name}</h3>
             {/saga}
-            <video  controls onseeking="updateSeeked()"  class="bigone" src="../{.file}"></video>
+            <video onseeking="updateSeeked()" controls  class="bigone" src="../{.file}"></video>
             {/last_watched}
 
 
@@ -71,6 +73,7 @@
             <div class="c2">
 
             {#episode_list}
+
             <button  class="next_episodes" onclick="setWatchingRoom('../{.file}')">Watch {.name}</button><br/>
             {/episode_list}
             </div>

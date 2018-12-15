@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link href="styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -15,9 +16,8 @@
 <body>
 
     <header>
-        <h1 class="Title">WorkInProgress</h1>
-        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-        <h1 class="current_Page">Live Rooms</h1>
+            <h1 class="Title">StreamFast</h1>
+        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
     </header>
 
     <main>
@@ -26,11 +26,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b>Home </b></a></li>
-                <li><a href="upload"><b> Upload   </b></a></li>
-                <li><a href="favorites"><b>Favorites</b></a></li>
-                <li><a href="/"><b> Live Room </b></a></li>
-
+                <li><a href="home"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
+                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
+                <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
+                <li><a href="all_rooms" id="Current-page"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
             </ul>
         </nav>
 
@@ -38,8 +37,9 @@
 
     <div class='maincontent'>
         <div class="div_search_mobile">
-            <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
-        </div>
+            <div <b id="Search-text">Search</b> </div>
+        <input class='search' type="text" ></input>
+    </div>
         <form method="POST" action="/room">
           <input type="text" name="newRoomName" placeholder="You're new room name"><br/>
           <select name="saga_id">
@@ -71,42 +71,4 @@
     </footer>
 
 </body>
-<script>
-    let events = ['keyup'];
-    events.forEach(function(ev){
-        document.querySelector('.search').addEventListener(ev , function(event){
-            event.preventDefault();
-            let filter = document.querySelector('.search').value;
-            if (filter !== "") {
-                doJSONRequest("GET", "/search/room?name="+filter, {}, undefined).then(function(obj){
-                    var model = {
-                        x : obj
-                    };
-                    dust.render('partials/rooms',model,function(err, out){
-                        if (err) {
-                            console.log('err!');
-                        }
-                        var latestEl = document.querySelector('.output');
-                        latestEl.innerHTML = out;
-                    })
-                })
-            }else {
-
-                doJSONRequest("GET", "/search/room/all", {}, undefined).then(function(obj){
-                    var model = {
-                        x : obj
-                    };
-                    dust.render('partials/rooms',model,function(err, out){
-                        if (err) {
-                            console.log('err!');
-                        }
-                        var latestEl = document.querySelector('.output');
-                        latestEl.innerHTML = out;
-                    })
-                })
-            }
-        });
-    })
-
-</script>
 </html>
