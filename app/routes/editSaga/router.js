@@ -6,7 +6,6 @@ mongoose.connect('mongodb://localhost/test');
 const util = require('util');
 const express = require('express');
 const router = express.Router();
-
 require('../../models/episode');
 const Episode = mongoose.model('Episode');
 require('../../models/saga');
@@ -18,14 +17,18 @@ const login = require('connect-ensure-login');
 router.delete('/:id',
     login.ensureLoggedIn(),
     function(req, res){
-        const id = req.params.id;
+        var id = req.params.id;
+        if (id.charAt(0) == ':') {
+            id = id.substring(1);
+        }
         Saga.findById(id).then((found) => {
             found.remove().then(function(removed){
                 if(req.accepts('application/json')){
-                    event.emit('saga.deleted',removed);
-                    rest.status(204);
-                    res.redirect('/');
+                    // event.emit('saga.deleted',removed);
+                    console.log("ALl ok");
+                    res.json(JSON.stringify({removed: removed})).end();
                 }}).catch(function(err){
+                    console.log(err);
                     res.status(400).end();
             })
         }).catch(function(err){
@@ -33,12 +36,11 @@ router.delete('/:id',
         })
     });
 
-router.put('/:id', function(req, res) {
+router.post('/:id', function(req, res) {
     var id = req.params.id;
     if (id.charAt(0) == ':') {
         id = id.substring(1);
     }
-    console.log('fsdgrhetrgweehtgrwferhetregrwhtregrweht qui:'+id);
 
     Saga.findById(id).then(function(found){
         //object already exists (replace content)
@@ -47,26 +49,16 @@ router.put('/:id', function(req, res) {
             found.name = req.body.name;
         }
 
-        found.save().then(function(saved){
-            if (req.accepts('html')) {
-                res.redirect('home');
-            } else {
-                event.emit('saga.updated', saved);
-                res.json(saved);
-            }
-        }).catch(function(err){
-            console.log('PUT CATCH');
-            console.log(id);
-            console.log(req.body);
+        console.log(req.body);
 
+        found.save().then(function(){
+                res.status(202).end();
+        }).catch(function(err){
             res.status(400).end();
         });
     }).catch(function(err){
         res.status(404).end();
     });
 });
-
-
-
 
 module.exports = router;

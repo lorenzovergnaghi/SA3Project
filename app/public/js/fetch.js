@@ -9,15 +9,14 @@
 
                 function doFetchRequest(method, url, headers, body) {
 
-                if ((arguments.length) != 4 || (method !== "PUT" && method !== "POST" &&
-                    method !== "GET" && method !== "DELETE") ||
-                  ((body && typeof body !== 'string'))) {
+                if ((arguments.length) != 4 || (method !== "PUT" && method !== "POST" && method !== "GET" && method !== "DELETE") || ((body && typeof body !== 'string'))) {
                   throw new Error();
                 } else if (method === "POST" || method === "PUT") {
+                    console.log(url,method,headers,body);
                   return fetch(url, {
-                    method: method,
-                    headers: headers,
-                    body: body
+                      method: method,
+                      headers: headers,
+                      body: body
                   });
                 } else {
                   return fetch(url, {
@@ -42,6 +41,7 @@
                   }
 
                   return doFetchRequest(method, url, headers, JSON.stringify(body)).then((res) => {
-                    return res.json();
+                      const copy = res.clone();
+                      return copy.json();
                   });
               }
