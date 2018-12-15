@@ -1,0 +1,12 @@
+
+
+
+
+
+{#x}
+   <div style="color:white;background-color:purple;">
+   {.name}<br/>
+   {._id}<br/>
+   <a href="/room/:{._id}"><b>Join</b></a>
+   </div>
+{/x}

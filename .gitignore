@@ -13,7 +13,7 @@ yarn-error.log*
 .idea/*
 #ignore Presentation folder contents
 Presentations/*
-
+./app/public/storage/saga_covers/*
 
 #ignore ds store files
 .DS_Store

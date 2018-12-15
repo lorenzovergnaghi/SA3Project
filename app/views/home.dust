@@ -57,7 +57,7 @@
                            <br/>
                            <a id="series-title">{.name}</a>
                        </div></a>
-                    </div>
+
                 {/x}
             </div>
         </div>

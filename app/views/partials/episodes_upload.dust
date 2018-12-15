@@ -1,4 +1,5 @@
 
+
 {#x}
 <div class="flex-item">
     <form class="new" method="POST" action="upload/addep">
@@ -9,5 +10,3 @@
         <button class="button" type="submit">EDIT</button>
     </form>
 </div>
-        {/x}
-
