@@ -45,19 +45,17 @@
                 <form method="GET" action="/upload/newsaga" >
                     <button class="button_plus" type="submit" >
                             <img class="plus_saga" src="animeImages/plus.svg"  height="190" width="250"  />
-
                     </button>
                 </form>
             </div>
             {#x}
                 <div class="flex-item">
-
                     <form class="new" method="POST" action="upload/addep">
-
                         <input  type="hidden" name="sagaid" value="{._id}"/>
-                        {.name}<br/>
-                        <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
-                        <button class="button" type="submit">EDIT {.name}</button>
+                        <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE" /><br/>
+                        <br/>
+                        <a id="series-title">{.name}</a><br/>
+                        <button class="button" type="submit">EDIT</button>
                     </form>
                 </div>
             {/x}

@@ -54,7 +54,8 @@
                            <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
                            <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
                            <br/>
-                           <a>"{.name}"</a>
+                           <br/>
+                           <a id="series-title">{.name}</a>
                        </div></a>
                     </div>
                 {/x}
