@@ -49,13 +49,15 @@
                 {#x}
                    <div class="flex-item" >
                        <div class="parent">
-                       <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
+                         <a href="/watching/:{._id}"><img style="width:300px;height:300px;" id="Homeimage"src="{.image}"></a>
+                       <!-- <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
                        <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
-                       </div>
-                        <form action="/watching/:{._id}" method="get">
+                       </div> -->
+                        <!-- <form action="/watching/:{._id}" method="get">
                             <p id="series-title">{.name}</p>
                          <button type="button">WATCH {.name}</button>
-                        </form>
+                        </form> -->
+
                     </div>
                 {/x}
             </div>
