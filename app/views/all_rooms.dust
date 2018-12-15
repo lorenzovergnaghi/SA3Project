@@ -74,4 +74,44 @@
     </footer>
 
 </body>
+<script>
+    var OUT = undefined;
+    let events = ['keyup'];
+    events.forEach(function(ev){
+        document.querySelector('.search').addEventListener(ev , function(event){
+            event.preventDefault();
+            let filter = document.querySelector('.search').value;
+            if (filter !== "") {
+                doJSONRequest("GET", "/search/room?name="+filter, {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episode_room',model,function(err, out){
+                        if (err) {
+                            console.log('err!1');
+                            console.log(err);
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }else {
+
+                doJSONRequest("GET", "/search/room/all", {}, undefined).then(function(obj){
+                    var model = {
+                        x : obj
+                    };
+                    dust.render('partials/episode_room',model,function(err, out){
+                        if (err) {
+                            console.log('err!2');
+                        }
+                        var latestEl = document.querySelector('.output');
+                        latestEl.innerHTML = out;
+                    })
+                })
+            }
+        });
+    })
+
+</script>
 </html>
