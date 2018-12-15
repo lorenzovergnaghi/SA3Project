@@ -47,13 +47,11 @@
 
 
             <br/>
-
-
             {#last_watched}
             {#saga}
             <h3 class="">{.name}</h3>
             {/saga}
-            <video  controls  class="bigone" src="../{.file}"></video>
+            <video  controls onseeking="updateSeeked()"  class="bigone" src="../{.file}"></video>
             {/last_watched}
 
 
@@ -73,8 +71,7 @@
             <div class="c2">
 
             {#episode_list}
-
-            <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+            <button  class="next_episodes" onclick="setWatchingRoom('../{.file}')">Watch {.name}</button><br/>
             {/episode_list}
             </div>
 

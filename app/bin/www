@@ -44,6 +44,15 @@ io.on('connection', function(socket) {
     socket.to(room).emit('typing', data);
   });
   socket.on('play_pause',function(data){
+    console.log("cast play_pause :"+data);
       socket.to(room).emit('play_pause', data);
+  });
+  socket.on('seek',function(data){
+    console.log("seek :"+data.time);
+    socket.to(room).emit('seeked', data);
+  });
+  socket.on('switch_episode',function(data){
+    console.log("WWW , switch_episode");
+    socket.to(room).emit('switch_episode_once',data);
   });
 });
