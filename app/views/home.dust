@@ -55,6 +55,7 @@
                            <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
                            <br/>
                            <br/>
+                           <br/>
                            <a id="series-title">{.name}</a>
                        </div></a>
                     </div>
