@@ -34,6 +34,7 @@ btn.addEventListener('click', function() {
       handle: handle.value,
       color_handle: handle.style.color
     });
+    
   }
   if(message.value !== ""){
     socket.emit('afterSendingDelete');
@@ -84,7 +85,7 @@ input.addEventListener("keyup", function(event) {
   event.preventDefault();
   if (event.keyCode === 13) {
     document.getElementById("send").click();
-    document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
+    document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight;
   }
 });
 

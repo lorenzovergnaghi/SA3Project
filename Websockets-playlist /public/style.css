@@ -1,12 +1,13 @@
 body{
     font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+
 }
 
 
 #main_container{
     max-width: 600px;
-    box-shadow: 5px 5px 5px #928b8b;
     border-radius: 15px;
+    background-color: rgb(226, 18, 33);
 
 
 }
@@ -14,8 +15,10 @@ body{
 #window{
     height: 250px;
     overflow: scroll;
-    background: #eee;
-    border-radius: 15px;
+    background-color:rgb(232, 232, 232);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
 }
 
 #output p{
@@ -34,23 +37,24 @@ body{
 input{
     padding: 15px 15px;
     box-sizing: border-box;
-    background: #eee;
     border-radius: 15px;
     display: block;
     width: 98.75%;
     font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
     font-size: 17px;
-    border: 1px solid red;
+    border: 1px solid rgba(226, 18, 33);
     margin: 4px;
+
 }
 
 button{
-    background: #00d1b2;
+    background: rgba(226, 18, 33);
     color: white;
     font-size: 25px;
     border: 0;
     padding: 15px 0;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
+
 
 }
