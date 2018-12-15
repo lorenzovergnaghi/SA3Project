@@ -1,8 +1,8 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link href="styles/mainstyle.css" rel="stylesheet"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <title>WorkInProgress's Homepage</title>
@@ -16,8 +16,9 @@
 <body>
 
     <header>
-        <h1 class="Title">StreamFast</h1>
-        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page">Favorites</h1>
     </header>
 
     <main>
@@ -26,10 +27,11 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
-                <li><a href="favorites" id="Current-page"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
-                <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a href="home"><b>Home </b></a></li>
+                <li><a href="upload"><b> Upload   </b></a></li>
+                <li><a href="favorites"><b>Favorites</b></a></li>
+                <li><a href="all_rooms"><b> Live Room </b></a></li>
+
             </ul>
         </nav>
 
