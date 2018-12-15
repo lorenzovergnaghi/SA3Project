@@ -27,7 +27,7 @@
         <nav class="navigation">
             <ul>
                 <li><a href="home"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="animeImages/exit.svg"> Upload </b></a></li>
+                <li><a href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
                 <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
                 <li><a href="all_rooms" id="Current-page"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
             </ul>
@@ -62,7 +62,10 @@
         <br/>
         <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
-
+          <ul>
+          <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"></b></a></li>
+          <li><a href="logout"><b>Logout</b></a></li>
+          </ul>
         </div>
     </main>
 

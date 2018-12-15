@@ -1,6 +1,3 @@
-
-
-
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
@@ -8,11 +5,11 @@
     <link href="../../styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
-    <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-    <script src="js/views.js"></script>
-    <script src="js/fetch.js"></script>
-    <script src="main.js"></script>
-    <script  src="../js/upload.js"></script>
+    <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="../js/views.js"></script>
+    <script src="../js/fetch.js"></script>
+    <script src="../main.js"></script>
+    <!-- <script  src="../js/upload.js"></script> -->
 
     <title>WorkInProgress's Homepage</title>
 
@@ -31,10 +28,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b><img id="Homeimage"src="../animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"> Upload </b></a></li>
-                <li><a href="favorites"><b><img id="Homeimage"src="../animeImages/stars.svg">Starred</b></a></li>
-                <li><a href="all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a href="../home"><b><img id="Homeimage"src="../animeImages/friend.svg"> Home </b></a></li>
+                <li><a href="../upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"> Upload </b></a></li>
+                <li><a href="../favorites"><b><img id="Homeimage"src="../animeImages/stars.svg">Starred</b></a></li>
+                <li><a href="../all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
             </ul>
         </nav>
     <!--===========================Maincontent-Upload====================================================================-->
@@ -60,7 +57,10 @@
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
 
-
+          <ul>
+          <li><a href="../logout" id="Current-page"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"></b></a></li>
+          <li><a href="../logout"><b>Logout</b></a></li>
+          </ul>
 
         </div>
     </main>

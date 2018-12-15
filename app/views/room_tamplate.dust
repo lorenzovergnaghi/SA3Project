@@ -19,7 +19,7 @@
 
 <header>
     <h1 class="Title">WorkInProgress</h1>
-    <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+    <img src="../animeImages/video-player.svg"  class="usilogo" align="left"/>
     <h1 class="current_Page"></h1>
 </header>
 
@@ -92,7 +92,10 @@
 
     <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
-
+      <ul>
+      <li><a href="../logout" id="Current-page"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"></b></a></li>
+      <li><a href="../logout"><b>Logout</b></a></li>
+      </ul>
     </div>
 </main>
 
