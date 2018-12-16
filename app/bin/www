@@ -58,12 +58,12 @@ io.on('connection', function(socket) {
 
   //chat
   // Here on the server we handle the our events
-  socket.on('chat', function(data){
-    
-    console.log(data);
-    socket.to(room).emit("chat", data)
-  });
-  //Broadcast to all except one client.
+  // socket.on('chat', function(data){
+  //   console.log(data);
+  //   // socket.to(room).emit("chat", data);
+  //   socket.emit("chat",data);
+  // });
+  // //Broadcast to all except one client.
   //Because when I'm typing only the others must see that I'm typing a message.
   socket.on('typing', function(data){
     socket.to(room).emit('typing', data)

@@ -42,10 +42,10 @@ function setWatchingTHISRoom(a){
 }
 
 //video play pause emitters
-// TODO: 
+// TODO:
 // let can_play_pause = true;IS Works
 // let action_recived = true; Should be, dont know
-let can_play_pause = true;
+let action_recived = true;
 document.querySelector('.bigone').addEventListener('play',function(event){
   if (action_recived) {
       action_recived = false;
@@ -109,6 +109,7 @@ btn.addEventListener('click', function() {
       color_handle: handle.style.color
     });
     output_chat.innerHTML += '<p class="rightAlign" style="color:' +handle.style.color+'"><strong>'+handle.value+'</strong></p>'+'<p class="rightAlign">'+ message.value+ '</p>';
+    message.value = "";
   }
   if(message.value !== ""){
     socket.emit('afterSendingDelete');
@@ -134,10 +135,11 @@ socket.on('chat', function(data){
     msg_recived = false;
   }else {
     console.log('it was NOT me');
-      feedback.innerHTML = "";
-      output_chat.innerHTML += "<strong><p style='color:"+data.color_handle+";'>"+data.handle+"</p></strong><p>"+data.message+"</p>";
-      // message.value = "";
-      document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight;
+    console.log(feedback.innerHTML);
+    feedback.innerHTML = "";
+    output_chat.innerHTML += "<strong><p style='color:"+data.color_handle+";'>"+data.handle+"</p></strong><p>"+data.message+"</p>";
+    // message.value = "";
+    document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight;
   }
 });
 //
@@ -154,8 +156,7 @@ socket.on('notype', function () {
 
 socket.on('afterSendingDelete', function () {
   message.value = "";
-
-})
+});
 
 
 
