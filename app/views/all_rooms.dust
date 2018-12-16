@@ -40,22 +40,36 @@
             <div <b id="Search-text">Search</b> </div>
         <input class='search' type="text" ></input>
     </div>
+        <div class="room-up">
         <form method="POST" action="/room">
-          <input type="text" name="newRoomName" placeholder="You're new room name"><br/>
+            <a id="title-room">New room name:</a><br/>
+          <input type="text" name="newRoomName" id="form-text"  placeholder="You're new room name"><br/>
           <select name="saga_id">
           {#y}
             <option value="{._id}">{.name}</option>
             {/y}
           </select>
+        </div>
   <br><br>
         </form>
         <div class="output">
             {#x}
-               <div style="color:white;background-color:purple;">
-               {.name}<br/>
-               {._id}<br/>
-               <a href="/room/:{._id}"><b>Join</b></a>
-               </div>
+            <div class="room-style">
+               <a>Room name:</a><br/><a id="room-name">{.name}<br/></a><br/>
+                <a>Join Room:</a><br/>
+                <a href="/room/:{._id}"><img src="animeImages/broken-link.svg" id="join-room" alt="CANT LOAD TEST IMAGE"/></a>
+                <form method='POST' action='/editSaga/room/:{._id}'>
+                    <a>Change room name:</a><br/>
+                    <input type="text" name="name" id="form-text" contenteditable="true">
+                            <br/>
+                    <button type="submit" class="button">Post new name</button>
+                </form>
+                <form method='POST' action='/editSaga/room/delete/:{._id}'>
+                    <a>Delete room:</a><br/>
+                    <button type="submit" class="button">Delete Room</button>
+                </form>
+
+            </div>
             {/x}
         </div>
     </div>

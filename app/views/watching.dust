@@ -50,7 +50,7 @@
         {/z}
 
         {#y}
-        <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+        <button class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
         {/y}
 
     </div>

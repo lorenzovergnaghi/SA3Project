@@ -34,7 +34,7 @@
           <div class="newCollection">
               <form enctype="multipart/form-data" method="POST" action="/upload/newsaga">
                   <input  type="text" name="sagaName" placeholder="Anime's Title"/><br/><br/>
-                  <input type="file" name="file" placeholder="add cover" accept="image/png, image/jpeg"/><br/><br/>
+                  <input type="file" class='button' name="file" placeholder="add cover" accept="image/png, image/jpeg"/><br/><br/>
                   <button class="button" type="submit">Create Collection </button>
               </form>
           </div>
