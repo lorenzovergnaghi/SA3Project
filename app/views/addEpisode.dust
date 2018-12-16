@@ -66,7 +66,7 @@
     </main>
 
     <footer>
-        <p>&copy; WorkInProgress	</p>
+      <p id="footer">&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
     </footer>
 
 
