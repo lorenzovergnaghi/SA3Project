@@ -23,19 +23,6 @@ const login = require('connect-ensure-login');
 router.get('/',
 login.ensureLoggedIn(),
 function(req,res){
-
-//Room creation
-// let kk = new Room({name:'testRoom',testSagaName:'AFROSAMU'});
-// console.log(kk);
-// kk.save(function(err,saved){
-//   if (err) {
-//     console.warn('Error creating new Room');
-//   }else {
-//     console.warn('saved new saga');
-//   }
-// });
-
-
   Room.find({},function(err, rooms){
       if (err) {
         res.status(404).end();

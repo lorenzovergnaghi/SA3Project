@@ -23,16 +23,7 @@ const url	= require('url');
 router.get('/',
 login.ensureLoggedIn(),
 function(req, res){
-  // Episode.find({},function(err,foundAll){
-  //     if (err) {
-  //       res.render('index');
-  //     }else {
-  //       let mod = {
-  //         x : foundAll
-  //       }
-  //       res.render('index',mod);
-  //     }});
-  res.redirect('/home')
+  res.redirect('/login');
 });
 
 router.get('/storage',function(req,res){
@@ -43,7 +34,7 @@ router.post('/',function(req,res){
   console.log(req.body);
   res.redirect('/');
 }
-)
+);
 
 /** router for /root */
 module.exports = router;

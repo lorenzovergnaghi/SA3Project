@@ -1,6 +1,8 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
   <link href="../styles/SiteStyle.css" rel="stylesheet"/>
+  <link href="../styles/mainstyle.css" rel="stylesheet"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
   <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
@@ -16,9 +18,8 @@
 
 <!--header div-->
   <header>
-    <h1 class="Title">WorkInProgress</h1>
-    <img src="../animeImages/logoonepiece.png"  class="usilogo" align="left"/>
-    <h1 class="current_Page">Watching</h1>
+    <h1 class="Title">StreamFast</h1>
+    <img src="../animeImages/video-player.svg"  class="usilogo" align="left"/>
 
 
 
@@ -29,37 +30,41 @@
 <!--===========================NavigationBar====================================================================-->
 
       <nav class="navigation">
-        <ul>
-          <li><a href="../home"><b>Home </b></a></li>
-          <li><a href="../upload"><b> Upload   </b></a></li>
-          <li><a href="../favorites"><b>Favorites</b></a></li>
-          <li><a href="../all_rooms"><b>Live Room </b></a></li>
-
-        </ul>
+          <ul>
+              <li><a class="link" href="../home"><b><img id="Homeimage"src="../animeImages/friend.svg"> Home </b></a></li>
+              <li><a class="link" href="../upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"> Upload </b></a></li>
+              <!-- <li><a class="link" href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
+              <li><a class="link" href="../all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
+          </ul>
       </nav>
 
 
-    <div class="maincontent_watching">
+      <div class="maincontent_watching">
 
-        {#x}
-        <h3 class="">{.name}</h3>
-        {/x}
-        {#z}
-        <p class="title_asdf">{.name}<p><br/>
-        <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
-        {/z}
-        {#y}
-        <button  class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
-        {/y}
+          {#x}
+          <h3 class="series_title">{.name}</h3>
+          {/x}
+          {#z}
+          <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+          <p class="movie_title">{.name}<p><br/>
+          {/z}
 
-    </div>
+          {#y}
+          <button class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+          {/y}
+
+      </div>
 
     <div class="sidebar">
+      <ul>
+      <li><a href="../logout" id="Current-page"><b><img id="Homeimage"src="../animeImages/exit.svg"></b></a></li>
+      <li><a class="sidelink" href="../logout"><b>Logout</b></a></li>
+      </ul>
 
     </div>
   </main>
   <footer>
-    <p>&copy; WorkInProgress	</p>
+    <p id="footer">&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
   </footer>
 </body>
 

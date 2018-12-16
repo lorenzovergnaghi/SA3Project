@@ -12,6 +12,8 @@ const mongoose = require('mongoose');
 require('./models/user');
 const User = mongoose.model('User');
 const app = express();
+var http = require('http');
+var io = require('socket.io')(http);
 //passport
     var passport = require('passport');
     var LocalStrategy = require('passport-local');
@@ -59,6 +61,8 @@ const routers = require('./routes/routers');
 app.use(methodOverride('_method'));
 app.use('/', routers.root);
 
+app.use('/preview',routers.preview);
+app.use('/editSaga',routers.editSaga);
 app.use('/room', routers.room);
 app.use('/all_rooms', routers.all_rooms);
 app.use('/watching', routers.watching);
@@ -68,6 +72,7 @@ app.use('/home', routers.home);
 app.use('/favorites', routers.favorites);
 app.use('/register', routers.register);
 app.use('/search', routers.search);
+app.use('/logout', routers.logout);
 
 
 
