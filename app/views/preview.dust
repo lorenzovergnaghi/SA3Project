@@ -1,24 +1,44 @@
-<!-- DON'T MODIFY THIS FILE -->
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <title>SA3Project</title>
-    <link type= "text/css"rel="stylesheet" href="styles/style.css">
-</head>
-<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
-    <script src="js/views.js"></script>
-<body>
-  <header class="header" id="abcdefg">
-    UGLY DEMO
-  </header>
-  <div class='main'>
-    <div class="main_content">
-    CIAO<br/>
-    <a href="/login">LOGIN - REGISTER</a>
-    <!-- <a href="/login">LOGIN - REGISTER</a> -->
-    </div>
-  </div>
-</body>
+    <title>Preview</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="styles/preview.css" rel="stylesheet"/>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="box-signin">
+      <a class="authlinks" href="/login"><button class="button1"  name="button">Sign U[]</button></a>
+      </div>
+      <h1 class="title">StreamFast</h1>
 
+    </header>
+
+
+
+        <div class="titolo1">
+          <h2 class="colore1">WATCH ANYWHERE, CANCEL ANY TIME</h2>
+        </div>
+
+
+          <div class="titolo2">
+            <h2 class="colore2">See whats's next</h2>
+          </div>
+
+
+        <div class="bottone3">
+          <a href="https://www.youtube.com/watch?v=LWtFMiEB4pI"><button class="button2" type="button" name="button">JOIN FREE FOR A MONTH</button></a>
+        </div>
+
+
+    <aside class=".aside">
+    </aside>
+
+    <nav class="nav">
+    </nav>
+
+    <footer class="footer"></footer>
+
+  </body>
 </html>
