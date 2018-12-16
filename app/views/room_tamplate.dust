@@ -85,7 +85,7 @@
         <div id ="output_chat"></div>
         <div id ="feedback"></div>
       </div>
-      <input id="handle"type="text" contenteditable="false"value="{username}"/>
+      <input id="handle"type="hidden" contenteditable="false"value="{username}"/>
       <input id="message" type="text" placeholder="Type a message..."/>
       <button id="send">Send</button>
             </div>
