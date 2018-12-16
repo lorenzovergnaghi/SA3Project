@@ -39,21 +39,21 @@
       </nav>
 
 
-    <div class="maincontent_watching">
+      <div class="maincontent_watching">
 
-        {#x}
-        <h3 class="series_title">{.name}</h3>
-        {/x}
-        {#z}
-        <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
-        <p class="movie_title">{.name}<p><br/>
-        {/z}
+          {#x}
+          <h3 class="series_title">{.name}</h3>
+          {/x}
+          {#z}
+          <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+          <p class="movie_title">{.name}<p><br/>
+          {/z}
 
-        {#y}
-        <button style="color:red;width:100%;" class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
-        {/y}
+          {#y}
+          <button class="next_episodes" onclick="setWatching('../{.file}','{.name}')">Watch {.name}</button><br/>
+          {/y}
 
-    </div>
+      </div>
 
     <div class="sidebar">
       <ul>

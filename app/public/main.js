@@ -46,7 +46,7 @@ function validation()
 }
 
 
-let editable = true;git
+let editable = true;
 function edit() {
   const targets = document.querySelectorAll('.editable');
 

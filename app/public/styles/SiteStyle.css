@@ -351,7 +351,21 @@
 
 
 
-
+  .next_episodes{
+      border: none;
+      background-color: #555555;
+      color: white;
+      border-radius: 4px;
+      margin-top: 4px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: bold;
+      padding: 5px 12px;
+      font-size: 15px;
+  }
+  .next_episodes:hover{
+      transform: scale(1.1);
+      opacity:0.8;
+  }
 
 
 

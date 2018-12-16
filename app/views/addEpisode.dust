@@ -36,20 +36,20 @@
         </nav>
     <!--===========================Maincontent-Upload====================================================================-->
 
-        <div class='maincontent'>
-            <br/>
+    <div class='maincontent'>
+        <br/>
 
-            <h3 style="color:white;" >{name}</h3>
-            <image src=".{image}" style="width:200px"/>
-            <form  class="upload_form" method="POST" action="/upload" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="{_id}"/><br/>
-                <input type="file" name="file" multiple=""/><br/>
-                <input type="submit"/><br/>
-            </form>
-            <br/>
-            {files}
+        <h3 id="series-title">{name}</h3>
+        <image src=".{image}" style="width:200px"/>
+        <form  class="upload_form" method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="hidden"  name="id" value="{_id}"/><br/>
+            <input class="button" type="file" name="file" multiple=""/><br/>
+            <input class="button" type="submit"/><br/>
+        </form>
+        <br/>
+        {files}
 
-        </div>
+    </div>
 
 
 

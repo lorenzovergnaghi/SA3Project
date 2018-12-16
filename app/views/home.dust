@@ -82,7 +82,7 @@
             <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/exit.svg"></b></a></li>
             <li><a class="sidelink" href="logout"><b>Logout</b></a></li>
             <li><br/></li>
-            <li><form action="/home"  ><button type="button" id="editButton" onclick="edit()">Edit Anime</button></form></li>
+            <li><form action="/home"  ><button class="next_episodes" type="button" id="editButton" onclick="edit()">Edit Collections</button></form></li>
             </ul>
         </div>
 

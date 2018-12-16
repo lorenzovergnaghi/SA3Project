@@ -91,6 +91,63 @@
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
     }
+    #title-room{
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .room-up{
+        background-color: #676767;
+        margin-top: 20px;
+        padding-top: 10px;
+        width: 40%;
+        position: relative;
+        left: 29.5%;
+        min-width: 200px;
+        padding-bottom: 10px;
+    }
+
+    .room-style{
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+        background-color: #676767;
+        border-radius: 15px;
+        padding: 20px 20px;
+        margin-top: 20px;
+    }
+    #room-name{
+        font-size:20px;
+        color: #1B222C;
+        margin-bottom: 10px;
+    }
+    #join-room{
+        height: 40px;
+        width: 40px;
+        color: #1B222C;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    #join-room:hover{
+        transform: scale(1.1);
+        opacity:0.8;
+
+    }
+    #form-text{
+        border-radius: 5px;
+        border: none;
+        background:rgba(255,255,255,0.3);
+        color: black;font-family: 'Josefin Sans', sans-serif;
+        height:20px;
+        width:100%;
+        max-width: 350px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
 
 
     .search{
@@ -101,6 +158,8 @@
         background:rgba(255,255,255,0.3);
         color: black;
         margin-top:10px;
+        font-size: 20px;
+        font-family: 'Josefin Sans', sans-serif;
     }
     .search:hover{
         background:rgba(255,255,255,0.8);
@@ -321,5 +380,75 @@
     .img1:hover +.img2{
         visibility: visible;
     }
+    .button{
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        margin-top: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding: 5px 12px;
+        font-size: 15px;
+    }
+    .button:hover{
+        transform: scale(1.1);
+        opacity:0.8;
+    }
+    .deleteSeries{
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        margin-top: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding: 5px 12px;
+        font-size: 15px;
+
+    }
+    .editNameButton{
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        margin-top: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding: 5px 12px;
+        font-size: 15px;
+
+    }
+    .editName{
+        border-radius: 5px;
+        border: none;
+        background:rgba(255,255,255,0.3);
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        height:20px;
+        width:150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .editName::placeholder{
+        color:white;
+    }
+    .next_episodes{
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        margin-top: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding: 5px 12px;
+        font-size: 15px;
+    }
+    .next_episodes:hover{
+        transform: scale(1.1);
+        opacity:0.8;
+    }
+
 
 }
