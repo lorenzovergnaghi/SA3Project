@@ -1,9 +1,7 @@
 <html>
 <head>
     <title>SA3Project || Login </title>
-    <link type= "text/css" rel="stylesheet" href="styles/siteStyle.css"/>
-    <link href="styles/mainstyle.css" rel="stylesheet"/>
-
+    <link type= "text/css"rel="stylesheet" href="styles/siteStyle.css"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>

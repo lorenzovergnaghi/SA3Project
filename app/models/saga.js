@@ -10,5 +10,5 @@ const SagaSchema = new mongoose.Schema(
   }
 );
 mongoose.model('Saga', SagaSchema);
-// const Saga = mongoose.model('Saga');
+const Saga = mongoose.model('Saga');
 module.exports = SagaSchema;

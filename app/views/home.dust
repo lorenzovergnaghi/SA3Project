@@ -1,16 +1,13 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
-    <script src="/socket.io/socket.io.js"></script>
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
-    <link href="styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-    <title>WorkInProgress's Homepage </title>
+    <title>WorkInProgress's Homepage</title>
 
 </head>
 
@@ -19,8 +16,12 @@
 
 <!--header div-->
     <header>
-        <h1 class="Title">StreamFast</h1>
-        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
+        <h1 class="Title">WorkInProgress</h1>
+        <img src="animeImages/logoonepiece.png"  class="usilogo" align="left"/>
+        <h1 class="current_Page">HomePage</h1>
+
+
+
     </header>
 
     <main>
@@ -29,10 +30,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home" id="Current-page"><b><img id="Homeimage" src="animeImages/friend.svg"/> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage" src="animeImages/exit.svg"/> Upload </b></a></li>
-                <li><a href="favorites"><b><img id="Homeimage" src="animeImages/stars.svg"/>Starred</b></a></li>
-                <li><a href="all_rooms"><b><img id="Homeimage" src="animeImages/group.svg"/><br> Live Room </br></b></a></li>
+                <li><a href="home"><b>Home </b></a></li>
+                <li><a href="upload"><b> Upload   </b></a></li>
+                <li><a href="favorites"><b>Favorites</b></a></li>
+                <li><a href="all_rooms"><b> Live Room</b></a></li>
 
 
             </ul>
@@ -40,29 +41,21 @@
 
         <!--===========================Maincontent-Upload====================================================================-->
 
+
+
         <div class='maincontent'>
             <div class="div_search_mobile">
-                <div> <b id="Search-text">Search</b> </div>
-                <input class='search' type="text" ></input>
+                <input class='search' type="text" ><img class="search_img" src="animeImages/search.png" height="30" width="30"/></input>
             </div>
 
             <div class="output">
                 {#x}
-                   <div class="flex-item" id="{._id}" >
-
-                       <div class="parent">
-                            <h4 id="series-title" class="saga_title" align="left">{.name}</h4>
-
-                            <img src="{.image}" id="img1" alt="CANT LOAD TEST IMAGE"/>
-                            <img src="animeImages/play-button.svg" id="img2" alt="CANT LOAD TEST IMAGE"/>
-                       </div>
-
-                       <form action="/watching/:{._id}" method="GET">
-                           <button type="submit">WATCH {.name}</button>
-                       </form>
-
-                       <input class="hiddenIds" type="hidden" value={._id}/>
-                       <div class="editable"></div>
+                   <div class="flex-item" >
+                        <p style="color:white;">{.name}</p>
+                       <img src="{.image}" alt="CANT LOAD TEST IMAGE" height="190" width="250"/><br/>
+                        <form action="/watching/:{._id}" method="get">
+                         <button>WATCH {.name}</button>
+                        </form>
                     </div>
                 {/x}
             </div>
@@ -71,20 +64,12 @@
     <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
 
-            <ul>
-                <li><a href="logout"><b>LOGOUT</b></a></li><br/>
-
-                <li><form action="/home"  ><button type="button" id="editButton" onclick="edit()">Edit Anime</button></form></li>
-                <!--<li></li>-->
-                <!--<li></li>-->
-                <!--<li><a href="https://plus.google.com/u/0/110960581361779283407?tab=wX" target="_blank"> <img src="img/g.png" width="30" height="30"> </a></li>-->
-            </ul>
         </div>
 
     </main>
 
     <footer>
-    <p>&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
+    <p>&copy; WorkInProgress	</p>
     </footer>
 
 </body>

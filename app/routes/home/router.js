@@ -1,4 +1,4 @@
-/** @module root/home */
+/** @module root/router */
 'use strict';
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
@@ -22,7 +22,7 @@ const login = require('connect-ensure-login');
 //     res.render('home');
 //   });
 router.get('/',
-    login.ensureLoggedIn(),
+login.ensureLoggedIn(),
 function(req,res){
   Saga.find({},function(err, found){
       if (err) {
@@ -30,14 +30,11 @@ function(req,res){
         return
       }else {
         if(found){
-          res.render('home',{x:found,
-          username: req.user.username});
+          res.render('home',{x:found});
         }
       }
     });
 });
-
-
 
 
 /** router for /root */
