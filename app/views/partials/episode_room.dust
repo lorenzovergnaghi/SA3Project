@@ -1,8 +1,17 @@
 
-        {#x}
-           <div style="color:white;background-color:purple;">
-           {.name}<br/>
-           {._id}<br/>
-           <a href="/room/:{._id}"><b>Join</b></a>
-           </div>
-        {/x}
+{#x}
+   <div style="color:white;background-color:purple;">
+   {.name}<br/>
+   {._id}<br/>
+   <a href="/room/:{._id}"><b>Join</b></a>
+   <form method='POST' action='/editSaga/room/:{._id}'>
+     <input type="text" name="name" contenteditable="true">
+     <button type="submit">Post new name</button>
+   </form>
+   <br/>
+   <form method='POST' action='/editSaga/room/delete/:{._id}'>
+   <button type="submit">Delete Room</button>
+ </form>
+
+   </div>
+{/x}
