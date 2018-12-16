@@ -1,0 +1,24 @@
+<!-- DON'T MODIFY THIS FILE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SA3Project</title>
+    <link type= "text/css"rel="stylesheet" href="styles/style.css">
+</head>
+<script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
+    <script src="js/views.js"></script>
+<body>
+  <header class="header" id="abcdefg">
+    UGLY DEMO
+  </header>
+  <div class='main'>
+    <div class="main_content">
+    CIAO<br/>
+    <a href="/login">LOGIN - REGISTER</a>
+    <!-- <a href="/login">LOGIN - REGISTER</a> -->
+    </div>
+  </div>
+</body>
+
+</html>
