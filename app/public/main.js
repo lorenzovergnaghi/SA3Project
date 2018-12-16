@@ -46,20 +46,27 @@ function validation()
 }
 
 
+let editable = true;
+
 function edit() {
-  let editable= true;
+  const targets = document.querySelectorAll('.editable');
+
   if(editable) {
     const editHTML = ` <input  class="editName"  placeholder="New Title" type="text"/>
                        <input  class="editNameButton" type="submit" value="edit"/><br/>
                      <input type="submit" class="deleteSeries" value="delete"/> `;
-
-    console.log('Called');
-    const targets = document.querySelectorAll('.editable');
     targets.forEach((element) => {
       element.innerHTML = editHTML;
 
     });
     addEditListener();
+    editable = false;
+
+  }else{
+    targets.forEach((element) => {
+      element.innerHTML = null;
+      editable = true;
+    });
   }
 }
 
