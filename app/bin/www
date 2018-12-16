@@ -52,7 +52,30 @@ io.on('connection', function(socket) {
     socket.to(room).emit('seeked', data);
   });
   socket.on('switch_episode',function(data){
-    console.log("WWW , switch_episode");
     socket.to(room).emit('switch_episode_once',data);
+  });
+
+
+  //chat
+  // Here on the server we handle the our events
+  socket.on('chat', function(data){
+    
+    console.log(data);
+    socket.to(room).emit("chat", data)
+  });
+  //Broadcast to all except one client.
+  //Because when I'm typing only the others must see that I'm typing a message.
+  socket.on('typing', function(data){
+    socket.to(room).emit('typing', data)
+  });
+  //Broadcast to all except one client.
+  socket.on('notype', function () {
+    socket.to(room).emit('notype')
+
+  });
+  // We send only to one client, because when a client Send his message, only
+  // his input message is deleted and not also the other clients.
+  socket.on('afterSendingDelete', function () {
+    socket.to(room).emit('afterSendingDelete');
   });
 });
