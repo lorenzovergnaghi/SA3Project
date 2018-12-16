@@ -73,7 +73,7 @@
     <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
       <ul>
-      <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"></b></a></li>
+      <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/exit.svg"></b></a></li>
       <li><a class="sidelink" href="logout"><b>Logout</b></a></li>
       </ul>
 
