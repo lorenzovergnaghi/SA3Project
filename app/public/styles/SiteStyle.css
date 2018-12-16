@@ -79,6 +79,7 @@
     box-shadow: 0 0 10px 8px #0a0511 ;
     border-radius: 10px;
     background-color: rgba(0,0,0,0.5);
+    font-family: 'Josefin Sans', sans-serif;
     margin: 5px;
   }
   .navigation ul {
@@ -89,6 +90,7 @@
     justify-content: space-around;
     list-style-type: none;
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
   .navigation ul li{
@@ -97,7 +99,6 @@
 
   .navigation ul li a{
     display: block;
-    color: orange;
 
   }
 
@@ -106,12 +107,12 @@
     padding: 0px 10px 0px 10px;
   }
 
-  .navigation li a:hover {
+  /* .navigation li a:hover {
     background-color: goldenrod;
     border-radius: 10px;
     color: black;
 
-  }
+  } */
   /*====================================================================*/
   /*====================================================================*/
 
@@ -119,80 +120,6 @@
 
 
   /*############################-maincontent-###########################*/
-
-  .maincontent{
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin: 0 5px;
-    background: rgba(0,0,0,0.5);
-    padding: 0;
-  }
-
-  .output{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-  .search{
-    height: 30px;
-    width: 300px;
-    border-radius: 10px;
-    border-color: darkblue;
-    background:rgba(255,255,255,0.3);
-    color: black;
-  }
-  .search:hover{
-    background:rgba(255,255,255,0.8);
-  }
-
-
-  .search_img{
-    position: relative;
-    top: 10px;
-  }
-
-  /*.div_search_mobile {*/
-    /*border: 10px;*/
-    /*border: #0a0511;*/
-    /*padding: 0px;*/
-  /*}*/
-
-
-  .flex-item{
-    margin: 25px 10px 10px 10px;
-  }
-
-  .newSaga{
-    margin-top: 40px;
-    margin-left: 30px;
-    margin-right: 20px;
-  }
-  .plus_saga{
-    border-radius: 15px;
-    background:rgba(255,255,255,0.5);
-    color: black;
-  }
-  .button_plus{
-
-    background: none;
-    border: none;
-    border-radius: 15px;
-  }
-  /*.newCollection{*/
-    /*position: relative;*/
-    /*top: 50px;*/
-  /*}*/
-  /*==========================Upload-FORM==========================================*/
-
-  /*====================================================================*/
-  /*====================================================================*/
-
 
 
   /*############################-Sidebar-###########################*/
@@ -224,6 +151,10 @@
     width: 35%;
     padding-top:  3%;
     padding-bottom: 3%
+  }
+
+  .sidebar ul{
+    text-decoration: none;
   }
 /*====================================================================*/
   /*====================================================================*/
@@ -259,7 +190,10 @@
     position: relative;
     display: grid;
     grid-template-rows: 200px 1fr auto;
-    grid-template-areas: "header" "content" "footer";
+    grid-template-areas:
+            "header"
+            "content"
+            "footer";
     min-height: 100%;
     text-align: center;
   }
@@ -272,7 +206,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url("/animeImages/sss.jpg");
+    background-image: url("/animeImages/cosmos-1853491_1280.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -289,23 +223,22 @@
   header {
     grid-area: header;
     height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 8px #0a0511  ;
-    background: rgba(0,0,0, 0.75);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /*box-shadow: 0 0 8px 8px #0a0511  ;*/
+    background: rgba(20,20,20,0.8);
   }
-
-
 
   .Title {
     text-align: center;
-    font-size: 50px;
-    background: -webkit-linear-gradient(goldenrod, orange, gold, goldenrod, gold);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+    background:rgba(226,18,32);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0px;
     position: relative;
-    top: 25px;
-    right: 85px;
+    top: 70px;
 
   }
 
@@ -313,7 +246,7 @@
     text-align: center;
     font-size: 100px;
     position: relative;
-    left: 45px;
+    /*left: 45px;*/
     margin: 0px 0px 0px -50px;
     background: -webkit-linear-gradient(45deg, #A019C1, #A019C1, #FE01D4, #FF1361, #FFF800, #FFF800);
     -webkit-background-clip: text;
@@ -325,10 +258,8 @@
   .usilogo {
     width: 100px;
     height: 100px;
-    /*border-radius: 50%;*/
-    box-shadow: 0 0 15px 8px #0a0511;
     position: static;
-    margin: -10px 10px 10px 40px;
+    margin: -10px 30px 30px 55px;
   }
 
   .usilogo1 {
@@ -342,7 +273,6 @@
   }
 
   .BlogTitle {
-
     font-size: 450%;
     background: -webkit-linear-gradient(45deg, #A019C1, #A019C1, #FE01D4, #FF1361, #FFF800, #FFF800);
     -webkit-background-clip: text;
@@ -352,12 +282,10 @@
 
   .navigation {
     grid-area: nav;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(20,20,20,0.8);
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
-    margin-top: 20px;
-    margin-bottom: 13px;
+    border-bottom-left-radius: 10px;
     max-width: 200px;
 
 
@@ -374,32 +302,74 @@
     font-size: 30px;
   }
 
-  .navigation ul li a {
+   .navigation ul li a {
+    color:white;
     display: block;
-    color: orange;
   }
 
   .navigation li a:link {
     text-decoration: none;
     padding: 0px 10px 0px 10px;
   }
-
+/*
   .navigation li a:hover {
-    background-color: goldenrod;
+    text-decoration: underline rgba(226,18,32);
     border-radius: 10px;
-    color: black;
+    transition: text-decoration 2s;
+  }
+  .navigation li a{
+    transition: width 2s;
+  } */
 
+  .link{
+    position: relative;
+  }
+
+  .link:after{
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 0; height: 5px;
+    display: block;
+    margin-top: 0;
+    left: 0;
+    background:  rgba(200,18,132);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+
+  .link:hover:after{
+    /* margin-top: 0; */
+    width: 100%;
+    left: 0;
+    background: crimson;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #current-page{
+    margin: 0;
+    text-decoration: underline rgba(200,18,132,0);
   }
 
   .sidebar {
     grid-area: sidebar;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    background: rgba(0,0,0, 0.5);
+    border-bottom-right-radius: 10px;
+    background: rgba(20,20,20,0.8);
     max-width: 250px;
+
   }
 
   .sidebar_icons {
@@ -422,90 +392,112 @@
   .sidebar_icons:hover {
     opacity: 1;
   }
+  .sidebar ul{
+    list-style-type: none;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .sidebar ul li a{
+    color:white;
+    transition: width 2s;
+  }
+   .sidebar li a:link {
+    text-decoration: none;
+    color: white;
+  }
+  .sidelink{
+    position: relative;
+  }
+
+  .sidelink:after{
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 0;
+    right: 0;
+    background:  rgba(200,18,132);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+
+  .sidelink:hover:after{
+    margin-top: 0;
+    width: 100%;
+    right: 0;
+    background: crimson;
+  }
+  /*
+  .sidebar li a:hover {
+    text-decoration: underline rgba(226,18,32);
+    border-radius: 10px;
+    width:100px;
+  } */
+  body{
+    font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+}
+
+
+#main_container{
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: rgb(226, 18, 33);
+
+
+}
+
+#window{
+    height: 250px;
+    overflow: scroll;
+    background-color:rgb(232, 232, 232);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+#output_chat p{
+    padding: 2px 0px; /*top/bottom - right/left*/
+    margin: 0 20px;
+    color: black;
+    /*background-color: rgb(165, 164, 164);*/
+}
+
+#feedback p{
+    color: #676767;
+    padding: 5px 0px;
+    margin: 0 15px;
+}
+
+
+#handle,#message{
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: block;
+    width: 98.75%;
+    font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+    font-size: 17px;
+    border: 1px solid rgba(226, 18, 33);
+    margin: 4px;
+
+}
+
+#send{
+    background: rgba(226, 18, 33);
+    color: white;
+    font-size: 25px;
+    border: 0;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 8px;
+}
+.rightAlign{
+    text-align: right;
+}
+
   /*++++++++++++++++++++++++++++++++++++++++++++main-content******************************************************************/
   /*++++++++++++++++++++++++++++++++++++++++++++main-content*****************************************************************/
-  .maincontent{
-    background: rgba(0,0,0,0.5);
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    margin-left: 20px;
-    padding: 0;
-    min-height: 700px;
-  }
-
-  .output{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-
-  .search{
-    height: 30px;
-    width: 300px;
-    border-radius: 10px;
-    border-color: darkblue;
-    background:rgba(255,255,255,0.3);
-    color: black;
-  }
-  .search:hover{
-    background:rgba(255,255,255,0.8);
-  }
-
-
-  .search_img{
-    position: relative;
-    top: 10px;
-  }
-
-  .flex-item{
-    margin: 25px 10px 10px 10px;
-
-  }
-
-  .newSaga{
-    margin-top: 45px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .plus_saga{
-    border-radius: 15px;
-    background:rgba(255,255,255,0.5);
-    color: black;
-  }
-  .button_plus{
-
-    background: none;
-    border: none;
-    border-radius: 15px;
-  }
-
-
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style******************************************************************/
-  /*++++++++++++++++++++++++++++++++++++++++++++Upload-form-Style*****************************************************************/
-
-  /*============================Main-Watching=================================*/
-  .maincontent_watching{
-    background: rgba(0,0,0,0.5);
-    grid-area: main;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    margin-left: 20px;
-    padding: 0;
-  }
-
-
-
 
   /* ###################################footer##################################### */
   footer {
@@ -513,9 +505,14 @@
     background: rgba(0,0,0, 0.5);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 8px 8px #0a0511 ;
-    border-radius: 10px;
-    color: gold;
+    font-family: 'Josefin Sans', sans-serif;
+    /*box-shadow: 0 0 8px 8px #0a0511 ;*/
+    /*border-radius: 10px;*/
+    color:white;
+  }
+  #Homeimage{
+    height: 30px;
+    width: 30px;
   }
 
 

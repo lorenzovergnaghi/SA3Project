@@ -10,26 +10,72 @@ var server = app.listen(app.get('port'), function() {
 
 
 //Sockets
-// const eventBus = require('../pubsub');
 
-// const io = require('socket.io')(server);
-// io.on('connection', function(socket) {
-//   console.log('client connected');
-//
-//   socket.join("Publish and Subscribe");
-//
-//   socket.on('disconnect', function() {
-//     console.log('client disconnected');
-//   });
-// });
-//
-// eventBus.on('favorite.deleted', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.deleted', event);
-// });
-// eventBus.on('favorite.created', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.created', event)
-// });
-//
-// eventBus.on('favorite.updated', function(event) {
-//   io.to("Publish and Subscribe").emit('favorite.updated', event)
-// });
+const socket = require('socket.io');
+const io = socket(server);
+io.on('connection', function(socket) {
+  let room;
+
+  console.log('client connected');
+  socket.on('disconnect', function() {
+      console.log('client disconnected by room: '+room);
+  });
+  socket.on('join', function(data){
+    console.log(data);
+    room = data.room_name;
+    socket.join(room);
+    console.log('client joining room: '+room);
+  });
+
+  socket.on('chatMessage', function(data){
+    console.log(data);
+    if(room) {
+      io.to(room).emit('chatMessage',data);
+    }
+  });
+
+  socket.on('chat', function(data){
+    console.log("CHAT :"+data);
+    io.to(room).emit('chat',data);
+  });
+
+  socket.on('typing', function(data){
+    console.log("typing :"+data);
+    socket.to(room).emit('typing', data);
+  });
+  socket.on('play_pause',function(data){
+    console.log("cast play_pause :"+data);
+      socket.to(room).emit('play_pause', data);
+  });
+  socket.on('seek',function(data){
+    console.log("seek :"+data.time);
+    socket.to(room).emit('seeked', data);
+  });
+  socket.on('switch_episode',function(data){
+    socket.to(room).emit('switch_episode_once',data);
+  });
+
+
+  //chat
+  // Here on the server we handle the our events
+  // socket.on('chat', function(data){
+  //   console.log(data);
+  //   // socket.to(room).emit("chat", data);
+  //   socket.emit("chat",data);
+  // });
+  // //Broadcast to all except one client.
+  //Because when I'm typing only the others must see that I'm typing a message.
+  socket.on('typing', function(data){
+    socket.to(room).emit('typing', data)
+  });
+  //Broadcast to all except one client.
+  socket.on('notype', function () {
+    socket.to(room).emit('notype')
+
+  });
+  // We send only to one client, because when a client Send his message, only
+  // his input message is deleted and not also the other clients.
+  socket.on('afterSendingDelete', function () {
+    socket.to(room).emit('afterSendingDelete');
+  });
+});
