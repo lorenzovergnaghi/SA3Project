@@ -28,7 +28,7 @@
         <ul>
             <li><a href="home" ><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
             <li><a href="upload"id="Current-page"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
-            <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li>
+            <!-- <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
             <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
         </ul>
     </nav>
