@@ -5,18 +5,17 @@
 <script src="js/util.js"></script>
         <!--Jquery-->
 
-
-
-
-    {#x}
-    <div class="flex-item" >
-        <a href="/watching/:{._id}"><div class="parent">
-            <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
-            <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
-            <br/>
-            <br/>
-            <a id="series-title">{.name}</a>
-        </div></a>
-    </div>
-    {/x}
-
+  {#x}
+     <div class="flex-item" id="{._id}" >
+       <h4 id="series-title" class="saga_title" align="left">{.name}</h4>
+       <a href="/watching/:{._id}"><div class="parent">
+           <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
+           <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
+           <br/>
+           <br/>
+           <br/>
+       </div></a>
+         <input class="hiddenIds" type="hidden" value={._id}/>
+         <div class="editable"></div>
+      </div>
+  {/x}

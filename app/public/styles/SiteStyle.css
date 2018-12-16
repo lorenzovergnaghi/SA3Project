@@ -107,12 +107,12 @@
     padding: 0px 10px 0px 10px;
   }
 
-  .navigation li a:hover {
+  /* .navigation li a:hover {
     background-color: goldenrod;
     border-radius: 10px;
     color: black;
 
-  }
+  } */
   /*====================================================================*/
   /*====================================================================*/
 
@@ -302,7 +302,7 @@
     font-size: 30px;
   }
 
-  .navigation ul li a {
+   .navigation ul li a {
     color:white;
     display: block;
   }
@@ -311,17 +311,57 @@
     text-decoration: none;
     padding: 0px 10px 0px 10px;
   }
-
+/*
   .navigation li a:hover {
     text-decoration: underline rgba(226,18,32);
     border-radius: 10px;
-    width:100px;
+    transition: text-decoration 2s;
   }
   .navigation li a{
     transition: width 2s;
+  } */
+
+  .link{
+    position: relative;
   }
+
+  .link:after{
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 0; height: 5px;
+    display: block;
+    margin-top: 0;
+    left: 0;
+    background:  rgba(200,18,132);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+
+  .link:hover:after{
+    /* margin-top: 0; */
+    width: 100%;
+    left: 0;
+    background: crimson;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   #current-page{
-    text-decoration: underline rgba(226,18,32);
+    margin: 0;
+    text-decoration: underline rgba(200,18,132,0);
   }
 
   .sidebar {
@@ -361,18 +401,41 @@
     color:white;
     transition: width 2s;
   }
-  .sidebar li a:link {
+   .sidebar li a:link {
     text-decoration: none;
     color: white;
   }
+  .sidelink{
+    position: relative;
+  }
+
+  .sidelink:after{
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 0;
+    right: 0;
+    background:  rgba(200,18,132);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+
+  .sidelink:hover:after{
+    margin-top: 0;
+    width: 100%;
+    right: 0;
+    background: crimson;
+  }
+  /*
   .sidebar li a:hover {
     text-decoration: underline rgba(226,18,32);
     border-radius: 10px;
     width:100px;
-  }
+  } */
   body{
     font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
-
 }
 
 

@@ -32,10 +32,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
-                <!-- <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
-                <li><a href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a class="link"href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
+                <li><a class="link" href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
+                <!-- <li><a class="link" href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
+                <li><a class="link" href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
             </ul>
         </nav>
 
@@ -48,7 +48,7 @@
             </div>
 
             <div class="output">
-                {#x}
+                <!-- {#x}
                    <div class="flex-item" >
                        <a href="/watching/:{._id}"><div class="parent">
                            <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
@@ -58,6 +58,20 @@
                            <a id="series-title">{.name}</a>
                        </div></a>
                     </div>
+                {/x} -->
+                {#x}
+                   <div class="flex-item" id="{._id}" >
+                     <h4 id="series-title" class="saga_title" align="left">{.name}</h4>
+                     <a href="/watching/:{._id}"><div class="parent">
+                         <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
+                         <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
+                         <br/>
+                         <br/>
+                         <br/>
+                     </div></a>
+                       <input class="hiddenIds" type="hidden" value={._id}/>
+                       <div class="editable"></div>
+                    </div>
                 {/x}
             </div>
         </div>
@@ -66,7 +80,9 @@
         <div class="sidebar">
             <ul>
             <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"></b></a></li>
-            <li><a href="logout"><b>Logout</b></a></li>
+            <li><a class="sidelink" href="logout"><b>Logout</b></a></li>
+            <li><br/></li>
+            <li><form action="/home"  ><button type="button" id="editButton" onclick="edit()">Edit Anime</button></form></li>
             </ul>
         </div>
 
