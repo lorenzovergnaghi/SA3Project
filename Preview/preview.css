@@ -1,0 +1,106 @@
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./img/camera1.jpeg);
+  background-position: fixed
+}
+
+.header{
+  flex: 0 0 20vh;
+  text-align: center;
+}
+.title{
+  color: rgba(226, 18, 33);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 80px;
+}
+
+
+.button1{
+  background-color: #e50914;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 3px;
+  padding: 7px 17px;
+  border: 0;
+  font-size: 15px;
+  color: #fff;
+}
+.button2{
+  background-color: #e50914;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 3px;
+  padding: 7px 17px;
+  border: 0;
+  font-size: 24px;
+  letter-spacing: 2.5px;
+  padding: 1em 1.5em 1em 2em;
+  font-weight: 400;
+  min-width: 112px;
+  min-height: 48px;
+  color: #fff;
+}
+.button1:hover{
+  background-color: #8B1212;
+  opacity: 1;
+}
+.button2:hover{
+  background-color: #8B1212;
+  opacity: 1;
+}
+
+.colore1, .colore2{
+  font-weight: bold;
+  color: #fff
+
+
+
+}
+
+.section{
+  display: flex;
+  min-height: 50vh;
+  text-align: center;
+  /* flex-direction: row; */
+}
+
+
+.nav{
+  flex: 0 0 15vw;
+}
+
+.aside{
+  flex: 0 0 15vw;
+}
+
+article{
+
+  padding: 2em;
+  border-radius: 30px;
+  flex-grow: 1;
+
+}
+.box-signin{
+  text-align: right;
+  margin: 18px 3% 0;
+}
+
+.titolo1{
+  text-align: center;
+}
+.titolo2{
+  text-align: center;
+}
+.bottone3{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .button2{
+    margin: 50px;
+  }
+
+}
