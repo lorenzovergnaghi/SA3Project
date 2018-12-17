@@ -1,8 +1,18 @@
+{#x}
+<div class="room-style">
+   <a>Room name:</a><br/><a id="room-name">{.name}<br/></a><br/>
+    <a>Join Room:</a><br/>
+    <a href="/room/:{._id}"><img src="animeImages/broken-link.svg" id="join-room" alt="CANT LOAD TEST IMAGE"/></a>
+    <form method='POST' action='/editSaga/room/:{._id}'>
+        <a>Change room name:</a><br/>
+        <input type="text" name="name" id="form-text" contenteditable="true">
+                <br/>
+        <button type="submit" class="button">Post new name</button>
+    </form>
+    <form method='POST' action='/editSaga/room/delete/:{._id}'>
+        <a>Delete room:</a><br/>
+        <button type="submit" class="button">Delete Room</button>
+    </form>
 
-        {#x}
-           <div style="color:white;background-color:purple;">
-           {.name}<br/>
-           {._id}<br/>
-           <a href="/room/:{._id}"><b>Join</b></a>
-           </div>
-        {/x}
+</div>
+{/x}

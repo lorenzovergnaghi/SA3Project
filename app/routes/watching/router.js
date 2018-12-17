@@ -25,6 +25,10 @@ login.ensureLoggedIn(),
           console.log(found);
           let x = found;
           let y = found.episodes;
+          y.forEach((ep)=>{
+            let ep_len = ep.name.length;
+            ep.name = ep.name.substring(0,ep_len-4);
+          });
           let z = found.episodes[found.last_watched];
           console.log(found.last_watched);
           res.render('watching',{x:x,y:y,z:z});

@@ -26,51 +26,62 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
-                <!-- <li><a href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
-                <li><a href="all_rooms" id="Current-page"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a class="link" href="home"><b><img id="Homeimage"src="animeImages/friend.svg"/><br/> Home </b></a></li>
+                <li><a class="link" href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"/><br/> Upload </b></a></li>
+                <li><a class="link" href="all_rooms" id="Current-page"><b><img id="Homeimage" src="animeImages/group.svg"/><br/> Live Room </b></a></li>
             </ul>
         </nav>
 
     <!--===========================Maincontent-Upload====================================================================-->
 
     <div class='maincontent'>
-        <div class="div_search_mobile">
-            <div <b id="Search-text">Search</b> </div>
-        <input class='search' type="text" ></input>
-    </div>
-        <form method="POST" action="/room">
-          <input type="text" name="newRoomName" placeholder="You're new room name"><br/>
-          <select name="saga_id">
-          {#y}
-            <option value="{._id}">{.name}</option>
-            {/y}
-          </select>
-  <br><br>
-        </form>
-        <div class="output">
-            {#x}
-               <div style="color:white;background-color:purple;">
-               {.name}<br/>
-               {._id}<br/>
-               <a href="/room/:{._id}"><b>Join</b></a>
-               </div>
-            {/x}
-        </div>
-    </div>
-        <br/>
+          <div class="div_search_mobile">
+              <div <b id="Search-text">Search</b> </div>
+          <input class='search' type="text" ></input>
+      </div>
+          <div class="room-up">
+          <form method="POST" action="/room">
+              <a id="title-room">Create new room</a><br/>
+            <input type="text" name="newRoomName" id="form-text"  placeholder="You're new room name"><br/>
+            <select name="saga_id">
+            {#y}
+              <option value="{._id}">{.name}</option>
+              {/y}
+            </select>
+          </div>
+    <br><br>
+          </form>
+          <div class="output">
+              {#x}
+              <div class="room-style">
+                 <a>Room name:</a><br/><a id="room-name">{.name}<br/></a><br/>
+                  <a>Join Room:</a><br/>
+                  <a href="/room/:{._id}"><img src="animeImages/broken-link.svg" id="join-room" alt="CANT LOAD TEST IMAGE"/></a>
+                  <form method='POST' action='/editSaga/room/:{._id}'>
+                      <a>Change room name:</a><br/>
+                      <input type="text" name="name" id="form-text" contenteditable="true">
+                              <br/>
+                      <button type="submit" class="button">Post new name</button>
+                  </form>
+                  <form method='POST' action='/editSaga/room/delete/:{._id}'>
+                      <a>Delete room:</a><br/>
+                      <button type="submit" class="button">Delete Room</button>
+                  </form>
+
+              </div>
+              {/x}
+          </div>
+      </div>
         <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
           <ul>
-          <li><a href="logout" id="Current-page"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"></b></a></li>
-          <li><a href="logout"><b>Logout</b></a></li>
+              <li><a href="logout" id="Current-page" class="sidelink"><img id="Homeimage"src="animeImages/exit.svg"/><br/><b>Logout </b></a></li>
           </ul>
         </div>
     </main>
 
     <footer>
-        <p>&copy; WorkInProgress	</p>
+      <p id="footer">&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
     </footer>
 
 </body>

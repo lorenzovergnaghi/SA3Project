@@ -1,11 +1,11 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
     <link href="../styles/SiteStyle.css" rel="stylesheet"/>
     <link href="../styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
-    <title>WorkInProgress's Homepage</title>
+    <title>StreamFast | Live Room  </title>
     <script src="../dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="../../js/views.js"></script>
@@ -18,7 +18,7 @@
 <body>
 
 <header>
-    <h1 class="Title">WorkInProgress</h1>
+    <h1 class="Title">StreamFast</h1>
     <img src="../animeImages/video-player.svg"  class="usilogo" align="left"/>
     <h1 class="current_Page"></h1>
 </header>
@@ -29,80 +29,75 @@
 
     <nav class="navigation">
         <ul>
-            <li><a href="../home" ><b><img id="Homeimage"src="../animeImages/friend.svg"> Home </b></a></li>
-            <li><a href="../upload"id="Current-page"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"> Upload </b></a></li>
-            <!-- <li><a href="../favorites"><b><img id="Homeimage"src="../animeImages/stars.svg">Starred</b></a></li> -->
-            <li><a href="../all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
+            <li><a href="../home" class="link">  <img id="Homeimage" src="../animeImages/friend.svg"/><br/> Home </a></li>
+            <li><a href="../upload" class="link"><img id="Homeimage" src="../animeImages/cloud-computing.svg"/><br/> Upload </a></li>
+            <li><a href="../all_rooms" class="link"><img id="Homeimage"  src="../animeImages/group.svg"/> <br> Live Room </br></a></li>
         </ul>
     </nav>
 
     <!--===========================Maincontent-Upload====================================================================-->
 
 
-    <div class='maincontent_room'>
-    <input class="unique_room_name" type="hidden" value="{k}">
+    <div class='main_room'>
+        <input class="unique_room_name" type="hidden" value="{k}"/>
         <div class="container_video">
+            <div class="ciao">
+                {#saga}
+                <pre class="title_video">{.name}</pre>
+                {/saga}
+            </div>
+            <div class="video">
+                {#last_watched}
 
+                <video onseeking="updateSeeked()" controls=""  class="bigone" src="../{.file}"></video>
+                {/last_watched}
+            </div>
 
-            <br/>
-
-
-            {#last_watched}
-            {#saga}
-            <h3 class="">{.name}</h3>
-            {/saga}
-            <video onseeking="updateSeeked()" controls  class="bigone" src="../{.file}"></video>
-            {/last_watched}
-
-
-
+            <div class="episodes">
+                {#episode_list}
+                <button  class="next_episodes" onclick="setWatchingRoom('../{.file}')" > {.name}</button>
+                {/episode_list}
+            </div>
         </div>
 
         <div class="container_rest">
-            <div class="c1">
-                {#saga}
-                <div>
-                    {.name}<br/><br/>
-                    <image style='max-height:250px;' src='../{.image}'/>
-                    <br/>
-                </div>
-                {/saga}
-            </div>
-            <div class="c2">
 
-            {#episode_list}
+            <!--<div class="cover-saga">-->
+                <!--{#saga}-->
+                    <!--<image class="img_room"  src='../{.image}'/>-->
+                <!--{/saga}-->
+                <!--<h1 class="pub">StreamFast</h1>-->
+                <!--<img src="../animeImages/video-player.svg"  class="usilogo" />-->
+            <!--</div>-->
 
-            <button  class="next_episodes" onclick="setWatchingRoom('../{.file}')">Watch {.name}</button><br/>
-            {/episode_list}
-            </div>
 
-            <div class="c3">
-                <div class="window">
-                    <div class ="output"></div>
-                    <div class ="feedback"></div>
-                </div>
+            <div class="chat">
                 <div id="window">
-        <div id ="output_chat"></div>
-        <div id ="feedback"></div>
-      </div>
-      <input id="handle"type="hidden" contenteditable="false"value="{username}"/>
-      <input id="message" type="text" placeholder="Type a message..."/>
-      <button id="send">Send</button>
+                    <div id ="output_chat"></div>
+                    <div id ="feedback"></div>
+                </div>
+                <input id="handle" type="hidden" contenteditable="false" value="{username}"/>
+                <div>
+                    <input id="message" type="text" placeholder="Type a message..."/>
+                    <button  type="hidden" id="send"> </button>
+                </div>
+            </div>
             </div>
         </div>
     </div>
 
+
     <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
-      <ul>
-      <li><a href="../logout" id="Current-page"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"></b></a></li>
-      <li><a href="../logout"><b>Logout</b></a></li>
-      </ul>
+        <ul>
+            <li><a href="../logout" id="Current-page" class="sidelink"><img id="Homeimage"src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
+
+        </ul>
     </div>
 </main>
 
 <footer>
-    <p>&copy; WorkInProgress	</p>
+    <p id="footer">&copy;Jacopo-Lorenzo-Mihail-Sergio</p>
 </footer>
 
 </body>

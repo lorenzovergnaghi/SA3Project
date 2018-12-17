@@ -25,7 +25,7 @@ router.get('/room/all',function(req,res){
                 let model = {
                   x : fav
                 }
-                res.render('room_searched', model);
+                res.render('all_rooms', model);
                 return;
               }
             }

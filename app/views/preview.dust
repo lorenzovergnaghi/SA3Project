@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Preview</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="styles/preview.css" rel="stylesheet"/>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="box-signin">
+      <a class="authlinks" href="/login"><button class="button1"  name="button">Sign Up</button></a>
+      </div>
+      <h1 class="title">StreamFast</h1>
+
+    </header>
+
+
+
+        <div class="titolo1">
+          <h2 class="colore1">Upload, Watch, Chat, Enjoy</h2>
+        </div>
+
+
+          <div class="titolo2">
+            <h2 class="colore2">Anywhere, Anytime</h2>
+          </div>
+
+
+        <div class="bottone3">
+          <a href="/login"><button class="button2" type="button" name="button">JOIN AND REGISTER NOW</button></a>
+        </div>
+
+
+    <aside class=".aside">
+    </aside>
+
+    <nav class="nav">
+    </nav>
+
+    <footer class="footer"></footer>
+
+  </body>
+</html>

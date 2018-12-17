@@ -46,14 +46,14 @@ function validation()
 }
 
 
-let editable = true;git
+let editable = true;
 function edit() {
   const targets = document.querySelectorAll('.editable');
 
   if(editable) {
     const editHTML = ` <input  class="editName"  placeholder="New Title" type="text"/>
                        <input  class="editNameButton" type="submit" value="edit"/><br/>
-                     <input type="submit" class="deleteSeries" value="delete"/> `;
+                       <input type="submit" class="deleteSeries" value="delete"/> `;
     targets.forEach((element) => {
       element.innerHTML = editHTML;
 
@@ -104,10 +104,8 @@ function addEditListener() {
             console.log(target);
             const parent = target.parentElement;
             parent.removeChild(target);
-            // console.log(res)
-            //get by id ggez poi
-            //get by id OUTPUT
-            //outputElement.removeChild(flexItemElement);
+            document.querySelector('#editButton').click();
+            document.querySelector('#editButton').click();
           }
       ).catch(err=>{
         console.log(err)
@@ -117,3 +115,5 @@ function addEditListener() {
     });
   }
 }
+
+

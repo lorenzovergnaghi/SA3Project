@@ -137,7 +137,7 @@ socket.on('chat', function(data){
     console.log('it was NOT me');
     console.log(feedback.innerHTML);
     feedback.innerHTML = "";
-    output_chat.innerHTML += "<strong><p style='color:"+data.color_handle+";'>"+data.handle+"</p></strong><p>"+data.message+"</p>";
+    output_chat.innerHTML += "<strong><p class='left_align' style='color:"+data.color_handle+";'>"+data.handle+"</p></strong><p class='left_align'>"+data.message+"</p>";
     // message.value = "";
     document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight;
   }
@@ -145,7 +145,8 @@ socket.on('chat', function(data){
 //
 
 socket.on('typing', function(data){
-  feedback.innerHTML = '<p><em>' + data +  ' is typing a message.. </em></p>';
+  feedback.innerHTML = '<p class= "align_left"><em>' + data +  ' is typing a message.. </em></p>';
+
   document.getElementById('window').scrollTop = document.getElementById('window').scrollHeight
 
 });

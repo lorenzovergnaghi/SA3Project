@@ -61,6 +61,7 @@ const routers = require('./routes/routers');
 app.use(methodOverride('_method'));
 app.use('/', routers.root);
 
+app.use('/preview',routers.preview);
 app.use('/editSaga',routers.editSaga);
 app.use('/room', routers.room);
 app.use('/all_rooms', routers.all_rooms);
