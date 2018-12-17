@@ -1,96 +1,238 @@
+@media (max-width: 768px) {
+    body {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/animeImages/cosmos-1853491_1280.jpg");
+    }
 
-body{
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/animeImages/cosmos-1853491_1280.jpg");
-}
-.boxx{
-    position: relative;
-    margin: 10% 0 10% 30% ;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 25%;
-    z-index: 10;
-    border-radius: 10px;
-    box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    padding: 5%;
-    text-align: center;
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.boxx input[type="text"]{
-    margin-left: 20px;
-}
-.boxx input[type="password"]{
-    margin-left: 30px;
-}
+    .boxx {
+        position: relative;
+        margin: 10% 0 10% 30%;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 25%;
+        z-index: 10;
+        border-radius: 10px;
+        box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.8);
+        padding: 5%;
+        text-align: center;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 100px;
+    }
+
+    .boxx input[type="text"] {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80px
+    }
+
+    .boxx input[type="password"] {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80px;
+    }
 
 
-.outer
-{
-    position: absolute;
-    width: 100%;
+    .outer {
+        position: absolute;
+        width: 100%;
 
-}
+    }
 
 
-.header {
-    height: 15%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    .header {
+        height: 15%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
 
-    box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand {
+        font-size: 80px;
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        float: left;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .left {
+        float: right;
+        margin: 0;
+    }
+
+    .left ul li {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    ul > li {
+        display: inline-block;
+        padding: 20px;
+        font-size: 30px;
+        list-style: none;
+        margin-right: 30px;
+    }
+
+    li > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .indent {
+        float: left;
+    }
+
+    .box {
+        width: 200px;
+        height: 30px;
+        border-radius: 5%;
+    }
+
+    .button {
+        font-size: 15px;
+        width: 120px;
+        height: 30px;
+        border-radius: 2px;
+        box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        border: none;
+        background-color: black;
+        font-size: 30px;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 30px;
+    }
 }
-.brand{
-    font-size: 80px;
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    float: left;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.left{
-    float: right;
-    margin: 0;
-}
-.left ul li{
-    font-family: 'Josefin Sans', sans-serif;
-}
-ul>li {
-    display: inline-block;
-    padding: 20px;
-    font-size: 30px;
-    list-style: none;
-    margin-right: 30px;
-}
-li>a {
-    text-decoration: none;
-    color: white;
-}
-.indent{
-    float: left;
-}
-.box{
-    width:200px;
-    height:30px;
-    border-radius:5%;
-}
-.button
-{
-    font-size: 15px;
-    width: 120px;
-    height: 30px;
-    border-radius: 2px;
-    box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-}
-.btn {
-    border: none;
-    background-color: black;
-    font-size: 30px;
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 30px;
+@media (min-width: 768px) {
+    body {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/animeImages/cosmos-1853491_1280.jpg");
+    }
+
+    .boxx {
+        position: relative;
+        margin: 10% 0 10% 30%;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 25%;
+        z-index: 10;
+        border-radius: 10px;
+        box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.8);
+        padding: 5%;
+        text-align: center;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .boxx input[type="text"] {
+        margin-left: 20px;
+    }
+
+    .boxx input[type="password"] {
+        margin-left: 30px;
+    }
+
+
+    .outer {
+        position: absolute;
+        width: 100%;
+
+    }
+
+
+    .header {
+        height: 15%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+
+        box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand {
+        font-size: 80px;
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        float: left;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .left {
+        float: right;
+        margin: 0;
+    }
+
+    .left ul li {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    ul > li {
+        display: inline-block;
+        padding: 20px;
+        font-size: 30px;
+        list-style: none;
+        margin-right: 30px;
+    }
+
+    li > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .indent {
+        float: left;
+    }
+
+    .box {
+        width: 200px;
+        height: 30px;
+        border-radius: 5%;
+    }
+
+    .button {
+        font-size: 15px;
+        width: 120px;
+        height: 30px;
+        border-radius: 2px;
+        box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);
+        width: 100px;
+        border: none;
+        background-color: #555555;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+
+    .btn {
+        border: none;
+        background-color: black;
+        font-size: 30px;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 30px;
+    }
 }
