@@ -18,17 +18,17 @@
 
 
         <div class="titolo1">
-          <h2 class="colore1">WATCH ANYWHERE, CANCEL ANY TIME</h2>
+          <h2 class="colore1">Upload, Watch, Chat, Enjoy</h2>
         </div>
 
 
           <div class="titolo2">
-            <h2 class="colore2">See whats's next</h2>
+            <h2 class="colore2">Anywhere, Anytime</h2>
           </div>
 
 
         <div class="bottone3">
-          <a href="https://www.youtube.com/watch?v=LWtFMiEB4pI"><button class="button2" type="button" name="button">JOIN FREE FOR A MONTH</button></a>
+          <a href="/login"><button class="button2" type="button" name="button">JOIN AND REGISTER NOW</button></a>
         </div>
 
 

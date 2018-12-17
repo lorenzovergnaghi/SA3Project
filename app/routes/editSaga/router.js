@@ -38,7 +38,9 @@ router.delete('/:id',
         })
     });
 
-router.post('/:id', function(req, res) {
+router.post('/:id',
+  login.ensureLoggedIn(),
+ function(req, res) {
     var id = req.params.id;
     if (id.charAt(0) == ':') {
         id = id.substring(1);

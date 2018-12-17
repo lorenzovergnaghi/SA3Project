@@ -108,8 +108,6 @@ login.ensureLoggedIn(),
 function(req, res){
   console.log('GETTIN IT');
   var folderPath = './public/storage/';
-  var nname;
-  var npath;
   var form = new formidable.IncomingForm();
   form.on('field',function(name,value){
   });

@@ -53,7 +53,7 @@ function edit() {
   if(editable) {
     const editHTML = ` <input  class="editName"  placeholder="New Title" type="text"/>
                        <input  class="editNameButton" type="submit" value="edit"/><br/>
-                     <input type="submit" class="deleteSeries" value="delete"/> `;
+                       <input type="submit" class="deleteSeries" value="delete"/> `;
     targets.forEach((element) => {
       element.innerHTML = editHTML;
 
@@ -78,6 +78,7 @@ function addEditListener() {
   const nameButtons = document.querySelectorAll(".editNameButton");
   const names = document.querySelectorAll(".editName");
   const deletes = document.querySelectorAll(".deleteSeries");
+  console.log(ids,nameButtons,names,deletes);
 
   for (let i = 0; i < names.length; i++) {
     let len = ids[i].value.length;

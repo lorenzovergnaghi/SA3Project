@@ -15,6 +15,8 @@ const Saga = mongoose.model('Saga');
 require('../../models/room');
 const Room = mongoose.model('Room');
 const login = require('connect-ensure-login');
+require('../../models/episode');
+const Episode = mongoose.model('Episode');
 
 
 
@@ -53,6 +55,10 @@ login.ensureLoggedIn(),
                 if(found){
                   let x = found;
                   let y = found.episodes;
+                  y.forEach((ep)=>{
+                    let ep_len = ep.name.length;
+                    ep.name = ep.name.substring(0,ep_len-4);
+                  });
                   let z = found.episodes[found.last_watched];
                   res.render('room_tamplate',{saga:x,episode_list:y,last_watched:z,k:room_name,username: req.user.username});
                 }

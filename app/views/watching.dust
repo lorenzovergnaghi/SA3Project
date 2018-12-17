@@ -31,9 +31,8 @@
 
       <nav class="navigation">
           <ul>
-              <li><a class="link" href="../home"><b><img id="Homeimage"src="../animeImages/friend.svg"> Home </b></a></li>
-              <li><a class="link" href="../upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"> Upload </b></a></li>
-              <!-- <li><a class="link" href="favorites"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
+              <li><a class="link" class="link"href="../home" id="Current-page"><b><img id="Homeimage"src="../animeImages/friend.svg"><br/> Home </b></a></li>
+              <li><a class="link" class="link" href="../upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"><br/> Upload </b></a></li>
               <li><a class="link" href="../all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
           </ul>
       </nav>
@@ -45,7 +44,7 @@
           <h3 class="series_title">{.name}</h3>
           {/x}
           {#z}
-          <video style="max-width:600px; max-height:400px;" controls class="bigone" src="../{.file}"></video><br/>
+          <video  controls="" class="bigone" src="../{.file}"></video><br/>
           <p class="movie_title">{.name}<p><br/>
           {/z}
 
@@ -57,8 +56,8 @@
 
     <div class="sidebar">
       <ul>
-      <li><a href="../logout" id="Current-page"><b><img id="Homeimage"src="../animeImages/exit.svg"></b></a></li>
-      <li><a class="sidelink" href="../logout"><b>Logout</b></a></li>
+          <li><a href="logout" id="Current-page" class="sidelink"><img id="Homeimage"src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
+
       </ul>
 
     </div>
