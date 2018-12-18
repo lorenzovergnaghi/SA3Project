@@ -184,8 +184,8 @@
 
     .img1{
         position: relative;
-        width: 250;
-        height: 190;
+        width: 250px;
+        height: 190px;
         top: 0;
         left: 0;
         border-radius: 10px;
@@ -194,8 +194,8 @@
         position: absolute;
         top: 50px;
         left: 70px;
-        width:100;
-        height: 100;
+        width:100px;
+        height: 100px;
         visibility: hidden;
         border-radius: 10px;
 
@@ -318,11 +318,12 @@
         background-color: #676767;
         margin-top: 20px;
         padding-top: 10px;
-        width: 40%;
         position: relative;
-        left: 29.5%;
-        min-width: 200px;
         padding-bottom: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 10px;
+
     }
 
     .room-style{
@@ -489,6 +490,10 @@
         writing-mode: vertical-lr;
         text-orientation: upright;
         font-weight: bold;
+        background:rgba(85,85,85,0.5);
+        padding: 3px;
+        border-radius: 10px;
+        left: 20%;
     }
     .title_video:hover{
         color: crimson;

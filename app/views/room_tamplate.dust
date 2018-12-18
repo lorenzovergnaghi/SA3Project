@@ -19,7 +19,7 @@
 
 <header>
     <h1 class="Title">StreamFast</h1>
-    <img src="../animeImages/video-player.svg"  class="usilogo" align="left"/>
+    <img src="../animeImages/video-player.svg"  class="logo" align="left"/>
     <h1 class="current_Page"></h1>
 </header>
 
@@ -29,9 +29,10 @@
 
     <nav class="navigation">
         <ul>
-            <li><a href="../home" class="link">  <img id="Homeimage" src="../animeImages/friend.svg"/><br/> Home </a></li>
-            <li><a href="../upload" class="link"><img id="Homeimage" src="../animeImages/cloud-computing.svg"/><br/> Upload </a></li>
-            <li><a href="../all_rooms" class="link"><img id="Homeimage"  src="../animeImages/group.svg"/> <br> Live Room </br></a></li>
+            <li><a href="../home" class="link">  <img class="Homeimage" src="../animeImages/friend.svg"/><br/> Home </a></li>
+            <li><a href="../upload" class="link"><img class="Homeimage" src="../animeImages/cloud-computing.svg"/><br/> Upload </a></li>
+            <li><a class="link" href="../favorites"><b><img class="Homeimage" src="animeImages/stars.svg"/><br/>Starred</b></a></li>
+            <li><a href="../all_rooms" class="link"><img class="Homeimage"  src="../animeImages/group.svg"/> <br> Live Room </br></a></li>
         </ul>
     </nav>
 
@@ -70,7 +71,6 @@
                 <!--<img src="../animeImages/video-player.svg"  class="usilogo" />-->
             <!--</div>-->
 
-
             <div class="chat">
                 <div id="window">
                     <div id ="output_chat"></div>
@@ -82,7 +82,6 @@
                     <button  type="hidden" id="send"> </button>
                 </div>
             </div>
-            </div>
         </div>
     </div>
 
@@ -90,7 +89,7 @@
     <!--===========================Sidebar====================================================================-->
     <div class="sidebar">
         <ul>
-            <li><a href="../logout" id="Current-page" class="sidelink"><img id="Homeimage"src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
+            <li><a href="../logout"  class="sidelink"><img class="Homeimage" src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
 
         </ul>
     </div>

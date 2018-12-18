@@ -42,21 +42,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Josefin Sans', sans-serif;
-
     z-index: 0;
   }
 
-  .current_Page{
-    position: relative;
-    bottom: 45px;
-    font-size: 275%;
-    background: -webkit-linear-gradient(45deg,#A019C1,#A019C1,#FE01D4,#FF1361,#FFF800,#FFF800);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 0;
-  }
 
-  .usilogo {
+
+  .logo {
     display: none;
   }
 
@@ -85,7 +76,7 @@
 
 
   }
-  #Homeimage{
+  .Homeimage{
     height: 30px;
     width: 30px;
   }
@@ -244,7 +235,7 @@
 
   }
 
-  .usilogo {
+  .logo {
     width: 100px;
     height: 100px;
     position: static;
@@ -410,7 +401,7 @@
     /*border-radius: 10px;*/
     color:white;
   }
-  #Homeimage{
+  .Homeimage{
     height: 30px;
     width: 30px;
   }

@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>StreamFast || Login </title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
-    <link type= "text/css"rel="stylesheet" href="styles/loginStyle.css"/>
+    <title>StreamFast | Login </title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
+    <link type= "text/css" rel="stylesheet" href="styles/loginStyle.css"/>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
@@ -20,7 +20,7 @@
 
     <ul class="left">
         <li><input id="check" class="btn" type="button" onclick="check()" value=""/></li>
-        <li><a class="btn"href="/preview">Preview</a></li>
+        <li><a class="btn" href="/preview">Preview</a></li>
     </ul>
 </div>
 
@@ -30,7 +30,7 @@
 
       <form method="POST" action="/login">
           <label for="email">User Name</label>
-          <input  type="text" class="box" name="username" id="email" value=""placeholder="USERNAME"/><br/>
+          <input  type="text" class="box" name="username" id="email" value="" placeholder="USERNAME"/><br/>
           <p style="color:red;" id="error"><br/></p>
 
           <label for="password">Password</label>

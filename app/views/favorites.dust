@@ -1,11 +1,11 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link href="styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="SGlogo.png"/>
-    <title>WorkInProgress's Homepage</title>
+    <title>StreamFast | VideoScraps</title>
     <script src="dustjs-linkedin/dust-core.min.js" charset="utf-8"></script>
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
@@ -17,7 +17,7 @@
 
     <header>
         <h1 class="Title">StreamFast</h1>
-        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
+        <img src="animeImages/video-player.svg"  class="logo" align="left"/>
     </header>
 
     <main>
@@ -26,10 +26,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a class="link" href="home"><b><img id="Homeimage"src="animeImages/friend.svg"> Home </b></a></li>
-                <li><a class="link"href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"> Upload </b></a></li>
-                <!-- <li><a class="link" href="favorites" id="Current-page"><b><img id="Homeimage"src="animeImages/stars.svg">Starred</b></a></li> -->
-                <li><a class="link" href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a class="link" href="home"><b><img class="Homeimage" src="animeImages/friend.svg"/><br/> Home </b></a></li>
+                <li><a class="link" href="upload"><b><img class="Homeimage" src="animeImages/cloud-computing.svg"/><br/> Upload </b></a></li>
+                 <li><a class="link" href="favorites" id="Current-page"><b><img class="Homeimage" src="animeImages/stars.svg"/><br/>Starred</b></a></li>
+                <li><a class="link" href="all_rooms"><b><img class="Homeimage" src="animeImages/group.svg"/><br/> Live <br/>Room </b></a></li>
             </ul>
         </nav>
 
@@ -43,7 +43,6 @@
 
 
         </div>
-        <br/>
         <!--===========================Sidebar====================================================================-->
         <div class="sidebar">
 

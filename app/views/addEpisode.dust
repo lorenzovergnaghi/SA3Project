@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
     <link href="../../styles/SiteStyle.css" rel="stylesheet"/>
     <link href="../../styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,7 +9,6 @@
     <script src="../js/views.js"></script>
     <script src="../js/fetch.js"></script>
     <script src="../main.js"></script>
-    <!-- <script  src="../js/upload.js"></script> -->
 
     <title>WorkInProgress's Homepage</title>
 
@@ -19,7 +18,7 @@
 
     <header>
         <h1 class="Title">StreamFast</h1>
-        <img src="../animeImages/video-player.svg"  class="usilogo" align="left"/>
+        <img src="../animeImages/video-player.svg"  class="logo" align="left"/>
     </header>
 
     <main>
@@ -28,9 +27,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a class="link" href="../home"><b><img id="Homeimage"src="../animeImages/friend.svg"><br/> Home </br></a></li>
-                <li><a class="link" href="../upload"><b><img id="Homeimage"src="../animeImages/cloud-computing.svg"><br/> Upload </b></a></li>
-                <li><a class="link" href="../all_rooms"><b><img id="Homeimage"src="../animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a class="link" href="../home"><b><img class="Homeimage" src="../animeImages/friend.svg"/><br/> Home </a></li>
+                <li><a class="link" href="../upload"><b><img class="Homeimage" src="../animeImages/cloud-computing.svg"/><br/> Upload </b></a></li>
+                <li><a class="link" href="../favorites"><b><img class="Homeimage" src="../animeImages/stars.svg"/><br/>Starred</b></a></li>
+                <li><a class="link" href="../all_rooms"><b><img class="Homeimage" src="../animeImages/group.svg"/><br> Live <br/> Room </br></b></a></li>
             </ul>
         </nav>
     <!--===========================Maincontent-Upload====================================================================-->
@@ -56,7 +56,7 @@
         <div class="sidebar">
 
           <ul>
-              <li><a href="logout" id="Current-page" class="sidelink"><img id="Homeimage"src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
+              <li><a href="logout"  class="sidelink"><img class="Homeimage" src="../animeImages/exit.svg"/><br/><b>Logout </b></a></li>
 
           </ul>
 

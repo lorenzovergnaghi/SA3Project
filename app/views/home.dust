@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
     <link href="styles/SiteStyle.css" rel="stylesheet"/>
     <link href="styles/mainstyle.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -13,8 +13,46 @@
     <script src="js/views.js"></script>
     <script src="js/fetch.js"></script>
     <script src="main.js"></script>
-    <title>WorkInProgress's Homepage </title>
+    <script>
+        var OUT = undefined;
+        let events = ['keyup'];
+        events.forEach(function(ev){
+            document.querySelector('.search').addEventListener(ev , function(event){
+                event.preventDefault();
+                let filter = document.querySelector('.search').value;
+                if (filter !== "") {
+                    doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
+                        var model = {
+                            x : obj
+                        };
+                        dust.render('partials/episodes_home',model,function(err, out){
+                            if (err) {
+                                console.log('err!');
+                            }
+                            var latestEl = document.querySelector('.output');
+                            latestEl.innerHTML = out;
+                        })
+                    })
+                }else {
 
+                    doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
+                        var model = {
+                            x : obj
+                        };
+                        dust.render('partials/episodes_home',model,function(err, out){
+                            if (err) {
+                                console.log('err!');
+                            }
+                            var latestEl = document.querySelector('.output');
+                            latestEl.innerHTML = out;
+                        })
+                    })
+                }
+            });
+        })
+
+    </script>
+    <title>StreamFast | Home </title>
 </head>
 
 <body>
@@ -23,7 +61,7 @@
 <!--header div-->
     <header>
         <h1 class="Title">StreamFast</h1>
-        <img src="animeImages/video-player.svg"  class="usilogo" align="left"/>
+        <img src="animeImages/video-player.svg"  class="logo" align="left"/>
     </header>
 
     <main>
@@ -32,9 +70,10 @@
 
         <nav class="navigation">
             <ul>
-                <li><a class="link" class="link"href="home" id="Current-page"><b><img id="Homeimage"src="animeImages/friend.svg"><br/> Home </b></a></li>
-                <li><a class="link" class="link" href="upload"><b><img id="Homeimage"src="animeImages/cloud-computing.svg"><br/> Upload </b></a></li>
-                <li><a class="link" href="all_rooms"><b><img id="Homeimage"src="animeImages/group.svg"><br> Live Room </br></b></a></li>
+                <li><a class="link" class="link" href="home" ><b><img class="Homeimage" src="animeImages/friend.svg"/><br/> Home </b></a></li>
+                <li><a class="link" class="link" href="upload"><b><img class="Homeimage" src="animeImages/cloud-computing.svg"/><br/> Upload </b></a></li>
+                <li><a class="link" href="favorites"><b><img class="Homeimage" src="animeImages/stars.svg"/><br/>Starred</b></a></li>
+                <li><a class="link" href="all_rooms"><b><img class="Homeimage" src="animeImages/group.svg"/><br/> Live <br/> Room </b></a></li>
             </ul>
         </nav>
 
@@ -42,8 +81,8 @@
 
         <div class='maincontent'>
             <div class="div_search_mobile">
-                <div <b id="Search-text">Search</b> </div>
-                <input class='search' type="text" ></input>
+                <div> <b id="Search-text">Search</b> </div>
+                <input class='search' type="text" />
             </div>
 
             <div class="output">
@@ -51,12 +90,15 @@
                 {#x}
                    <div class="flex-item" id="{._id}" >
                      <h4 id="series-title" class="saga_title" align="left">{.name}</h4>
-                     <a href="/watching/:{._id}"><div class="parent">
-                         <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
-                         <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
-                         <br/>
-                     </div></a>
-                       <input class="hiddenIds" type="hidden" value={._id}/>
+
+                     <a href="/watching/:{._id}">
+                         <div class="parent">
+                             <img src="{.image}" class="img1" alt="CANT LOAD TEST IMAGE"/>
+                             <img src="animeImages/play-button.svg" class="img2" alt="CANT LOAD TEST IMAGE"/>
+                             <br/>
+                         </div>
+                     </a>
+                       <input class="hiddenIds" type="hidden" value= {._id} />
                        <div class="editable"></div>
                     </div>
                 {/x}
@@ -67,7 +109,7 @@
         <div class="sidebar">
             <ul>
                 <li><form action="/home"  ><button class="next_episodes" type="button" id="editButton" onclick="edit()">Edit <br/>Collections</button></form></li>
-                <li><a href="logout" id="Current-page" class="sidelink"><img id="Homeimage"src="animeImages/exit.svg"/><br/> <b>Logout </b></a></li>
+                <li><a href="logout"  class="sidelink"><img class="Homeimage" src="animeImages/exit.svg"/><br/> <b>Logout </b></a></li>
 
             </ul>
         </div>
@@ -79,45 +121,4 @@
     </footer>
 
 </body>
-
-<script>
-    var OUT = undefined;
-    let events = ['keyup'];
-    events.forEach(function(ev){
-        document.querySelector('.search').addEventListener(ev , function(event){
-            event.preventDefault();
-            let filter = document.querySelector('.search').value;
-            if (filter !== "") {
-                doJSONRequest("GET", "/search?name="+filter, {}, undefined).then(function(obj){
-                    var model = {
-                        x : obj
-                    };
-                    dust.render('partials/episodes_home',model,function(err, out){
-                        if (err) {
-                            console.log('err!');
-                        }
-                        var latestEl = document.querySelector('.output');
-                        latestEl.innerHTML = out;
-                    })
-                })
-            }else {
-
-                doJSONRequest("GET", "/search/all", {}, undefined).then(function(obj){
-                    var model = {
-                        x : obj
-                    };
-                    dust.render('partials/episodes_home',model,function(err, out){
-                        if (err) {
-                            console.log('err!');
-                        }
-                        var latestEl = document.querySelector('.output');
-                        latestEl.innerHTML = out;
-                    })
-                })
-            }
-        });
-    })
-
-</script>
-
 </html>
